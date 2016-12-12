@@ -33,6 +33,7 @@ import com.afirme.afirmenet.model.transferencia.ComprobanteBase;
  * <br>
  * <br>
  * @author epifanio.guzman@afirme.com
+ * Jorge
  * <br>
  */
 public class CorreoElectronicoDTO extends ComprobanteBase {
