@@ -8,6 +8,8 @@
   	<module>DisWeb</module>
   	<module>DisBeans</module>
   	<module>DisService</module>
+  	<module>UMLDiseño</module>
+  	<module>DisUML</module>
   </modules>
   <properties>
 		<!-- Propiedades generales -->
