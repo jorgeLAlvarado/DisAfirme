@@ -1,23 +1,23 @@
 package com.afirme.afirmenet.empresas.service.impl.acceso;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.dao.acceso.ContratoDao;
-import com.afirme.afirmenet.dao.acceso.OTPDao;
-import com.afirme.afirmenet.dao.acceso.UserDao;
-import com.afirme.afirmenet.dao.impl.acceso.OTPDaoImpl;
-import com.afirme.afirmenet.ibs.generics.Util;
-import com.afirme.afirmenet.ibs.objects.JOEncrypt;
-import com.afirme.afirmenet.service.acceso.OTPService;
-import com.afirme.afirmenet.service.mail.MailService;
+import com.afirme.afirmenet.empresas.dao.acceso.OTPDao;
+import com.afirme.afirmenet.empresas.dao.acceso.UserDao;
+import com.afirme.afirmenet.empresas.dao.impl.acceso.OTPDaoImpl;
+import com.afirme.afirmenet.empresas.service.acceso.OTPService;
+import com.afirme.afirmenet.service.impl.acceso.MailService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.utils.mail.AfirmeNetMail;
 
+/**
+ * clase para validar la contraseña
+ *  * 
+ * @author Bayron Gamboa Martinez
+ *
+ * @version 1.0.0
+ */
 @Service
 public class OTPServiceImpl implements OTPService {
 
@@ -31,43 +31,95 @@ public class OTPServiceImpl implements OTPService {
 	private ContratoDao contratoDao;
 	@Autowired
 	MailService mailService;
-
+	
+	/**
+	 * metodo para validar el token de cesion activa
+	 * @param usuario
+	 * @param serialToken
+	 * @param codigoActivacion
+	 * @return TRUE si el proceso no presento problemas.
+	 * 
+	 */
 	@Override
 	public boolean validaTokenXActivar(String contrato, String usuario, int serialToken, String codigoActivacion) {
 	
-		return null;
+		return false;
 	}
 	
+
+	/**
+	 * metodo para validar el token de cesion activa
+	 * @param usuario
+	 * @param serialToken
+	 * @param codigoActivacion
+	 * @return TRUE si el proceso no presento problemas.
+	 * 
+	 */
 	@Override
 	public String obtenToken(String contrato) {
 		return null;
 	}
 
+	/**
+	 * metodo que regresa la existencia del contacto
+	 * @param contrato
+	 * @return TRUE si el proceso no presento problemas.
+	 * 
+	 */
 	@Override
 	public boolean usaTokens(String contrato) {
-		return null;
+		return false;
 	}
 
+	/**
+	 * metodo para validar el codigo de seguridad
+	 * @param contrato
+	 * @param usuario
+	 * @param codigoSegEnc
+	 * @return TRUE si el proceso no presento problemas.
+	 * 
+	 */
 	@Override
 	public boolean setCodigoSeguridad(String contrato, String usuario, String codigoSegEnc) {
-		return null;
+		return false;
 	}
 
+	/**
+	 * metodo para enviar correo de seguridad
+	 * @param contrato
+	 * @return TRUE si el proceso no presento problemas.
+	 * 
+	 */
 	@Override
 	public boolean enviaMailCodigoSeguridad(String contrato) {
 		
-		return null;
+		return false;
 	}
 
+	/**
+	 * metodo para validar el vencimiento del token
+	 * @param serialToken
+	 * @param fechaVencimiento
+	 * @return TRUE si el proceso no presento problemas.
+	 * 
+	 */
 	@Override
 	public boolean setFechaVencimiento(String serialToken, String fechaVencimiento) {
-		return null;
+		return false;
 	}
 	
+	/**
+	 * metodo para enviar el codigo de seguridad
+	 * @param contrato
+	 * @param mail
+	 * @param codigoSeguridad
+	 * @return TRUE si el proceso no presento problemas.
+	 * 
+	 */
+	@Override
 	private boolean enviarCodigoSeguridad(String contrato, String mail, String codigoSeguridad) {
 
+		return false;
 		
-			return null;
-		}
 	}
 }

@@ -2,6 +2,12 @@ package com.afirme.afirmenet.empresas.dao.acceso;
 
 import java.util.Map;
 
+/**
+ * 
+ * @author Bayron Gamboa Martinez
+ *
+ * @version 1.0.0
+ */
 public interface PasswordDao {
 	
 	public Map<String, String> updatePassword(String idContrato, String password, String nuevoPassword);

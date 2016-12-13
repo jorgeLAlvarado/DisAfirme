@@ -6,7 +6,9 @@ import com.afirme.afirmenet.security.JBFirmaDigital;
 
 /**
  * @author 0cdcarguz
- *
+ * @author Bayron Gamboa Martinez
+ *  @since 13/12/2016
+ *  @version 1.0.2
  */
 public interface PasswordService {
 
