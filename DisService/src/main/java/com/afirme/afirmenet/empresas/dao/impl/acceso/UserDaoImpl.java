@@ -5,12 +5,14 @@ import com.afirme.afirmenet.utils.AfirmeNetLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.afirme.afirmenet.empresas.dao.acceso.AliasAvatarDTO;
 //import com.afirme.afirmenet.dao.impl.acceso.AS400Dao;
 //import com.afirme.afirmenet.dao.impl.acceso.DB2Dao;
 //import com.afirme.afirmenet.dao.AS400Dao;
 //import com.afirme.afirmenet.dao.DB2Dao;
 import com.afirme.afirmenet.empresas.dao.acceso.UserDao;
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
+import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
 /**
  * clase para validar la contraseña
@@ -45,9 +47,67 @@ public class UserDaoImpl implements UserDao {
 	 * @param correoElectronicoDTO
 	 * @return TRUE si el proceso no presento problemas.
 	 */
-	@Override
 	public boolean actualizarCorreoLogin(CorreoElectronicoDTO correoElectronicoDTO) throws Exception{
 		return false;
+	}
+	
+	public boolean registrarUsuario(UsuariosDTO usuarioDTO) {
+		return false;
+	}
+
+	public String obtenerTipoRegimen(String contrato) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int obtenerNumeroIntento(String contrato) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public boolean verificarUsuarioRegistrado(String contrato) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean registrarUsuarioAlias(String contrato) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean actualizarPrimerLoginConAlias(String contrato) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean incrementarNumeroIntentos(String contrato) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean actualizarAlias(String contrato, String alias) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean actualizarAliasLogin(String contrato, String alias, String avatar) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public String obtenerAvatar(String contrato) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean registraCambioAlias(AliasAvatarDTO aliasAvatarDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public String obtenerFechaNacimiento(String cliente) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

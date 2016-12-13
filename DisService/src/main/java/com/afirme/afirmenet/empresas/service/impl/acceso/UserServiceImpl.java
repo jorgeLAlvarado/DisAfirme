@@ -2,6 +2,7 @@ package com.afirme.afirmenet.empresas.service.impl.acceso;
 
 
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
+import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
 import org.springframework.stereotype.Service;
 
@@ -15,28 +16,27 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 	
 	
-	@Override
+	
 	public boolean verificarUsuarioRegistrado(String contrato) {
 		return userDao.verificarUsuarioRegistrado(contrato);
 	}
 	
-	@Override
+	
 	public int obtenerNumeroIntento(String contrato) {
 		return userDao.obtenerNumeroIntento(contrato);
 	}
 	
-	@Override
-	public boolean verificarUsuarioRegistrado(String contrato) {
-		return userDao.verificarUsuarioRegistrado(contrato);
-	}
-	
-	@Override
+
 	public String getMailUsuario(String contrato) {
 		return null;
 	}
 
-	@Override
+	
 	public boolean actualizarCorreoLogin( CorreoElectronicoDTO correoElectronicoDTO)  throws Exception{
+		return false;
+	}
+
+	public boolean registrarUsuario(UsuariosDTO usuarioDTO) {
 		return false;
 	}
 	

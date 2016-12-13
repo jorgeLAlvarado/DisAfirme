@@ -1,6 +1,7 @@
 package com.afirme.afirmenet.empresas.dao.acceso;
 
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
+import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
 public interface UserDao {
 	
@@ -28,9 +29,10 @@ public interface UserDao {
 
 	public String obtenerAvatar(String contrato);
 
-	// Clase de validar AVATAr modificar cuando este ese modulo
 	public boolean registraCambioAlias(AliasAvatarDTO aliasAvatarDTO) throws Exception;
 
 	public String obtenerFechaNacimiento(String cliente);
+	
+	public boolean registrarUsuario(UsuariosDTO usuarioDTO);
 	// +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+//
 }
