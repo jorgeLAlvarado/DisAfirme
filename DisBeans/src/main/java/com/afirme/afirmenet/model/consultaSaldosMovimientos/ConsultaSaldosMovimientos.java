@@ -4,16 +4,16 @@ import java.util.Date;
 
 public class ConsultaSaldosMovimientos {
 	
-	String nombreCuenta;
-	double cantidad;
-	String clabe;
-	String traspaso;
-	int numeroReferencia;
-	Date fecha;
-	String ciudad;
-	double cargos;
-	double abono;
-	double saldo;
+	private String nombreCuenta;
+	private double cantidad;
+	private String clabe;
+	private String traspaso;
+	private int numeroReferencia;
+	private Date fecha;
+	private String ciudad;
+	private double cargos;
+	private double abono;
+	private double saldo;
 	
 	/**
 	 * @return nombreCuentas

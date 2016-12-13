@@ -6,8 +6,14 @@ import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimi
 
 public interface ConsultaSaldosMovimientoLineaCreditoDao {
 	
+	/**
+	 * @param cuentasLC
+	 */
 	public void cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC);
 	
+	/**
+	 * @param prestamo
+	 */
 	public void informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo);
 	
 	

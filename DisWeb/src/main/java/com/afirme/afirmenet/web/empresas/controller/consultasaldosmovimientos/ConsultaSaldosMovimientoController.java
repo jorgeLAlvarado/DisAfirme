@@ -15,26 +15,44 @@ public class ConsultaSaldosMovimientoController {
 	@Autowired
 	private ConsultaSaldoMovimientoService consultaInversion;
 
+	/**
+	 * @param consultaCuenta
+	 */
 	public void Cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 
 	}
 
+	/**
+	 * @param consultaCredito
+	 */
 	public void Credito(ConsultaSaldosMovimientosLC consultaCredito) {
 
 	}
 
+	/**
+	 * @param consultaInversion
+	 */
 	public void inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
 
 	}
 
+	/**
+	 * @param consultaDetalle
+	 */
 	public void DetalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
 
 	}
 
+	/**
+	 * @param prestamo
+	 */
 	public void Prestamo(ConsultaSaldosMovimientosLC prestamo) {
 
 	}
 
+	/**
+	 * @param detalleProducto
+	 */
 	public void DetalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
 
 	}

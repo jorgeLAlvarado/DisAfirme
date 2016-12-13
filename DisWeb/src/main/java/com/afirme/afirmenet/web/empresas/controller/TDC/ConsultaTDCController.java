@@ -8,8 +8,13 @@ import org.springframework.stereotype.Controller;
 import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
 import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
 
+/**
+ * @author Noe
+ *
+ */
 @Controller
 public class ConsultaTDCController {
+	
 	
 	@Autowired
 	private ConsultaTDCService consultaSueldo;
@@ -17,6 +22,9 @@ public class ConsultaTDCController {
 
 	
 	
+	/**
+	 * @return
+	 */
 	List<ConsulatasSaldosMovimientos> obtenerConsulta(){
 		return null;
 	}
