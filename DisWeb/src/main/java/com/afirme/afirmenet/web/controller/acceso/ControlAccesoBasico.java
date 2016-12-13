@@ -115,7 +115,7 @@ public class ControlAccesoBasico  extends BaseController{
 	public String validaRespuesta(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
 		
 			return null;
-		}
 	}
+	
 	
 }
