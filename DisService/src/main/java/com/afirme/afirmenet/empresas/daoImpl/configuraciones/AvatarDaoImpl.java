@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.afirme.afirmenet.beas.login.JBAvatar;
 import com.afirme.afirmenet.empresas.dao.configuraciones.AvatarDao;
-import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
+
 @Repository
 public class AvatarDaoImpl implements AvatarDao{
 	
@@ -14,7 +15,7 @@ public class AvatarDaoImpl implements AvatarDao{
 	 */
 	
 	@Override
-	public List<AliasAvatarDTO> getListAvatar(String datos){
+	public List<JBAvatar> getListAvatar(String datos){
 		// TODO Auto-generated method stub
 		return null;
 		

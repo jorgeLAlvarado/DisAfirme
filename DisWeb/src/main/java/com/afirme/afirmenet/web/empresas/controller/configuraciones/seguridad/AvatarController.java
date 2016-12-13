@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.afirme.afirmenet.beas.login.JBAvatar;
 import com.afirme.afirmenet.empresas.service.configuraciones.AvatarService;
-import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
 
 @Controller
 @RequestMapping("/login")
@@ -18,7 +18,7 @@ public class AvatarController {
 	
 	
 	
-	List<AliasAvatarDTO> getListAvatar(){
+	List<JBAvatar> getListAvatar(){
 
 		return mostrarAvatarService.getListAvatar(null);
 		

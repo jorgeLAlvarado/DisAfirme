@@ -2,7 +2,7 @@ package com.afirme.afirmenet.empresas.dao.configuraciones;
 
 import java.util.List;
 
-import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
+import com.afirme.afirmenet.beas.login.JBAvatar;
 
 
 
@@ -17,6 +17,6 @@ public interface AvatarDao {
 	 * @param datos
 	 * @return
 	 */
-	List<AliasAvatarDTO> getListAvatar(String datos); 
+	List<JBAvatar> getListAvatar(String datos); 
 	
 }

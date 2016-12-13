@@ -2,7 +2,7 @@ package com.afirme.afirmenet.empresas.service.configuraciones;
 
 import java.util.List;
 
-import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
+import com.afirme.afirmenet.beas.login.JBAvatar;
 
 /**
  * @author Usuario
@@ -10,6 +10,6 @@ import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
  */
 public interface AvatarService {
 	
-	public List<AliasAvatarDTO> getListAvatar(String datos);
+	public List<JBAvatar> getListAvatar(String datos);
 
 }
