@@ -9,6 +9,10 @@ import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimi
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
 
+/**
+ * @author Noe
+ *
+ */
 @Controller
 public class ConsultaSaldosMovimientoController {
 

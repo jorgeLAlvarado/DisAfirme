@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
 
+/**
+ * @author Noe
+ *
+ */
 public interface ConsultaSaldosMovimientoLineaCreditoDao {
 	
 	/**
