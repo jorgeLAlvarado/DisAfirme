@@ -32,12 +32,11 @@ public class UserDaoImpl implements UserDao {
 	private DB2Dao db2Dao;
 	
 	/**
-	 * metodo para pide el corero del usuario
+	 * metodo para obtener el correo del usuario
 	 * @param contrato
 	 * @return el correo del contacto.
 	 * 
 	 */
-	@Override
 	public String getMailUsuario(String contrato) {
 		return null;
 	}
@@ -98,11 +97,6 @@ public class UserDaoImpl implements UserDao {
 	public String obtenerAvatar(String contrato) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	public boolean registraCambioAlias(AliasAvatarDTO aliasAvatarDTO) throws Exception {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	public String obtenerFechaNacimiento(String cliente) {

@@ -33,8 +33,8 @@ import com.afirme.afirmenet.model.transferencia.ComprobanteBase;
  * <br>
  * <br>
  * @author epifanio.guzman@afirme.com
- * Jorge
  * <br>
+ *
  */
 public class CorreoElectronicoDTO extends ComprobanteBase {
 	private String contrato = "";
@@ -90,7 +90,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return contrato
 	 */
 	public String getContrato() {
 		return contrato;
@@ -104,7 +104,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return correo actual
 	 */
 	public String getCorreoActual() {
 		return correoActual;
@@ -118,7 +118,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return correo nuevo
 	 */
 	public String getCorreoNuevo() {
 		return correoNuevo;
@@ -132,7 +132,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return correo nuevo confirmacion
 	 */
 	public String getCorreoNuevoConfirmacion() {
 		return correoNuevoConfirmacion;
@@ -146,7 +146,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return paso del proceso
 	 */
 	public int getPasoDelProceso() {
 		return pasoDelProceso;
@@ -160,7 +160,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return tiempo
 	 */
 	public String getTime() {
 		return time;
@@ -174,7 +174,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return estatus
 	 */
 	public String getStatus() {
 		return status;
@@ -188,7 +188,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return fecha de operacion
 	 */
 	public Calendar getFechaOperacion() {
 		return fechaOperacion;
@@ -202,7 +202,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return fechaoperacion ddMMYY
 	 */
 	public String getFechaOperacionddMMYY() {
 		return fechaOperacionddMMYY;
@@ -216,7 +216,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return hora de operacion HHmm
 	 */
 	public String getHoraOperacionHHmm() {
 		return horaOperacionHHmm;
@@ -230,7 +230,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return fecha de activacion
 	 */
 	public Calendar getFechaActivacion() {
 		return fechaActivacion;
@@ -244,7 +244,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return fecha de activacion ddMMYY
 	 */
 	public String getFechaActivacionddMMYY() {
 		return fechaActivacionddMMYY;
@@ -258,7 +258,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return hora de activacion HHmm
 	 */
 	public String getHoraActivacionHHmm() {
 		return horaActivacionHHmm;
@@ -272,7 +272,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return Correo para notificaciones
 	 */
 	public String getCorreoTOParaNotificacion() {
 		return correoTOParaNotificacion;
@@ -286,7 +286,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return nombre completo
 	 */
 	public String getNombreCompleto() {
 		return nombreCompleto;
@@ -300,7 +300,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return mensajeUsuario24Horas
 	 */
 	public String getMensajeUsuario24Horas() {
 		return mensajeUsuario24Horas;
@@ -314,7 +314,7 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 	}
 
 	/**
-	 * @return
+	 * @return cadena24horas
 	 */
 	public String getCadena24horas() {
 		return cadena24horas;

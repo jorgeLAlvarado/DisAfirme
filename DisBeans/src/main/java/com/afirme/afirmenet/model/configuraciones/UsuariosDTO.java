@@ -4,6 +4,14 @@ import java.math.BigInteger;
 
 import com.afirme.afirmenet.model.transferencia.ComprobanteBase;
 
+/**
+ * Created on Dic 14, 2016 3:39:05 PM by Jorge
+ * <br><br>
+ * @author Jorge Luis Alvarado
+ * @version 1.0.0
+ * 
+ *
+ */
 public class UsuariosDTO extends ComprobanteBase{
 	
 	private String usuario;
@@ -28,70 +36,121 @@ public class UsuariosDTO extends ComprobanteBase{
 		return usuario;
 	}
 
+	/**
+	 * @param usuario
+	 */
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 
+	/**
+	 * @param nombre
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
+	/**
+	 * @return
+	 */
 	public BigInteger getToken() {
 		return token;
 	}
 
+	/**
+	 * @param token
+	 */
 	public void setToken(BigInteger token) {
 		this.token = token;
 	}
 
+	/**
+	 * @return los apellidos
+	 */
 	public String getApellidos() {
 		return apellidos;
 	}
 
+	/**
+	 * @param apellidos
+	 */
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
 
+	/**
+	 * @return el estatus
+	 */
 	public boolean isEstatus() {
 		return estatus;
 	}
 
+	/**
+	 * @param estatus
+	 */
 	public void setEstatus(boolean estatus) {
 		this.estatus = estatus;
 	}
 
+	/**
+	 * @return el email
+	 */
 	public String getEmail() {
 		return email;
 	}
 
+	/**
+	 * @param email
+	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
+	/**
+	 * @return el titulo
+	 */
 	public String getTitulo() {
 		return titulo;
 	}
 
+	/**
+	 * @param titulo
+	 */
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
+	/**
+	 * @return los permisos
+	 */
 	public String getPermisos() {
 		return permisos;
 	}
 
+	/**
+	 * @param permisos
+	 */
 	public void setPermisos(String permisos) {
 		this.permisos = permisos;
 	}
 
+	/**
+	 * @return la contrasena
+	 */
 	public String getContrasena() {
 		return contrasena;
 	}
 
+	/**
+	 * @param contrasena
+	 */
 	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
 	}

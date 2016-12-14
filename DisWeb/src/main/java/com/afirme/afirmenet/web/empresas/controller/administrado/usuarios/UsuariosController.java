@@ -23,7 +23,7 @@ import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
  */
 @Controller
 @RequestMapping(value= "/Nuevo_Usuario")
-public class Usuarios extends BaseController{
+public class UsuariosController extends BaseController{
 
 	@Autowired
 	private UserService userService;
