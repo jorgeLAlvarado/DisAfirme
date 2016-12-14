@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="com.afirme.afirmenet.beas.login.JBAvatar" project="DisBeans" 
     file="/DisBeans/src/main/java/com/afirme/afirmenet/beas/login/JBAvatar.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="189" width="146" x="18" y="33"/>    
+    <position height="-1" width="-1" x="507" y="870"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -13,7 +13,7 @@
   <interface id="2" language="java" name="com.afirme.afirmenet.empresas.dao.acceso.UserDao" project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/acceso/UserDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="183" y="455"/>    
+    <position height="-1" width="-1" x="161" y="618"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -23,7 +23,7 @@
   <class id="3" language="java" name="com.afirme.afirmenet.empresas.dao.impl.acceso.UserDaoImpl" project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/impl/acceso/UserDaoImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="387" width="288" x="249" y="-20"/>    
+    <position height="-1" width="-1" x="165" y="246"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -33,7 +33,7 @@
   <interface id="4" language="java" name="com.afirme.afirmenet.empresas.service.acceso.UserService" project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/service/acceso/UserService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="279" width="288" x="402" y="336"/>    
+    <position height="-1" width="-1" x="502" y="187"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -44,7 +44,7 @@
     project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/service/impl/acceso/UserServiceImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="297" width="288" x="483" y="84"/>    
+    <position height="-1" width="-1" x="503" y="616"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -54,7 +54,7 @@
   <class id="6" language="java" name="com.afirme.afirmenet.web.controller.acceso.ControlAcceso" project="DisWeb" 
     file="/DisWeb/src/main/java/com/afirme/afirmenet/web/controller/acceso/ControlAcceso.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="567" width="443" x="-33" y="-99"/>    
+    <position height="-1" width="-1" x="932" y="668"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -64,7 +64,7 @@
   <class id="7" language="java" name="com.afirme.afirmenet.web.controller.acceso.ControlAccesoBasico" project="DisWeb" 
     file="/DisWeb/src/main/java/com/afirme/afirmenet/web/controller/acceso/ControlAccesoBasico.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="279" width="443" x="180" y="270"/>    
+    <position height="-1" width="-1" x="922" y="183"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
