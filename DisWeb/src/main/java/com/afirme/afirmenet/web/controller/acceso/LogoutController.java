@@ -11,6 +11,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.afirme.afirmenet.empresas.service.acceso.LogInService;
+import com.afirme.afirmenet.empresas.service.log.LogService;
 import com.afirme.afirmenet.enums.ConfigPersonas;
 import com.afirme.afirmenet.ibs.generics.Util;
 import com.afirme.afirmenet.utils.AfirmeNetConstants;
@@ -39,6 +41,10 @@ public class LogoutController extends BaseController {
 
 	static final AfirmeNetLog LOG = new AfirmeNetLog(LoginController.class);
 
+	@Autowired
+	private LogInService logInService;
+	@Autowired
+	private LogService logService;
 
 	@RequestMapping(value = "/logout.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
