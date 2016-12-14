@@ -20,6 +20,7 @@ import com.afirme.afirmenet.ibs.generics.Util;
  * Modificado on dic 13, 2016 11:12:21 AM by Bayron 
  * 
  * @author Bayron Gamboa Martinez
+ * 
  */
 
 public class Consulta implements java.io.Serializable{
