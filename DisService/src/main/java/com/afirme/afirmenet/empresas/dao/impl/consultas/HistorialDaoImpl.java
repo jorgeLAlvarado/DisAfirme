@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.dao.impl.consultas;
+package com.afirme.afirmenet.empresas.dao.impl.consultas;
 
 import java.util.List;
 
