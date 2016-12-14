@@ -116,4 +116,15 @@ public class Usuarios extends BaseController{
 		
 	}
 	
+	/**
+	 * Consulta de usuarios
+	 * @param request
+	 * @param modelMap
+	 * @return
+	 */
+	@RequestMapping(value = "/listUsuarios", method = RequestMethod.POST)
+	public String listaUsuariosService(HttpServletRequest request,	ModelMap modelMap){
+		return null;
+	}
+	
 }
