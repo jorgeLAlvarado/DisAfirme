@@ -3,8 +3,7 @@ package com.afirme.afirmenet.empresas.daoImpl.administrador.usuarios;
 import java.util.List;
 
 import com.afirme.afirmenet.empresas.dao.administrador.usuarios.UsuariosDao;
-import com.afirme.afirmenet.model.administrador.usuarios.Usuarios;
-
+import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
 /**
  * @author Mayra Selene Mena Qui;ones
@@ -18,7 +17,7 @@ public class UsuariosDaoImpl implements UsuariosDao{
 	 */
 
 	@Override
-	public List<Usuarios> getdatosUsuario(String datos) {
+	public List<UsuariosDTO> getdatosUsuario(String datos) {
 		// TODO Auto-generated method stub
 		return null;
 	}

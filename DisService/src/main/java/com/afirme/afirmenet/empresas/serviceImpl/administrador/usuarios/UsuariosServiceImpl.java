@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.empresas.dao.administrador.usuarios.UsuariosDao;
 import com.afirme.afirmenet.empresas.service.administrador.usuarios.UsuariosService;
-import com.afirme.afirmenet.model.administrador.usuarios.Usuarios;
+import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
 
 
@@ -20,7 +20,7 @@ public  class UsuariosServiceImpl implements UsuariosService {
 	private UsuariosDao listaUsuariosDao;
 	
 	
-	public List<Usuarios> getdatosUsuario (String datos ){
+	public List<UsuariosDTO> getdatosUsuario (String datos ){
 		return listaUsuariosDao.getdatosUsuario(datos);
 	
 
