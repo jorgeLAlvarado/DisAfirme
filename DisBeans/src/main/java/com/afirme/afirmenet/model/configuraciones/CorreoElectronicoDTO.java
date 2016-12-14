@@ -89,138 +89,240 @@ public class CorreoElectronicoDTO extends ComprobanteBase {
 		return sb.toString();
 	}
 
+	/**
+	 * @return
+	 */
 	public String getContrato() {
 		return contrato;
 	}
 
+	/**
+	 * @param contrato
+	 */
 	public void setContrato(String contrato) {
 		this.contrato = contrato;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getCorreoActual() {
 		return correoActual;
 	}
 
+	/**
+	 * @param correoActual
+	 */
 	public void setCorreoActual(String correoActual) {
 		this.correoActual = correoActual;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getCorreoNuevo() {
 		return correoNuevo;
 	}
 
+	/**
+	 * @param correoNuevo
+	 */
 	public void setCorreoNuevo(String correoNuevo) {
 		this.correoNuevo = correoNuevo;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getCorreoNuevoConfirmacion() {
 		return correoNuevoConfirmacion;
 	}
 
+	/**
+	 * @param correoNuevoConfirmacion
+	 */
 	public void setCorreoNuevoConfirmacion(String correoNuevoConfirmacion) {
 		this.correoNuevoConfirmacion = correoNuevoConfirmacion;
 	}
 
+	/**
+	 * @return
+	 */
 	public int getPasoDelProceso() {
 		return pasoDelProceso;
 	}
 
+	/**
+	 * @param pasoDelProceso
+	 */
 	public void setPasoDelProceso(int pasoDelProceso) {
 		this.pasoDelProceso = pasoDelProceso;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getTime() {
 		return time;
 	}
 
+	/**
+	 * @param time
+	 */
 	public void setTime(String time) {
 		this.time = time;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getStatus() {
 		return status;
 	}
 
+	/**
+	 * @param status
+	 */
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
+	/**
+	 * @return
+	 */
 	public Calendar getFechaOperacion() {
 		return fechaOperacion;
 	}
 
+	/**
+	 * @param fechaOperacion
+	 */
 	public void setFechaOperacion(Calendar fechaOperacion) {
 		this.fechaOperacion = fechaOperacion;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getFechaOperacionddMMYY() {
 		return fechaOperacionddMMYY;
 	}
 
+	/**
+	 * @param fechaOperacionddMMYY
+	 */
 	public void setFechaOperacionddMMYY(String fechaOperacionddMMYY) {
 		this.fechaOperacionddMMYY = fechaOperacionddMMYY;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getHoraOperacionHHmm() {
 		return horaOperacionHHmm;
 	}
 
+	/**
+	 * @param horaOperacionHHmm
+	 */
 	public void setHoraOperacionHHmm(String horaOperacionHHmm) {
 		this.horaOperacionHHmm = horaOperacionHHmm;
 	}
 
+	/**
+	 * @return
+	 */
 	public Calendar getFechaActivacion() {
 		return fechaActivacion;
 	}
 
+	/**
+	 * @param fechaActivacion
+	 */
 	public void setFechaActivacion(Calendar fechaActivacion) {
 		this.fechaActivacion = fechaActivacion;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getFechaActivacionddMMYY() {
 		return fechaActivacionddMMYY;
 	}
 
+	/**
+	 * @param fechaActivacionddMMYY
+	 */
 	public void setFechaActivacionddMMYY(String fechaActivacionddMMYY) {
 		this.fechaActivacionddMMYY = fechaActivacionddMMYY;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getHoraActivacionHHmm() {
 		return horaActivacionHHmm;
 	}
 
+	/**
+	 * @param horaActivacionHHmm
+	 */
 	public void setHoraActivacionHHmm(String horaActivacionHHmm) {
 		this.horaActivacionHHmm = horaActivacionHHmm;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getCorreoTOParaNotificacion() {
 		return correoTOParaNotificacion;
 	}
 
+	/**
+	 * @param correoTOParaNotificacion
+	 */
 	public void setCorreoTOParaNotificacion(String correoTOParaNotificacion) {
 		this.correoTOParaNotificacion = correoTOParaNotificacion;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getNombreCompleto() {
 		return nombreCompleto;
 	}
 
+	/**
+	 * @param nombreCompleto
+	 */
 	public void setNombreCompleto(String nombreCompleto) {
 		this.nombreCompleto = nombreCompleto;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getMensajeUsuario24Horas() {
 		return mensajeUsuario24Horas;
 	}
 
+	/**
+	 * @param mensajeUsuario24Horas
+	 */
 	public void setMensajeUsuario24Horas(String mensajeUsuario24Horas) {
 		this.mensajeUsuario24Horas = mensajeUsuario24Horas;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getCadena24horas() {
 		return cadena24horas;
 	}
 
+	/**
+	 * @param cadena24horas
+	 */
 	public void setCadena24horas(String cadena24horas) {
 		this.cadena24horas = cadena24horas;
 	}
