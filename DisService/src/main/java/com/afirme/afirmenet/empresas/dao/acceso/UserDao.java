@@ -29,8 +29,6 @@ public interface UserDao {
 
 	public String obtenerAvatar(String contrato);
 
-	public boolean registraCambioAlias(AliasAvatarDTO aliasAvatarDTO) throws Exception;
-
 	public String obtenerFechaNacimiento(String cliente);
 	
 	public boolean registrarUsuario(UsuariosDTO usuarioDTO);
