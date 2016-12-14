@@ -14,8 +14,6 @@ public interface UserService {
 	public String getMailUsuario(String contrato);
 	
 	public boolean actualizarCorreoLogin(CorreoElectronicoDTO correoElectronicoDTO) throws Exception;
-	
-	public boolean registrarUsuario(UsuariosDTO usuarioDTO);
 
 	public boolean actualizarPrimerLoginConAlias(String contrato);
 	

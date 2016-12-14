@@ -33,10 +33,6 @@ public class UserServiceImpl implements UserService {
 		return null;
 	}
 
-	
-	public boolean actualizarCorreoLogin( CorreoElectronicoDTO correoElectronicoDTO)  throws Exception{
-		return false;
-	}
 
 	public boolean registrarUsuario(UsuariosDTO usuarioDTO) {
 		return false;
