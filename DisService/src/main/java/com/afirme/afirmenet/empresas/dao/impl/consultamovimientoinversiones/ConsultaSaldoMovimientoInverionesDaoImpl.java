@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.empresas.dao.impl.consultamovimientoinveriones;
+package com.afirme.afirmenet.empresas.dao.impl.consultamovimientoinversiones;
 
 import java.util.List;
 
