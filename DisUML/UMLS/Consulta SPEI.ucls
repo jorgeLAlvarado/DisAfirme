@@ -43,8 +43,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="5" language="java" name="com.afirme.afirmenet.dao.consultas.HistorialDao" project="DisService" 
-    file="/DisService/src/main/java/com/afirme/afirmenet/dao/consultas/HistorialDao.java" binary="false" 
+  <interface id="5" language="java" name="com.afirme.afirmenet.empresas.dao.consultas.HistorialDao" project="DisService" 
+    file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/consultas/HistorialDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="838" y="818"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -55,8 +55,12 @@
   </interface>  
   <association id="6">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="7" name="historialDao"/>      
-      <multiplicity id="8" minimum="0" maximum="1"/>    
+      <attribute id="7" name="historialDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="8" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
