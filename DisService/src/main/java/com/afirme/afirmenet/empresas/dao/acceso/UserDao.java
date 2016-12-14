@@ -17,8 +17,6 @@ public interface UserDao {
 
 	public boolean verificarUsuarioRegistrado(String contrato);
 
-	public boolean registrarUsuarioAlias(String contrato);
-
 	public boolean actualizarPrimerLoginConAlias(String contrato);
 
 	public boolean incrementarNumeroIntentos(String contrato);
