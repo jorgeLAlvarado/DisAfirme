@@ -94,4 +94,5 @@ public interface UserService {
 	 * @return
 	 */
 	public boolean registrarUsuario(UsuariosDTO usuarioDTO);
+	
 }
