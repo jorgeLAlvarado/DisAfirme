@@ -1,10 +1,16 @@
 package com.afirme.afirmenet.web.controller.acceso;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+
+import com.afirme.afirmenet.beas.login.JBAvatar;
+import com.afirme.afirmenet.empresas.service.acceso.LogInService;
+import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
+import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 
 /**
@@ -21,22 +27,22 @@ import com.afirme.afirmenet.utils.AfirmeNetLog;
 public class ControlAccesoBasico  extends BaseController{
 	
 	static final AfirmeNetLog LOG = new AfirmeNetLog(ControlAccesoBasico.class);
-	/*
-	@Autowired
-	private ContratoService contratoService;
+	
+	//@Autowired
+	//private ContratoService contratoService;
 	
 	@Autowired
 	private PasswordService passwordService;
 	
-	@Autowired
-	private PreguntaSecretaService preguntaService;
+	//@Autowired
+	//private PreguntaSecretaService preguntaService;
 	
 	@Autowired
 	private LogInService logInService;
 	
 	@Autowired
 	private UserService userService;
-	*/
+	
 	
 	/**
 	 * Método que valida la información de Contrato y verifica el estatus del Token.

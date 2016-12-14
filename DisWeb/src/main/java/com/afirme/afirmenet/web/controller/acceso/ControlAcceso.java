@@ -4,11 +4,16 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
+import com.afirme.afirmenet.beas.login.JBAvatar;
+import com.afirme.afirmenet.empresas.service.acceso.LogInService;
+import com.afirme.afirmenet.empresas.service.acceso.OTPService;
+import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
+import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.model.Login;
 /**

@@ -15,6 +15,6 @@ public interface UsuariosDao {
 	 * @param datos
 	 * @return
 	 */
-	List<UsuariosDTO> getdatosUsuario(String datos);
+	public List<UsuariosDTO> getdatosUsuario(String datos);
 
 }
