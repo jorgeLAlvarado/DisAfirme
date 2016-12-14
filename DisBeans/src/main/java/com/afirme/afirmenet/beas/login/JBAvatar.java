@@ -1,5 +1,9 @@
 package com.afirme.afirmenet.beas.login;
 
+/**
+ * @author Selene Mena
+ *
+ */
 public class JBAvatar {
 	
 	private int id;

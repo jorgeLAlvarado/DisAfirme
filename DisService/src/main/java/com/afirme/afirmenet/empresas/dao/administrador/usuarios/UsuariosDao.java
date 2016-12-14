@@ -4,10 +4,12 @@ import java.util.List;
 
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
-
 /**
- * @author Usuario
+ * clase para consultar  lista de usuarios 
+ *  * 
+ * @author Selene Mena
  *
+ * @version 1.0.0
  */
 public interface UsuariosDao {
 	
