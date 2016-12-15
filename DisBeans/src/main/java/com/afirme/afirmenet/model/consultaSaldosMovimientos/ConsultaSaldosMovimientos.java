@@ -43,10 +43,7 @@ public class ConsultaSaldosMovimientos {
 	 * @return clabe
 	 */
 	public String getClabe() {
-		if(clabe==null)
-			return "";
 		return clabe;
-		
 	}
 	/**
 	 * @param clabe
