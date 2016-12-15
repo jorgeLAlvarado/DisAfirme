@@ -2,6 +2,12 @@ package com.afirme.afirmenet.model.consultaSaldosMovimientos;
 
 import java.util.Date;
 
+/**
+ * @author Noe Galarza
+ *
+ *Modificado on dic 14, 2016 3:12:21 PM by Noe Galarza
+ * @version 1.0.0
+ */
 public class ConsultaSaldosMovimientos {
 	
 	private String nombreCuenta;

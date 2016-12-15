@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
 
 /**
- * @author Noe
+ * @author Noe Galarza
  *
+ *Modificado on dic 14, 2016 3:12:21 PM by Noe Galarza
+ * @version 1.0.0
  */
 @Controller
 public class ConsultaTDCController {

@@ -12,8 +12,10 @@ import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimi
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
 
 /**
- * @author Noe
+ * @author Noe Galarza
  *
+ * Modificado on dic 14, 2016 3:12:21 PM by Noe Galarza
+ * @version 1.0.0
  */
 @Controller
 public class ConsultaSaldosMovimientoController {
