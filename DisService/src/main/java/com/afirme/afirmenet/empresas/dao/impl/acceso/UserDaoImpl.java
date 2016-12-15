@@ -23,6 +23,12 @@ import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
  * @author Bayron Gamboa Martinez
  *
  * @version 1.0.0
+ * 
+ *   
+ * Modificado on dic 13, 2016 4:12:11 PM by Selene 
+ * 
+ * @author Selene Mena Quiñones
+ * 
  */
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -109,6 +115,7 @@ public class UserDaoImpl implements UserDao {
 	
 
 	public List<UsuariosDTO> getTokens(Boolean soloDiponibles) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 	

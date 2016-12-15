@@ -27,6 +27,10 @@ import com.afirme.afirmenet.web.empresas.utils.AfirmeNetWebConstants;
  * 
  * @author jorge.canoc@gmail.com
  * 
+ * Modificado on dic 14, 2016 3:12:21 PM by Selene 
+ * 
+ * @author Selene Mena Quiñones
+ * 
  */
 @Controller
 public class HomeController  extends BaseController{

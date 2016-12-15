@@ -10,7 +10,11 @@ import com.afirme.afirmenet.model.transferencia.ComprobanteBase;
  * @author Jorge Luis Alvarado
  * @version 1.0.0
  * 
- *
+ * 
+ * Modificado on dic 13, 2016 11:12:21 AM by Selene 
+ * 
+ * @author Selene Mena Quiñones
+ * 
  */
 public class UsuariosDTO extends ComprobanteBase{
 	

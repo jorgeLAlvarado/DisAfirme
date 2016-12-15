@@ -21,7 +21,9 @@ import com.afirme.afirmenet.empresas.services.impl.token.Token;
  * @author Jorge Luis Alvarado
  * @version 1.0.0
  * 
- *
+ * Modificado on dic 14, 2016 3:12:21 PM by Selene 
+ * 
+ * @author Selene Mena Quiñones
  */
 @Service
 public class UserServiceImpl implements UserService {

@@ -20,6 +20,9 @@ import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
 /**
  * @author usuario
  *
+ * Modificado on dic 14, 2016 3:12:21 PM by Selene 
+ * 
+ * @author Selene Mena Quiñones
  */
 @Controller
 @RequestMapping(value= "/Usuarios")
@@ -128,7 +131,7 @@ public class UsuariosController extends BaseController{
 	}
 	
 	/**
-	 * Consulta de usuarios
+	 * Consulta de tokens
 	 * @param request
 	 * @param modelMap
 	 * @return

@@ -2,6 +2,7 @@ package com.afirme.afirmenet.web.controller.acceso;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;

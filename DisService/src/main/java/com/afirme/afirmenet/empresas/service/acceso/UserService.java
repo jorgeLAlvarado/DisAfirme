@@ -8,6 +8,18 @@ import com.afirme.afirmenet.empresas.services.token.Token;
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
+
+/**
+ * @author Jorge Luis Alvarado
+ * @version 1.0.0
+ * Created on Created on Dic 10, 2016 3:50:05 PM by Jorge
+ * 
+ *  
+ * Modificado on dic 14, 2016 3:12:21 PM by Selene 
+ * 
+ * @author Selene Mena Quiñones
+ * 
+ */
 public interface UserService {
 	
 	/**
