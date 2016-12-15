@@ -1,74 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.12" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.afirme.afirmenet.web.controller.consultas.HistorialMovimientosController" 
-    project="DisWeb" 
-    file="/DisWeb/src/main/java/com/afirme/afirmenet/web/controller/consultas/HistorialMovimientosController.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="248" y="308"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="2" language="java" name="com.afirme.afirmenet.service.impl.consultas.HistorialServiceImpl" 
+  <class id="1" language="java" name="com.afirme.afirmenet.service.impl.consultas.HistorialServiceImpl" 
     project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/service/impl/consultas/HistorialServiceImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="819" y="321"/>    
+    <position height="-1" width="-1" x="359" y="417"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="3" language="java" name="com.afirme.afirmenet.service.consultas.HistorialService" project="DisService" 
-    file="/DisService/src/main/java/com/afirme/afirmenet/service/consultas/HistorialService.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="798" y="70"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="4" language="java" name="com.afirme.afirmenet.dao.impl.consultas.HistorialDaoImpl" project="DisService" 
-    file="/DisService/src/main/java/com/afirme/afirmenet/dao/impl/consultas/HistorialDaoImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="153" width="275" x="137" y="628"/>    
+  <class id="2" language="java" name="com.afirme.afirmenet.empresas.dao.impl.consultas.HistorialDaoImpl" 
+    project="DisService" 
+    file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/impl/consultas/HistorialDaoImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="807" y="114"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="5" language="java" name="com.afirme.afirmenet.empresas.dao.consultas.HistorialDao" project="DisService" 
+  <interface id="3" language="java" name="com.afirme.afirmenet.empresas.dao.consultas.HistorialDao" project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/consultas/HistorialDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="838" y="818"/>    
+    <position height="-1" width="-1" x="788" y="342"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <association id="6">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="7" name="historialDao">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="8" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <interface id="4" language="java" name="com.afirme.afirmenet.service.consultas.HistorialService" project="DisService" 
+    file="/DisService/src/main/java/com/afirme/afirmenet/service/consultas/HistorialService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="338" y="269"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="com.afirme.afirmenet.ibs.beans.consultas.Consulta" project="DisBeans" 
+    file="/DisBeans/src/main/java/com/afirme/afirmenet/ibs/beans/consultas/Consulta.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1142" y="681"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.afirme.afirmenet.web.controller.consultas.HistorialMovimientosController" 
+    project="DisWeb" 
+    file="/DisWeb/src/main/java/com/afirme/afirmenet/web/controller/consultas/HistorialMovimientosController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="336" y="32"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="7">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="8">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="9" name="historialDao"/>      
+      <multiplicity id="10" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="9">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="5"/>  
+  <realization id="11">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
   </realization>  
+  <association id="12">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="13" name="historialService"/>      
+      <multiplicity id="14" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

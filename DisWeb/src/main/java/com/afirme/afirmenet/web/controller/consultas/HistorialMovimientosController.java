@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
+import com.afirme.afirmenet.service.consultas.HistorialService;
 
 
 
@@ -45,35 +46,7 @@ public class HistorialMovimientosController extends BaseController{
 	@Autowired
 	private HistorialService historialService;
 	
-	@Autowired
-	private ComprobanteTransferenciaDao comprobanteTransferenciaDao;
-	@Autowired
-	PropertyService propertyService; // PropertyServiceImpl
 		
-	@Autowired
-	DivisaService divisaService;
-	
-	@Autowired
-	private PagosService pagosService;
-	
-	@Autowired
-	CuentasHistorialService cuentasHistorialService;
-	
-	@Autowired
-	private CuentaService cuentaService;
-	
-	@Autowired
-	private ImpuestosService impuestosService;
-	
-	@Autowired
-	private ImpuestosGDFService impuestosGDFService;
-	
-	@Autowired
-	private RecargasService recargasService;
-	
-	@Autowired
-	protected TDCService tdcService;
-	
 	/**
 	 * Metodo que atiende las peticiones al contexto /resumen-de-mis-cuentas.htm
 	 * En el cual se muestran el saldo de todas las cuentas del cliente de manera global 
@@ -132,27 +105,6 @@ public class HistorialMovimientosController extends BaseController{
 		return null;
 	}
 	
-	/**
-	 * Obtener los valores para avisoViajeDTO que es el objeto que utiliza el
-	 * comprobante de Aviso de Viaje.
-	 * 
-	 * @param comprobante de tipo TransferenciaBase
-	 * @return avisoViajeDTO de tipo AvisoViajeDTO
-	 */
-	private AvisoViajeDTO obtenerAvisoViajeDTO( TransferenciaBase comprobante){
-		
-		
-		return null;
-	}
 	
-	/**
-	 * Para formar el objeto AliasAvatarDTO que utiliza el comprobante de cambio de alias.
-	 * 
-	 * @param comprobante de tipo TransferenciaBase
-	 * @return AliasAvatarDTO
-	 */
-	private AliasAvatarDTO obtenerAliasAvatarDTO( TransferenciaBase comprobante ){
-		
-	}
 	
 }

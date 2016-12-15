@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.empresas.dao.consultas.HistorialDao;
+import com.afirme.afirmenet.service.consultas.HistorialService;
 import com.afirme.afirmenet.utils.time.TimeUtils;
 
 
@@ -18,37 +19,13 @@ public class HistorialServiceImpl implements HistorialService {
 	@Autowired
 	private HistorialDao historialDao;
 	
-	@Autowired
-	private AsociaMovilCuentaService asociaMovilCuentaService;
-	
-	@Autowired
-	private ComprobanteTransferenciaDao comprobanteTransferenciaDao;
-	
-	@Autowired
-	private OperacionesProgramadasDao operacionesProgramadasDao;
-
-	@Autowired
-	ConveniosDomiciliacionDao conveniosDao;
-	
-	@Autowired
-	CuentaTercerosDao cuentaTercerosDao;
-	
-	@Autowired
-	private ImpuestosGDFDao impuestoGDFDao;
-	
-	@Autowired
-	private ImpuestosGDFService impuestosGDFService;
 	
 	
 	public List<TipoTransaccion> listaTransacciones(boolean esBasicoSinToken) {
 		return null;
 	}
 	
-	@Override
-	public List<String> categorias(boolean esBasicoSinToken) {
-		return null;
-	}
-
+	
 	/**
 	 * Devuelve una lista de TransferenciaBase que es el tipo de objeto para mostrar la lista de resultados.
 	 */
@@ -58,33 +35,5 @@ public class HistorialServiceImpl implements HistorialService {
 		return null;
 	}
 
-	@Override
-	public void obtenerInformacionExtra(TransferenciaBase comprobante) {
-		
-		return null;
-	}
-
-	@Override
-	public ConvenioDomiciliacion buscarInfoExtraConvenioServicios(
-			String contrato, String referencia) {
-		
-		return null;
-	}
 	
-	@Override
-	public ImpuestoGDF getComprobanteGDF(TransferenciaBase comprobante){
-		return null;
-	}
-	
-	@Override
-	public ImpuestoGDF getTramiteyConcepto(ImpuestoGDF comprobante){
-		return null;
-	}
-	
-	@Override
-	public String getEstatusInotr(String referencia, String contrato){
-		
-	      
-		return null;
-	}
 }

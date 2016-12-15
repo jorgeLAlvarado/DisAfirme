@@ -44,7 +44,7 @@
   <interface id="5" language="java" name="com.afirme.afirmenet.empresas.dao.acceso.PasswordDao" project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/acceso/PasswordDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="153" width="301" x="412" y="717"/>    
+    <position height="-1" width="-1" x="767" y="810"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -55,7 +55,7 @@
     project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/impl/acceso/PasswordDaoImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="941" y="761"/>    
+    <position height="-1" width="-1" x="1150" y="803"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -65,7 +65,7 @@
   <class id="7" language="java" name="com.afirme.afirmenet.empresas.dao.impl.acceso.UserDaoImpl" project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/impl/acceso/UserDaoImpl.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="171" width="288" x="665" y="393"/>    
+    <position height="-1" width="-1" x="806" y="510"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   <interface id="8" language="java" name="com.afirme.afirmenet.empresas.dao.acceso.UserDao" project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/dao/acceso/UserDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="802" y="194"/>    
+    <position height="-1" width="-1" x="807" y="133"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -97,7 +97,7 @@
     project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/service/impl/acceso/PasswordServiceImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1135" y="175"/>    
+    <position height="-1" width="-1" x="1128" y="487"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -108,7 +108,7 @@
     project="DisService" 
     file="/DisService/src/main/java/com/afirme/afirmenet/empresas/service/impl/acceso/UserServiceImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1122" y="523"/>    
+    <position height="-1" width="-1" x="1139" y="118"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -124,46 +124,58 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="13">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="14" name="userDao"/>      
-      <multiplicity id="15" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="16">    
+  <realization id="13">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="8"/>  
   </realization>  
-  <realization id="17">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <realization id="18">    
+  <realization id="14">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="3"/>  
   </realization>  
-  <association id="19">    
+  <association id="15">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="20" name="userDao"/>      
-      <multiplicity id="21" minimum="0" maximum="1"/>    
+      <attribute id="16" name="userDao">        
+        <position height="0" width="0" x="5" y="-61"/>      
+      </attribute>      
+      <multiplicity id="17" minimum="0" maximum="1">        
+        <position height="0" width="0" x="5" y="-61"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="22">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <association id="23">    
+  <association id="18">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="24" name="otpDao"/>      
-      <multiplicity id="25" minimum="0" maximum="1"/>    
+      <attribute id="19" name="otpDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="20" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="21">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="22" name="userDao">        
+        <position height="0" width="0" x="5" y="-61"/>      
+      </attribute>      
+      <multiplicity id="23" minimum="0" maximum="1">        
+        <position height="0" width="0" x="5" y="-61"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="24">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="25">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
