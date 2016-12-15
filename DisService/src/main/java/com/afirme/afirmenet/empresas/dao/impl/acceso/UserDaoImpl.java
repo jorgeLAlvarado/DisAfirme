@@ -2,6 +2,8 @@ package com.afirme.afirmenet.empresas.dao.impl.acceso;
 
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +13,7 @@ import com.afirme.afirmenet.empresas.dao.acceso.AliasAvatarDTO;
 //import com.afirme.afirmenet.dao.AS400Dao;
 //import com.afirme.afirmenet.dao.DB2Dao;
 import com.afirme.afirmenet.empresas.dao.acceso.UserDao;
+import com.afirme.afirmenet.empresas.dao.impl.token.Token;
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
@@ -103,5 +106,19 @@ public class UserDaoImpl implements UserDao {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+
+	public List<UsuariosDTO> getTokens(Boolean soloDiponibles) {
+		return null;
+	}
+	
+
+	public List<UsuariosDTO> getdatosUsuario(String datos) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+
 	
 }

@@ -123,7 +123,18 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	@RequestMapping(value = "/listUsuarios", method = RequestMethod.POST)
-	public String listaUsuariosService(HttpServletRequest request,	ModelMap modelMap){
+	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
+		return null;
+	}
+	
+	/**
+	 * Consulta de usuarios
+	 * @param request
+	 * @param modelMap
+	 * @return
+	 */
+	@RequestMapping(value = "/TokensDisponibles", method = RequestMethod.POST)
+	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
 		return null;
 	}
 	

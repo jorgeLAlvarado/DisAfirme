@@ -1,7 +1,10 @@
 package com.afirme.afirmenet.empresas.service.acceso;
 
 
+import java.util.List;
+
 import com.afirme.afirmenet.empresas.dao.acceso.AliasAvatarDTO;
+import com.afirme.afirmenet.empresas.services.token.Token;
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
@@ -94,5 +97,20 @@ public interface UserService {
 	 * @return
 	 */
 	public boolean registrarUsuario(UsuariosDTO usuarioDTO);
+	
+	
+	/**
+	 * consulta listar usuarios
+	 * @param usuarioDTO
+	 * @return
+	 */	
+	public List<UsuariosDTO> getdatosUsuario(String datos);
+	
+	/**
+	 * consulta tokens disponibles
+	 * @param usuarioDTO
+	 * @return
+	 */		
+	public List<UsuariosDTO> getTokens(Boolean soloDisponibles);
 	
 }

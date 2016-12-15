@@ -1,5 +1,7 @@
 package com.afirme.afirmenet.empresas.dao.acceso;
 
+import java.util.List;
+
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
@@ -101,4 +103,20 @@ public interface UserDao {
 	 */
 	public boolean registrarUsuario(UsuariosDTO usuarioDTO);
 	// +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+//
+	
+	
+	/**Consulta para listar usuarios en administrador
+	 * @param datos
+	 * @return
+	 */
+	public List<UsuariosDTO> getdatosUsuario(String datos);	
+	
+	/**Consulta para los Tokens disponibles en administrador
+	 * @param datos
+	 * @return
+	 */	
+	
+	public List<UsuariosDTO> getTokens(Boolean soloDisponibles);
+	
+	
 }

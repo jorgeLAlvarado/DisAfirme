@@ -18,6 +18,8 @@ public class UsuariosDTO extends ComprobanteBase{
 	
 	private String nombre;
 	
+	private String nToken;
+
 	private BigInteger token;
 	
 	private String apellidos;
@@ -57,6 +59,21 @@ public class UsuariosDTO extends ComprobanteBase{
 		this.nombre = nombre;
 	}
 
+
+	
+	/**
+	 * @return
+	 */
+	public String getnToken() {
+		return nToken;
+	}
+
+	/**
+	 * @param nToken
+	 */
+	public void setnToken(String nToken) {
+		this.nToken = nToken;
+	}
 	/**
 	 * @return
 	 */

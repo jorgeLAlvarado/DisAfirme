@@ -5,11 +5,16 @@ import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 import com.afirme.afirmenet.utils.time.TimeUtils;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.empresas.dao.acceso.UserDao;
+import com.afirme.afirmenet.empresas.dao.administrador.usuarios.UsuariosDao;
 import com.afirme.afirmenet.empresas.service.acceso.AliasAvatarDTO;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
+import com.afirme.afirmenet.empresas.services.impl.token.Token;
 
 /**
  * Created on Dic 14, 2016 3:39:05 PM by Jorge
@@ -83,4 +88,27 @@ public class UserServiceImpl implements UserService {
 	public boolean registraCambioAlias(AliasAvatarDTO aliasAvatarDTO) throws Exception {
 		return false;
 	}
+	
+	
+	@Autowired
+	private UserService listaUsuarios;
+	
+	
+	public List<UsuariosDTO> getdatosUsuario (String datos ){
+		return listaUsuarios.getdatosUsuario(datos);
+	
+
+    }
+	
+	@Autowired
+	private UserService tokendisponibles; 
+	
+	public List<UsuariosDTO> getTokens(Boolean soloDisponibles){
+		return tokendisponibles.getTokens(soloDisponibles);
+	}
+	
+	
+	
+	
+	
 }
