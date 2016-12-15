@@ -6,8 +6,8 @@ import com.afirme.afirmenet.beas.login.Notificaciones;
 /**
  * clase para consultar  notificaciones y autorizaciones pendientes
  *  * 
- * @author Selene Mena
- *
+ * Created on Dic 14, 2016 4:37:05 PM by Selene
+ * @author Selene Mena Quiñones
  * @version 1.0.0
  */
 public interface ActividadesPendientesService {

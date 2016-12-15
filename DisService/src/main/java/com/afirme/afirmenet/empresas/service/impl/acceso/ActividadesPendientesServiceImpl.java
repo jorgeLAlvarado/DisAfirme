@@ -9,8 +9,8 @@ import com.afirme.afirmenet.empresas.service.acceso.ActividadesPendientesService
 /**
  * clase para consultar  notificaciones y autorizaciones pendientes
  *  * 
- * @author Selene Mena
- *
+ * Created on Dic 14, 2016 5:39:05 PM by Selene
+ * @author Selene Mena Quiñones
  * @version 1.0.0
  */
 public class ActividadesPendientesServiceImpl implements ActividadesPendientesService{
