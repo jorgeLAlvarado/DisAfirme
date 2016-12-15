@@ -3,8 +3,9 @@ package com.afirme.afirmenet.model.consultaSaldosMovimientos;
 import java.util.Date;
 
 /**
+ * Created on Dic 14, 2016 3:39:05 PM by Noé
  * @author Noe
- *
+ * @version 1.0.0
  */
 public class ConsultaSaldosMovimientosLC {
 	
