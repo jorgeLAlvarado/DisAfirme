@@ -7,32 +7,38 @@ import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimi
 
 public class ConsultaSaldosMovimientoCuentasDaoImpl implements ConsultaSaldosMoviemntoCuentasDao{
 
-	public void cuentas(List<ConsultaSaldosMovimientos> cuentas) {
+	public String cuentas(List<ConsultaSaldosMovimientos> cuentas) {
+		return null;
 	
 		
 	}
 
-	public void consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos) {
+	public String consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos) {
+		return null;
 
 		
 	}
 
-	public void ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos) {
+	public String ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos) {
+		return null;
 	
 		
 	}
 
-	public void movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes) {
+	public String movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes) {
+		return null;
 	
 		
 	}
 
-	public void retenidos(List<ConsultaSaldosMovimientos> retenidos) {
+	public String retenidos(List<ConsultaSaldosMovimientos> retenidos) {
+		return null;
 		
 		
 	}
 
-	public void buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico) {
+	public String buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico) {
+		return null;
 	
 		
 	}

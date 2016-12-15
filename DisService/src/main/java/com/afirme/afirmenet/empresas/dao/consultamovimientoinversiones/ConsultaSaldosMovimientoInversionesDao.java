@@ -13,12 +13,12 @@ public interface ConsultaSaldosMovimientoInversionesDao {
 /**
  * @param consultaInversion
  */
-public void consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion);
+public String consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion);
 	
 /**
  * @param detalleProducto
  */
-public void detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto);
+public String detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto);
 	
 	
 

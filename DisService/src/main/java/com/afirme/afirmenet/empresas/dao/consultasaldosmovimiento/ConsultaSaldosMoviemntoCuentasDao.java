@@ -15,32 +15,32 @@ public interface ConsultaSaldosMoviemntoCuentasDao {
 	/**
 	 * @param cuentas
 	 */
-	public void cuentas(List<ConsultaSaldosMovimientos> cuentas);
+	public String cuentas(List<ConsultaSaldosMovimientos> cuentas);
 	
 	/**
 	 * @param consultaSaldos
 	 */
-	public void consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos);
+	public String consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos);
 	
 	/**
 	 * @param ultimosMovimientos
 	 */
-	public void ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos);
+	public String ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos);
 	
 	/**
 	 * @param movimientoMes
 	 */
-	public void movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes);
+	public String movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes);
 	
 	/**
 	 * @param retenidos
 	 */
-	public void retenidos(List<ConsultaSaldosMovimientos> retenidos);
+	public String retenidos(List<ConsultaSaldosMovimientos> retenidos);
 	
 	/**
 	 * @param buscarHistorico
 	 */
-	public void buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico);
+	public String buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico);
 	
 
 

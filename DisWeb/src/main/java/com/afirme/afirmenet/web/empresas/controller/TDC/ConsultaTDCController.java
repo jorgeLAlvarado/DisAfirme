@@ -1,12 +1,10 @@
 package com.afirme.afirmenet.web.empresas.controller.TDC;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
-import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
 
 /**
  * @author Noe
@@ -25,10 +23,15 @@ public class ConsultaTDCController {
 	/**
 	 * @return
 	 */
+	/*public String detalleInversion()
 	List<ConsulatasSaldosMovimientos> obtenerConsulta(){
 		return null;
 	}
-
+*/
+	@RequestMapping(value = "/ConsultaTDC.htm")
+	public String obtenerConsulta(){
+		
+		return null;}
 	
 
 }

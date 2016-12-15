@@ -17,27 +17,27 @@ public interface ConsultaTDCService {
 	/**
 	 * @param consultaSaldos
 	 */
-	public void consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos);
+	public String consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos);
 
 	/**
 	 * @param consultaDespuesCorte
 	 */
-	public void consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte);
+	public String consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte);
 
 	/**
 	 * @param consultaMovimientoCorte
 	 */
-	public void consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte);
+	public String consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte);
 
 	/**
 	 * @param consultaMovimientoCorteAtras
 	 */
-	public void consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras);
+	public String consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras);
 
 	/**
 	 * @param consultaPromocionesPlazos
 	 */
-	public void consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos);
+	public String consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos);
 
 
 }

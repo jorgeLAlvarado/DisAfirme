@@ -3,6 +3,8 @@ package com.afirme.afirmenet.web.empresas.controller.consultasaldosmovimientos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.empresas.service.consultasaldosmovimientos.ConsultaSaldoMovimientoService;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
@@ -22,42 +24,54 @@ public class ConsultaSaldosMovimientoController {
 	/**
 	 * @param consultaCuenta
 	 */
-	public void Cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
+	@RequestMapping(value = "/consultacuenta.htm")
+	public String Cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
+		return null;
 
 	}
 
 	/**
 	 * @param consultaCredito
 	 */
-	public void Credito(ConsultaSaldosMovimientosLC consultaCredito) {
+	@RequestMapping(value = "/consultacredito.htm")
+	public String Credito(ConsultaSaldosMovimientosLC consultaCredito) {
+		return null;
 
 	}
 
 	/**
 	 * @param consultaInversion
 	 */
-	public void inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
+	@RequestMapping(value = "/consultaInversion.htm")
+	public String inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
+		return null;
 
 	}
 
 	/**
 	 * @param consultaDetalle
 	 */
-	public void DetalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
+	@RequestMapping(value = "/consultaDetalle.htm")
+	public String DetalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
+		return null;
 
 	}
 
 	/**
 	 * @param prestamo
 	 */
-	public void Prestamo(ConsultaSaldosMovimientosLC prestamo) {
+	@RequestMapping(value = "/Prestamo.htm")
+	public String Prestamo(ConsultaSaldosMovimientosLC prestamo) {
+		return null;
 
 	}
 
 	/**
 	 * @param detalleProducto
 	 */
-	public void DetalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
+	@RequestMapping(value = "/detalleProducto.htm")
+	public String DetalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
+		return null;
 
 	}
 

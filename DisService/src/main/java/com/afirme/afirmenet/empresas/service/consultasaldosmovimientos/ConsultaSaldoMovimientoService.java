@@ -19,52 +19,52 @@ public interface ConsultaSaldoMovimientoService {
 	/**
 	 * @param consultaInversion
 	 */
-	public void consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion);
+	public String consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion);
 	
 	/**
 	 * @param detalleProducto
 	 */
-	public void detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto);
+	public String detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto);
 	
 	/**
 	 * @param cuentas
 	 */
-	public void cuentas(List<ConsultaSaldosMovimientos> cuentas);
+	public String cuentas(List<ConsultaSaldosMovimientos> cuentas);
 	
 	/**
 	 * @param consultaSaldos
 	 */
-	public void consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos);
+	public String consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos);
 	
 	/**
 	 * @param ultimosMovimientos
 	 */
-	public void ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos);
+	public String ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos);
 	
 	/**
 	 * @param movimientoMes
 	 */
-	public void movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes);
+	public String movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes);
 	
 	/**
 	 * @param retenidos
 	 */
-	public void retenidos(List<ConsultaSaldosMovimientos> retenidos);
+	public String retenidos(List<ConsultaSaldosMovimientos> retenidos);
 	
 	/**
 	 * @param buscarHistorico
 	 */
-	public void buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico);
+	public String buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico);
 	
 	
 	/**
 	 * @param cuentasLC
 	 */
-	public void cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC);
+	public String cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC);
 	
 	/**
 	 * @param prestamo
 	 */
-	public void informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo);
+	public String informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo);
 
 }

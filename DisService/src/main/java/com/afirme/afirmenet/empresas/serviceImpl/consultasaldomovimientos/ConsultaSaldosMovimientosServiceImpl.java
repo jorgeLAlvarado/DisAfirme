@@ -33,43 +33,53 @@ public class ConsultaSaldosMovimientosServiceImpl implements ConsultaSaldoMovimi
 	
 	
 
-	public void consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion) {
+	public String consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion) {
+		return null;
 		
 	}
 
-	public void detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto) {
+	public String detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto) {
+		return null;
 		
 	}
 
-	public void cuentas(List<ConsultaSaldosMovimientos> cuentas) {
+	public String cuentas(List<ConsultaSaldosMovimientos> cuentas) {
+		return null;
 		
 	}
 
-	public void consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos) {
+	public String consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos) {
+		return null;
 		
 	}
 
-	public void ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos) {
+	public String ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos) {
+		return null;
 		
 	}
 
-	public void movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes) {
+	public String movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes) {
+		return null;
 		
 	}
 
-	public void retenidos(List<ConsultaSaldosMovimientos> retenidos) {
+	public String retenidos(List<ConsultaSaldosMovimientos> retenidos) {
+		return null;
 		
 	}
 
-	public void buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico) {
+	public String buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico) {
+		return null;
 		
 	}
 
-	public void cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC) {
+	public String cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC) {
+		return null;
 		
 	}
 
-	public void informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo) {
+	public String informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo) {
+		return null;
 		
 	}
 

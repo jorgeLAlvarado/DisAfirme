@@ -8,11 +8,13 @@ import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimi
 public class ConsultaSaldoMovimientoInverionesDaoImpl implements ConsultaSaldosMovimientoInversionesDao{
 
 
-	public void consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion) {
+	public String consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion) {
+		return null;
 		
 	}
 
-	public void detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto) {
+	public String detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto) {
+		return null;
 		
 	}
 

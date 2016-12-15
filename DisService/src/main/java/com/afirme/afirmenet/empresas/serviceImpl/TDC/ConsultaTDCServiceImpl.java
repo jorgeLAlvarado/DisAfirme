@@ -21,19 +21,24 @@ public class ConsultaTDCServiceImpl implements ConsultaTDCService{
 	@Autowired
 	private ConsultaTDCDao consultaTDC;
 	
-	public void consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos) {
+	public String consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos) {
+		return null;
 		
 	}
-	public void consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte) {
+	public String consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte) {
+		return null;
 		
 	}
-	public void consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte) {
+	public String consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte) {
+		return null;
 		
 	}
-	public void consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras) {
+	public String consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras) {
+		return null;
 		
 	}
-	public void consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos) {
+	public String consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos) {
+		return null;
 		
 	}
 

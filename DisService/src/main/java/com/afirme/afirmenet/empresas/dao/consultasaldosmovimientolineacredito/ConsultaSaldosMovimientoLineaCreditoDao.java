@@ -14,12 +14,12 @@ public interface ConsultaSaldosMovimientoLineaCreditoDao {
 	/**
 	 * @param cuentasLC
 	 */
-	public void cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC);
+	public String cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC);
 	
 	/**
 	 * @param prestamo
 	 */
-	public void informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo);
+	public String informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo);
 	
 	
 
