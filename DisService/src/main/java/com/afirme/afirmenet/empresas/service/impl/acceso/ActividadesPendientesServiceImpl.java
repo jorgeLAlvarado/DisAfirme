@@ -18,12 +18,12 @@ public class ActividadesPendientesServiceImpl implements ActividadesPendientesSe
 	private ActividadesPendientesDao actividadesPendientesDao;
 
 	public List<Notificaciones> getNotificacionesPendientes(String datos) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	public List<Notificaciones> getAutorizacionesPendientes(String datos) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 

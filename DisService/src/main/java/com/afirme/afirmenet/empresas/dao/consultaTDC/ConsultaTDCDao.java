@@ -5,8 +5,9 @@ import java.util.List;
 import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
 
 /**
+ * Created on Dic 14, 2016 3:39:05 PM by Noé
  * @author Noe
- *
+ * @version 1.0.0
  */
 public interface ConsultaTDCDao {
 

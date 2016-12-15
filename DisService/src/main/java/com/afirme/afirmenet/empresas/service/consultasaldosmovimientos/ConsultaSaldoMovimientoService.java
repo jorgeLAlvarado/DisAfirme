@@ -1,5 +1,17 @@
 package com.afirme.afirmenet.empresas.service.consultasaldosmovimientos;
 
+import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
+
+import java.util.List;
+
+import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
+import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
+
+/**
+ * Created on Dic 14, 2016 3:39:05 PM by Noe
+ * @author Noe Galarza
+ * @version 1.0.0
+ */
 
 
 public interface ConsultaSaldoMovimientoService {

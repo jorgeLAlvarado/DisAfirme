@@ -11,8 +11,14 @@ import com.afirme.afirmenet.empresas.dao.consultasaldosmovimientolineacredito.Co
 import com.afirme.afirmenet.empresas.service.consultasaldosmovimientos.ConsultaSaldoMovimientoService;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
+import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
 
 
+/**
+ * Created on Dic 14, 2016 3:39:05 PM by Noe
+ * @author Noe Galarza
+ * @version 1.0.0
+ */
 @Service
 public class ConsultaSaldosMovimientosServiceImpl implements ConsultaSaldoMovimientoService{
 	
@@ -27,68 +33,43 @@ public class ConsultaSaldosMovimientosServiceImpl implements ConsultaSaldoMovimi
 	
 	
 
-	@Override
 	public void consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion) {
-		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto) {
-		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void cuentas(List<com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos> cuentas) {
-		// TODO Auto-generated method stub
+	public void cuentas(List<ConsultaSaldosMovimientos> cuentas) {
 		
 	}
 
-	@Override
-	public void consultaSaldosMovimientosCuentas(
-			List<com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos> consultaSaldos) {
-		// TODO Auto-generated method stub
+	public void consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos) {
 		
 	}
 
-	@Override
-	public void ultimosMovimientos(
-			List<com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos> ultimosMovimientos) {
-		// TODO Auto-generated method stub
+	public void ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos) {
 		
 	}
 
-	@Override
-	public void movimientosMes(
-			List<com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos> movimientoMes) {
-		// TODO Auto-generated method stub
+	public void movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes) {
 		
 	}
 
-	@Override
-	public void retenidos(
-			List<com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos> retenidos) {
-		// TODO Auto-generated method stub
+	public void retenidos(List<ConsultaSaldosMovimientos> retenidos) {
 		
 	}
 
-	@Override
-	public void buscarHistorico(
-			List<com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos> buscarHistorico) {
-		// TODO Auto-generated method stub
+	public void buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico) {
 		
 	}
 
-	@Override
 	public void cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC) {
-		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo) {
-		// TODO Auto-generated method stub
 		
 	}
 

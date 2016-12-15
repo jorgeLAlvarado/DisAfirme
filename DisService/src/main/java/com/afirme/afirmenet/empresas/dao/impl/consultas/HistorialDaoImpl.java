@@ -35,7 +35,6 @@ public class HistorialDaoImpl implements HistorialDao {
 	 * @param esBasicoSinToken
 	 * @return regresa las consultas basicas.
 	 */
-	@Override
 	public List<TipoTransaccion> listaTransacciones(boolean esBasicoSinToken) {
 		
 		return null;
@@ -46,7 +45,6 @@ public class HistorialDaoImpl implements HistorialDao {
 	 * @param esBasicoSinToken
 	 * @return regresa las categorias.
 	 */
-	@Override
 	public List<String> categorias(boolean esBasicoSinToken) {
 		
 		return null;

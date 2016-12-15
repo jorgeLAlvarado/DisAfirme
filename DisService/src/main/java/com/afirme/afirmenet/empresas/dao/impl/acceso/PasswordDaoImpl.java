@@ -28,7 +28,6 @@ public class PasswordDaoImpl implements PasswordDao {
 	 * @return TRUE si el proceso no presento problemas.
 	 * 
 	 */
-	@Override
 	public Map<String, String> updatePassword(String idContrato, String password, String nuevoPassword) {
 		
 		
@@ -43,7 +42,6 @@ public class PasswordDaoImpl implements PasswordDao {
 	 * @return TRUE si el proceso no presento problemas.
 	 * 
 	 */
-	@Override
 	public boolean setPassword(String idContrato, String password) {
 		
 		return false;
@@ -55,7 +53,6 @@ public class PasswordDaoImpl implements PasswordDao {
 	 * @param idContrato
 	 * 
 	 */
-	@Override
 	public void mailNotificacionCambioPwd(String idContrato) {
 		
 	}
@@ -68,7 +65,6 @@ public class PasswordDaoImpl implements PasswordDao {
 	 * @return regresa la peticion para el cambio de contraseña
 	 * 
 	 */
-	@Override
 	public Map<String, String> solicitudCambioPwd(String idContrato, String nuevoPassword) {
 		
 		
@@ -83,7 +79,6 @@ public class PasswordDaoImpl implements PasswordDao {
 	 * @return regresa la validacion del usuario autentificado.
 	 * 
 	 */
-	@Override
 	public String validaPassword(String idContrato, String codigoToken) {
 		
 		return null;

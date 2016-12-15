@@ -10,8 +10,9 @@ import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
 import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
 
 /**
- * @author Noe
- *
+ * Created on Dic 14, 2016 3:39:05 PM by Noe
+ * @author Noe Galarza
+ * @version 1.0.0
  */
 @Service
 public class ConsultaTDCServiceImpl implements ConsultaTDCService{
@@ -19,50 +20,20 @@ public class ConsultaTDCServiceImpl implements ConsultaTDCService{
 	
 	@Autowired
 	private ConsultaTDCDao consultaTDC;
-
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService#consultaTDC(java.util.List)
-	 */
-	@Override
-	public void consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService#consultaDespuesCorte(java.util.List)
-	 */
-	@Override
-	public void consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService#consultaMovimientoCorte(java.util.List)
-	 */
-	@Override
-	public void consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService#consultaMovimientoCorteAtras(java.util.List)
-	 */
-	@Override
-	public void consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService#consultaPromocionesPlazos(java.util.List)
-	 */
 	
-	@Override
+	public void consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos) {
+		
+	}
+	public void consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte) {
+		
+	}
+	public void consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte) {
+		
+	}
+	public void consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras) {
+		
+	}
 	public void consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos) {
-		// TODO Auto-generated method stub
 		
 	}
 

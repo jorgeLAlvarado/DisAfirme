@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
 
 /**
- * @author Noe
- *
+ * Created on Dic 14, 2016 3:39:05 PM by Noe
+ * @author Noe Galarza
+ * @version 1.0.0
  */
 @Service
 public interface ConsultaTDCService {

@@ -18,8 +18,8 @@ import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 
 /**
- * clase para validar la contraseña
- *  * 
+ * clase para realizar todas las modificaciones y consulta de las distintas operaciones con usuarios
+ *   
  * @author Bayron Gamboa Martinez
  *
  * @version 1.0.0
@@ -40,21 +40,10 @@ public class UserDaoImpl implements UserDao {
 	@Autowired
 	private DB2Dao db2Dao;
 	
-	/**
-	 * metodo para obtener el correo del usuario
-	 * @param contrato
-	 * @return el correo del contacto.
-	 * 
-	 */
 	public String getMailUsuario(String contrato) {
 		return null;
 	}
 
-	/**
-	 * metodo para actualizar el correo del usuario
-	 * @param correoElectronicoDTO
-	 * @return TRUE si el proceso no presento problemas.
-	 */
 	public boolean actualizarCorreoLogin(CorreoElectronicoDTO correoElectronicoDTO) throws Exception{
 		return false;
 	}
@@ -64,64 +53,64 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	public String obtenerTipoRegimen(String contrato) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
 	public int obtenerNumeroIntento(String contrato) {
-		// TODO Auto-generated method stub
+	
 		return 0;
 	}
 
 	public boolean verificarUsuarioRegistrado(String contrato) {
-		// TODO Auto-generated method stub
+	
 		return false;
 	}
 
 	public boolean registrarUsuarioAlias(String contrato) {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
 	public boolean actualizarPrimerLoginConAlias(String contrato) {
-		// TODO Auto-generated method stub
+	
 		return false;
 	}
 
 	public boolean incrementarNumeroIntentos(String contrato) {
-		// TODO Auto-generated method stub
+	
 		return false;
 	}
 
 	public boolean actualizarAlias(String contrato, String alias) {
-		// TODO Auto-generated method stub
+	
 		return false;
 	}
 
 	public boolean actualizarAliasLogin(String contrato, String alias, String avatar) {
-		// TODO Auto-generated method stub
+	
 		return false;
 	}
 
 	public String obtenerAvatar(String contrato) {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 
 	public String obtenerFechaNacimiento(String cliente) {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 	
 
 	public List<UsuariosDTO> getTokens(Boolean soloDiponibles) {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 	
 
 	public List<UsuariosDTO> getdatosUsuario(String datos) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	

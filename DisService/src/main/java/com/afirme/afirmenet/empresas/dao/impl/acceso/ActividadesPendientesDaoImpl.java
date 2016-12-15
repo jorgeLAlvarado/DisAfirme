@@ -17,12 +17,10 @@ import com.afirme.afirmenet.empresas.dao.acceso.ActividadesPendientesDao;
 public class ActividadesPendientesDaoImpl implements ActividadesPendientesDao{
 	
 	
-	@Override
 	public List<Notificaciones> getNotificacionesPendientes (String datos){
 		
 		return null;
 	}
-	@Override
 	public List<Notificaciones> getAutorizacionesPendientes (String datos){
 		
 		return null;

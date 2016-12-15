@@ -15,48 +15,27 @@ import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
 @Repository
 public class ConsultaTDCDaoImpl extends Emp_BaseDao implements ConsultaTDCDao {
 
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.dao.consultaTDC.ConsultaTDCDao#consultaTDC(java.util.List)
-	 */
-	@Override
+	
 	public void consultaTDC(List<ConsulatasSaldosMovimientos> consulta) {
-		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.dao.consultaTDC.ConsultaTDCDao#consultaDespuesCorte(java.util.List)
-	 */
-	@Override
 	public void consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte) {
-		// TODO Auto-generated method stub
+	
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.dao.consultaTDC.ConsultaTDCDao#consultaMovimientoCorte(java.util.List)
-	 */
-	@Override
 	public void consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.dao.consultaTDC.ConsultaTDCDao#consultaMovimientoCorteAtras(java.util.List)
-	 */
-	@Override
+
 	public void consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras) {
-		// TODO Auto-generated method stub
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.afirme.afirmenet.dao.consultaTDC.ConsultaTDCDao#consultaPromocionesPlazos(java.util.List)
-	 */
-	@Override
 	public void consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 

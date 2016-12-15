@@ -22,7 +22,6 @@ public class FinDiaDaoImpl implements FinDiaDao {
 	 * metodo para validar manda la nueva contraseña
 	 * @return TRUE si el proceso no presento problemas.
 	 */
-	@Override
 	public String getFinDia() {
 		
 
@@ -36,7 +35,6 @@ public class FinDiaDaoImpl implements FinDiaDao {
 	 * @param password
 	 * @return TRUE si el proceso no presento problemas.
 	 */
-	@Override
 	public void valActivSocket() {
 		
 		

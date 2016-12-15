@@ -29,7 +29,6 @@ public class OTPDaoImpl implements OTPDao {
 	 * @param contrato
 	 * @return regresa el token del usuario.
 	 */
-	@Override
 	public String obtenToken(String contrato) {
 		
 		return null;
@@ -41,7 +40,6 @@ public class OTPDaoImpl implements OTPDao {
 	 * @param contrato
 	 * @return TRUE si el proceso no presento problemas.
 	 */
-	@Override
 	public boolean usaTokens(String contrato) {
 		
 			return false;						
@@ -58,7 +56,6 @@ public class OTPDaoImpl implements OTPDao {
 	 * @param codigoActivacion
 	 * @return TRUE si el proceso no presento problemas.
 	 */
-	@Override
 	public boolean validaTokenXActivar(String contrato, String usuario, int serialToken, String codigoActivacion) {
 		
 		return false;
@@ -72,7 +69,6 @@ public class OTPDaoImpl implements OTPDao {
 	 * @param codigoSegEncrypt
 	 * @return TRUE si el proceso no presento problemas.
 	 */
-	@Override
 	public boolean setCodigoSeguridad(String contrato, String usuario, String codigoSegEncrypt) {
 		
 		return false;
@@ -86,7 +82,6 @@ public class OTPDaoImpl implements OTPDao {
 	 * @return TRUE si el proceso no presento problemas.
 	 * 
 	 */
-	@Override
 	public boolean setFechaVencimiento(String serialToken, String fechaVencimiento) {
 		
 		

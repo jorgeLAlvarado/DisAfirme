@@ -11,6 +11,14 @@ import com.afirme.afirmenet.ibs.beans.consultas.Cuenta;
 import com.afirme.afirmenet.ibs.databeans.DC_CONFMSG;
 import com.afirme.afirmenet.model.configuraciones.ContrasenaDTO;
 
+/**
+ * clase para dar la validacion de fin de dia
+ * 
+ * @author Bayron Gamboa Martinez
+ *	@since 13/12/2016
+ *
+ * @version 1.0.2
+ */
 public interface LogInService {
 
 	  /**
