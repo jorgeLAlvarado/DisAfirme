@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
+import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
 import com.afirme.afirmenet.service.consultas.HistorialService;
@@ -64,7 +65,10 @@ public class HistorialMovimientosController extends BaseController{
 	
 	@RequestMapping("/historial_operaciones.htm")
 	public String historial(ModelMap model, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo");
+		//Se verifica logueo para extraer datos
+				AfirmeNetUser afirmeNetUser = getSessionUser(request);
+				LOG.debug("Se enlista de usuarios");
+				LOG.debug("Funciona este metodo");
 		return null;
 	}
 
@@ -80,7 +84,10 @@ public class HistorialMovimientosController extends BaseController{
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value ="/historial_resultados.htm", method = RequestMethod.POST)
 	public String resultados(ModelMap model, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo");
+		//Se verifica logueo para extraer datos
+				AfirmeNetUser afirmeNetUser = getSessionUser(request);
+				LOG.debug("Se enlista de usuarios");
+				LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -93,7 +100,10 @@ public class HistorialMovimientosController extends BaseController{
 	 */
 	@RequestMapping("/historial_comprobante.htm")
 	public String comprobante(ModelMap model, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo");
+		//Se verifica logueo para extraer datos
+				AfirmeNetUser afirmeNetUser = getSessionUser(request);
+				LOG.debug("Se enlista de usuarios");
+				LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
