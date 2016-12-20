@@ -1,8 +1,6 @@
 package com.afirme.afirmenet.web.empresas.controller.administrado.usuarios;
 
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,6 @@ import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.web.controller.base.BaseController;
-import com.afirme.afirmenet.web.controller.servicios.tarjetaDebito.cambioEstatus.TarjDebCambioEstatusController;
 /**
  * @author usuario
  *
@@ -43,7 +40,7 @@ public class UsuariosController extends BaseController{
 	@RequestMapping(value = "/listUsuarios.htm", method = RequestMethod.POST)
 	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		List<UsuariosDTO> 
+		LOG.debug("Se pode lista de usuarios");
 		return null;
 	}
 	
