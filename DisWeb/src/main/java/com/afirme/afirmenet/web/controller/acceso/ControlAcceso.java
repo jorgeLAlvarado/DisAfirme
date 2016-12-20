@@ -15,8 +15,8 @@ import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.OTPService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
+import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.model.Login;
 /**
  * Controller para las pantallas de las url donde se debe mostrar la pantalla de login.
  * 

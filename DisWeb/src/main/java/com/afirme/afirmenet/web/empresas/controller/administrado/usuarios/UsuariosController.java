@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.exception.AfirmeNetException;
+import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
-import com.afirme.afirmenet.empresas.service.administrador.usuarios.UsuariosService;
 import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
 
 /**
@@ -31,17 +31,17 @@ public class UsuariosController extends BaseController{
 	@Autowired
 	private UserService userService;
 	
-	@Autowired
-	private UsuariosService listaUsuariosService;
 	
 	/**
 	 * Cuando el usuario da clic al boton de agregar usuario en el token a asignar
+	 * Checa que el usuario se encuentre logueado
 	 * @param request
 	 * @param modelMap
 	 * @return
 	 */
 	@RequestMapping(value="/Agregar_Usuario", method = RequestMethod.POST)
 	public String agregaUsuarios(HttpServletRequest request,	ModelMap modelMap){
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		return null;
 	}
 	
