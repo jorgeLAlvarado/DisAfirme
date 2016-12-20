@@ -3,8 +3,6 @@ package com.afirme.afirmenet.empresas.service.acceso;
 
 import java.util.List;
 
-import com.afirme.afirmenet.empresas.dao.acceso.AliasAvatarDTO;
-import com.afirme.afirmenet.empresas.services.token.Token;
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 

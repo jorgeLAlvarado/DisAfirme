@@ -16,11 +16,16 @@ import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.web.controller.base.BaseController;
 /**
- * @author usuario
+ * Controlador para 
+ * @author Selene Mena Quiñones
  *
  * Modificado on dic 14, 2016 3:12:21 PM by Selene 
  * 
  * @author Selene Mena Quiñones
+ * 
+ * Modificado on dic 20, 2016 1:28:21 PM by Jorge
+ * 
+ *  @author Jorge Alvarado
  */
 @Controller
 @RequestMapping(value= "/usuarios")
@@ -42,15 +47,16 @@ public class UsuariosController extends BaseController{
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.debug("Se enlista de usuarios");
+		
 		return null;
 	}
-	
 	/**
 	 * Consulta de tokens
 	 * @param request
 	 * @param modelMap
 	 * @return
 	 */
+	
 	@RequestMapping(value = "/TokensDisponibles.htm", method = RequestMethod.POST)
 	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
@@ -63,6 +69,7 @@ public class UsuariosController extends BaseController{
 	 * @param modelMap
 	 * @return
 	 */
+	
 	@RequestMapping(value="/Agregar_Usuario.htm", method = RequestMethod.POST)
 	public String agregaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
@@ -75,9 +82,10 @@ public class UsuariosController extends BaseController{
 	 * @param modelMap
 	 * @return
 	 */
+	
 	@RequestMapping(value="/agregar_permisos.htm", method = RequestMethod.POST)
 	public String agregaPermisos(HttpServletRequest request,	ModelMap modelMap){
-		//Se verifica logueo para extraer datos
+		//Se verifica que el usuario esta logueado para extraer datos
 		LOG.debug("Se enlistan usuarios");
 		return null;
 	}
@@ -87,6 +95,7 @@ public class UsuariosController extends BaseController{
 	 * @param modelMap
 	 * @return
 	 */
+	
 	@RequestMapping(value="/agregar_contrasena.htm", method = RequestMethod.POST)
 	public String agregaContrasenia(HttpServletRequest request,	ModelMap modelMap){
 		LOG.debug("Contraseña guardada");
@@ -99,6 +108,7 @@ public class UsuariosController extends BaseController{
 	 * @param httpServletRequest
 	 * @return
 	 */
+	
 	@RequestMapping(value = "/confirmacion.htm", method = RequestMethod.POST)
 	public String valida(UsuariosDTO usuariosDTO, ModelMap modelMap, HttpServletRequest httpServletRequest){
 		LOG.debug("Se confirman datos de nuevo usuario");
@@ -111,6 +121,7 @@ public class UsuariosController extends BaseController{
 	 * @throws AfirmeNetException
 	 * @throws Exception
 	 */
+	
 	private void validarDatosRecibidos(UsuariosDTO usuariosDTO) throws AfirmeNetException,Exception{
 		
 	}
@@ -121,6 +132,7 @@ public class UsuariosController extends BaseController{
 	 * 
 	 * @param usuariosDTO
 	 */
+	
 	private void enviarComprobante(UsuariosDTO usuariosDTO){
 		
 	}
