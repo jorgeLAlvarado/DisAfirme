@@ -16,7 +16,8 @@ import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.web.controller.base.BaseController;
 /**
- * Controlador para 
+ * Controlador para administrar usuarios
+ * 
  * @author Selene Mena Quiñones
  *
  * Modificado on dic 14, 2016 3:12:21 PM by Selene 
