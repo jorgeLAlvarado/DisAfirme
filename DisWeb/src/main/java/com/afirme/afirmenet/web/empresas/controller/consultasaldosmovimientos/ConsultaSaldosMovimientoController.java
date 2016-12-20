@@ -31,7 +31,7 @@ public class ConsultaSaldosMovimientoController {
 	/**
 	 * @param consultaCuenta
 	 */
-	@RequestMapping(value = "/consultacuenta.htm")
+	@RequestMapping(value = "/consulta_cuenta.htm")
 	public String Cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 		
 		LOGGER.debug("Funciona este metodo consultaCuenta");
@@ -42,7 +42,7 @@ public class ConsultaSaldosMovimientoController {
 	/**
 	 * @param consultaCredito
 	 */
-	@RequestMapping(value = "/consultacredito.htm")
+	@RequestMapping(value = "/consulta_credito.htm")
 	public String Credito(ConsultaSaldosMovimientosLC consultaCredito) {
 		LOGGER.debug("Funciona este metodo consultaCredito");
 		return null;
@@ -52,7 +52,7 @@ public class ConsultaSaldosMovimientoController {
 	/**
 	 * @param consultaInversion
 	 */
-	@RequestMapping(value = "/consultaInversion.htm")
+	@RequestMapping(value = "/consulta_inversion.htm")
 	public String inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
 		LOGGER.debug("Funciona este metodo consultaInversion");
 		return null;
@@ -62,7 +62,7 @@ public class ConsultaSaldosMovimientoController {
 	/**
 	 * @param consultaDetalle
 	 */
-	@RequestMapping(value = "/consultaDetalle.htm")
+	@RequestMapping(value = "/consulta_detalle.htm")
 	public String DetalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
 		LOGGER.debug("Funciona este metodo consultaDetalle");
 		return null;
@@ -72,7 +72,7 @@ public class ConsultaSaldosMovimientoController {
 	/**
 	 * @param prestamo
 	 */
-	@RequestMapping(value = "/Prestamo.htm")
+	@RequestMapping(value = "/prestamo.htm")
 	public String Prestamo(ConsultaSaldosMovimientosLC prestamo) {
 		LOGGER.debug("Funciona este metodo prestamo");
 		return null;
