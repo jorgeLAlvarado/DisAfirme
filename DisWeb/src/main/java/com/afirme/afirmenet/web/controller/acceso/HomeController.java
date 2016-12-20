@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.afirme.afirmenet.empresas.service.acceso.ActividadesPendientesService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
 import com.afirme.afirmenet.ibs.beans.consultas.Cuenta;
-import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
+import com.afirme.afirmenet.utils.AfirmeNetLog;
+import com.afirme.afirmenet.web.controller.base.BaseController;
 import com.afirme.afirmenet.web.empresas.model.AfirmeNetUser;
 import com.afirme.afirmenet.web.empresas.utils.AfirmeNetWebConstants;
 
@@ -33,8 +34,10 @@ import com.afirme.afirmenet.web.empresas.utils.AfirmeNetWebConstants;
  * 
  */
 @Controller
+@RequestMapping("/home")
 public class HomeController  extends BaseController{
 	
+	static final AfirmeNetLog LOG = new AfirmeNetLog(HomeController.class);
 	
 	@Autowired
 	private ActividadesPendientesService actividadesPendientesService;
@@ -71,6 +74,7 @@ public class HomeController  extends BaseController{
 	 */
 	@RequestMapping(value = "/login.htm", method = RequestMethod.GET)
 	public String login(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -82,11 +86,13 @@ public class HomeController  extends BaseController{
 	 */
 	@RequestMapping(value = "/index.htm", method = RequestMethod.GET)
 	public String index(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
 	@RequestMapping(value = "/home.htm", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, ModelMap modelMap) {
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -98,7 +104,8 @@ public class HomeController  extends BaseController{
 	 * @return pagina JSP
 	 */
 	@RequestMapping(value = "/notificaciones.htm", method = RequestMethod.GET)
-	public String actividadesPendientesService(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
+	public String notificaciones(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	

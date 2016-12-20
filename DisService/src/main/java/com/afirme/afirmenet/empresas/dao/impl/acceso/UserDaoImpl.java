@@ -102,19 +102,14 @@ public class UserDaoImpl implements UserDao {
 		return null;
 	}
 	
-
 	public List<UsuariosDTO> getTokens(Boolean soloDiponibles) {
 	
 		return null;
 	}
 	
-
 	public List<UsuariosDTO> getdatosUsuario(String datos) {
 		
 		return null;
 	}
-	
-
-
 	
 }
