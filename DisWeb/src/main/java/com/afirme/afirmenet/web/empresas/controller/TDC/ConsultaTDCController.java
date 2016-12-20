@@ -34,8 +34,10 @@ public class ConsultaTDCController {
 		return null;
 	}
 */
-	@RequestMapping(value = "/ConsultaTDC.htm")
+	@RequestMapping(value = "/consulta_tdc.htm")
 	public String obtenerConsulta(){
+		
+		
 		
 		LOGGER.debug("Funciona este metodo");
 		return null;
