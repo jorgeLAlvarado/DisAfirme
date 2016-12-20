@@ -10,6 +10,7 @@
   	<module>DisService</module>
   	<module>UMLDiseño</module>
   	<module>DisUML</module>
+  	<module>DisUtils</module>
   </modules>
   <properties>
 		<!-- Propiedades generales -->
