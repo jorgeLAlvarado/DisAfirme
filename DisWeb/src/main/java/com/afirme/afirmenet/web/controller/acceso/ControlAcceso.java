@@ -59,21 +59,21 @@ public class ControlAcceso{
 	protected TokenService tokenService;
 	
 	
-	@RequestMapping(value = "/validaContrato.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/valida_contrato.htm", method = RequestMethod.POST)
 	public String validaContrato(Login login,ModelMap modelMap) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: validacion de contrato");
 		return null;
 	}
 
 	@RequestMapping(value = "/sincroniza.htm", method = RequestMethod.POST)
 	public String sincroniza(@ModelAttribute("login") Login login, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo sincroniza las notificasiones");
 		return null;
 	}
 
-	@RequestMapping(value = "/sincronizacionToken", method = RequestMethod.POST)
+	@RequestMapping(value = "/sincronizacion_token", method = RequestMethod.POST)
 	public void sincronizacionToken(@ModelAttribute("sincronizacion") Login login, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo sincroniza el token");
 	}
 	
 	/**
@@ -85,9 +85,9 @@ public class ControlAcceso{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/validaUsrActivacion.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/valida_usr_activacion.htm", method = RequestMethod.POST)
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo Validacin de usuario activo");
 		return null;
 	}
 	
@@ -98,9 +98,9 @@ public class ControlAcceso{
 	 * @param modelMap
 	 * @return
 	 */
-	@RequestMapping(value = "/preguntaSecreta.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/pregunta_secreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: manda la pregunta secreta");
 		return null;
 	}
 	
@@ -114,10 +114,10 @@ public class ControlAcceso{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/guardaPregSecreta.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/guarda_preg_secreta.htm", method = RequestMethod.POST)
 	public String guardaPreguntaSecreta(@ModelAttribute("activacion") Login login, 
 			ModelMap modelMap, HttpServletRequest request, RedirectAttributes redirect) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: guardar respuesta de pregunta secreta");
 		return null;
 	}
 	

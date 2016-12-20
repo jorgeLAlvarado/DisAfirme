@@ -1,26 +1,42 @@
 package com.afirme.afirmenet.web.controller.acceso;
 
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
-import com.afirme.afirmenet.beas.login.JBAvatar;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
+import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
+import com.afirme.afirmenet.web.controller.base.BaseController;
+
 
 /**
- * clase para implementar la contraseña
- *  * 
+ * clase para implementar la contraseña.
+ * 
+ * @author jorge.canoc@gmail.com
+ * 
+ * Modificado on Nov 6, 2015 10:12:21 AM by eguzher
+ * <br>
+ * <br>
+ * @author epifanio.guzman@afirme.com
+ * <br>
+ * 
+ * Modificado on dic 13, 2016 11:12:21 AM by Bayron 
+ * 
  * @author Bayron Gamboa Martinez
- *
- * @version 1.0.0
  */
-
 @Controller
 @SessionAttributes({"acceso","pathAvatar","intentosToken"})
 @RequestMapping("/controlAccesoBasico")
@@ -52,9 +68,9 @@ public class ControlAccesoBasico  extends BaseController{
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping(value = "/validaUsrActivacion.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/valida_usr_activacion.htm", method = RequestMethod.POST)
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: Valida el usuario activo");
 		return null;
 	}
 	
@@ -65,9 +81,9 @@ public class ControlAccesoBasico  extends BaseController{
 	 * @param modelMap
 	 * @return
 	 */
-	@RequestMapping(value = "/preguntaSecreta.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/pregunta_secreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: Manda a llamar la pregunta secreta");
 		return null;
 	}
 	
@@ -81,45 +97,45 @@ public class ControlAccesoBasico  extends BaseController{
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping(value = "/guardaPregSecreta.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/guarda_preg_secreta.htm", method = RequestMethod.POST)
 	public String guardaPreguntaSecreta(@ModelAttribute("activacion") Login login, 
 			ModelMap modelMap, HttpServletRequest request, RedirectAttributes redirect) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: se guarda la pregunta secreta");
 		return null;
 	}
 	
-	@RequestMapping(value = "/establecePwd.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/establece_pwd.htm", method = RequestMethod.POST)
 	public String establecePassword(@ModelAttribute("login") Login login, 
 			ModelMap modelMap, HttpServletRequest request) {
 		
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo metodo para gruardar contrasela");
 		return null;
 	}
 	
 	@RequestMapping(value = "/alias.htm", method = RequestMethod.POST)
 	public String capturaAlias(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: metodo para guardar el alias");
 		return null;
 	}
 	
-	@RequestMapping(value = "/aliasConfirma.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/alias_confirma.htm", method = RequestMethod.POST)
 	public String confirmaAlias(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: confirma alias");
 			return null;
-		}		
+				
 	}	
 	
 	
 	@SuppressWarnings("rawtypes")
 	@RequestMapping(value = "/activacion.htm", method = RequestMethod.POST)
 	public String activacion(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		LOG.debug("Funciona este metodo");
-		return AfirmeNetWebConstants.MV_LOGIN_DATOS_ACCESO;
+		LOG.debug("Funciona este metodo: activacion");
+		return null;
 	}
 	
 	@RequestMapping(value = "/validaRespuesta.htm", method = RequestMethod.POST)
 	public String validaRespuesta(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: valida la respuiesta");
 			return null;
 	}
 	

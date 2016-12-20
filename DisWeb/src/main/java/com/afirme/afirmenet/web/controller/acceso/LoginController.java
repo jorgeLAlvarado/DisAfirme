@@ -17,8 +17,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
+import com.afirme.afirmenet.web.controller.base.BaseController;
 
 
 
@@ -55,23 +57,23 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/contrato.htm", method = RequestMethod.POST)
 	public String mostrarAvisoSeguridad(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
 		
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: retorna la vista del contrato del usuario");
 		
 		return null;
 	}
 
-	@RequestMapping(value = "/avisoSeguridad.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/aviso_seguridad.htm", method = RequestMethod.POST)
 	public String mostrarDatosAcceso(@ModelAttribute("login") Login login,ModelMap modelMap,
 			HttpServletRequest request, HttpServletResponse response) {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: Muesta el aviso de seguridad de AFIRME");
 		return null;
 	}
 
 
-	@RequestMapping(value = "/datosAcceso.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/datos_acceso.htm", method = RequestMethod.POST)
 	public String mostrarHome(@ModelAttribute("login") Login login,
 			HttpServletRequest request, ModelMap modelMap) throws AfirmeNetException{
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: entra al home de acceso");
 		return null;
 
 	}
@@ -80,7 +82,7 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/terminos.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String mostrarTerminos() {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: muesta los terminos y condiciones de AFIRME");
 		return null;
 	}
 	
@@ -94,7 +96,7 @@ public class LoginController extends BaseController {
 	 */
 	public boolean validaTokenLogIn(String passCode, AfirmeNetUser afirmeNetUser, ModelMap modelMap, Login login) {
 		
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: valida el token");
 		
 		return false;
 	}

@@ -13,10 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.log.LogService;
-import com.afirme.afirmenet.enums.ConfigPersonas;
-import com.afirme.afirmenet.ibs.generics.Util;
-import com.afirme.afirmenet.utils.AfirmeNetConstants;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
+import com.afirme.afirmenet.web.controller.base.BaseController;
 
 
 /**
@@ -50,29 +48,29 @@ public class LogoutController extends BaseController {
 	@RequestMapping(value = "/logout.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutSeguro(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: finalisa sesion");
 		return null;
 	}
 
 	
-	@RequestMapping(value = "/logoutEnrolamiento.htm", method = { RequestMethod.GET,
+	@RequestMapping(value = "/logout_enrolamiento.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutSeguroEnrolamiento(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: Termina sesion de Enrolamiento");
 		return null;
 	}
 	
-	@RequestMapping(value = "/CEP-SPEI.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/cep_spei.htm", method = RequestMethod.POST)
 	public String cepSPEI(HttpServletRequest request, ModelMap modelMap) {				
 		
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: Cierra CEP-SPEI ");
 		return null;		
 	}
 	
-	@RequestMapping(value = "/logoutVersionClasica.htm", method = { RequestMethod.GET,
+	@RequestMapping(value = "/logout_version_clasica.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutVersionClasica(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		LOG.debug("Funciona este metodo");
+		LOG.debug("Funciona este metodo: manda fin de sesion");
 		return null;
 	}
 	
