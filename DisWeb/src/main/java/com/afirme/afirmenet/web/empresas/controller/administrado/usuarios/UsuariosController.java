@@ -43,7 +43,7 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/listUsuarios.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/list_usuarios.htm", method = RequestMethod.POST)
 	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
@@ -58,10 +58,11 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/TokensDisponibles.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/tokens_disponibles.htm", method = RequestMethod.POST)
 	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.debug("Se enlista de usuarios");
 		return null;
 	}
 	/**
@@ -71,7 +72,7 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	
-	@RequestMapping(value="/Agregar_Usuario.htm", method = RequestMethod.POST)
+	@RequestMapping(value="/agregar_usuario.htm", method = RequestMethod.POST)
 	public String agregaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		LOG.debug("Se enlistan usuarios");
