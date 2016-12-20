@@ -11,6 +11,7 @@
   	<module>UMLDiseño</module>
   	<module>DisUML</module>
   	<module>DisUtils</module>
+  	<module>Web</module>
   </modules>
   <properties>
 		<!-- Propiedades generales -->
