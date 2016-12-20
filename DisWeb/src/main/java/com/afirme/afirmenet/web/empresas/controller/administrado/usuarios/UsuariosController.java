@@ -14,9 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.afirme.afirmenet.exception.AfirmeNetException;
 import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
+import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
-import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
-
+import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.controller.servicios.tarjetaDebito.cambioEstatus.TarjDebCambioEstatusController;
 /**
  * @author usuario
  *
@@ -31,7 +32,31 @@ public class UsuariosController extends BaseController{
 	@Autowired
 	private UserService userService;
 	
+	static final AfirmeNetLog LOG = new AfirmeNetLog(UsuariosController.class);
+	/**
+	 * Consulta de usuarios
+	 * @param request
+	 * @param modelMap
+	 * @return
+	 */
 	
+	@RequestMapping(value = "/listUsuarios.htm", method = RequestMethod.POST)
+	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		List<UsuariosDTO> 
+		return null;
+	}
+	
+	/**
+	 * Consulta de tokens
+	 * @param request
+	 * @param modelMap
+	 * @return
+	 */
+	@RequestMapping(value = "/TokensDisponibles.htm", method = RequestMethod.POST)
+	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
+		return null;
+	}
 	/**
 	 * Cuando el usuario da clic al boton de agregar usuario en el token a asignar
 	 * Checa que el usuario se encuentre logueado
@@ -41,7 +66,8 @@ public class UsuariosController extends BaseController{
 	 */
 	@RequestMapping(value="/Agregar_Usuario", method = RequestMethod.POST)
 	public String agregaUsuarios(HttpServletRequest request,	ModelMap modelMap){
-		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		
+		LOG.debug("Se agregará usuario");
 		return null;
 	}
 	
@@ -119,26 +145,5 @@ public class UsuariosController extends BaseController{
 		
 	}
 	
-	/**
-	 * Consulta de usuarios
-	 * @param request
-	 * @param modelMap
-	 * @return
-	 */
-	@RequestMapping(value = "/listUsuarios", method = RequestMethod.POST)
-	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
-		return null;
-	}
-	
-	/**
-	 * Consulta de tokens
-	 * @param request
-	 * @param modelMap
-	 * @return
-	 */
-	@RequestMapping(value = "/TokensDisponibles", method = RequestMethod.POST)
-	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
-		return null;
-	}
-	
+
 }

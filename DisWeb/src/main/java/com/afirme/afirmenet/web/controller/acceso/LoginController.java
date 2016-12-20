@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.afirme.afirmenet.controller.controlador;
+import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 
 
