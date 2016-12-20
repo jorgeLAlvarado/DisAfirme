@@ -39,8 +39,9 @@ public class UsuariosController extends BaseController{
 	
 	@RequestMapping(value = "/listUsuarios.htm", method = RequestMethod.POST)
 	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
+		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		LOG.debug("Se pode lista de usuarios");
+		LOG.debug("Se enlista de usuarios");
 		return null;
 	}
 	
@@ -52,6 +53,7 @@ public class UsuariosController extends BaseController{
 	 */
 	@RequestMapping(value = "/TokensDisponibles.htm", method = RequestMethod.POST)
 	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		return null;
 	}
 	/**
@@ -61,10 +63,10 @@ public class UsuariosController extends BaseController{
 	 * @param modelMap
 	 * @return
 	 */
-	@RequestMapping(value="/Agregar_Usuario", method = RequestMethod.POST)
+	@RequestMapping(value="/Agregar_Usuario.htm", method = RequestMethod.POST)
 	public String agregaUsuarios(HttpServletRequest request,	ModelMap modelMap){
-		
-		LOG.debug("Se agregará usuario");
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.debug("Se enlistan usuarios");
 		return null;
 	}
 	
@@ -75,8 +77,10 @@ public class UsuariosController extends BaseController{
 	 * @param httpServletRequest
 	 * @return
 	 */
-	@RequestMapping(value = "/Agregar_Usuarios_Validar_Datos", method = RequestMethod.POST)
-	public String validaDatos(UsuariosDTO usuariosDTO, ModelMap modelMap, HttpServletRequest httpServletRequest){
+	@RequestMapping(value = "/guardar_usuario", method = RequestMethod.POST)
+	public String validaDatos(HttpServletRequest request,	ModelMap modelMap){
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.debug("Usuario guardado");
 		return null;
 	}
 	/**
@@ -85,8 +89,10 @@ public class UsuariosController extends BaseController{
 	 * @param modelMap
 	 * @return
 	 */
-	@RequestMapping(value = "/Agregar_Usuarios_Permisos", method = RequestMethod.POST)
+	@RequestMapping(value = "/guardar_permisos", method = RequestMethod.POST)
 	public String agregarPermisos(HttpServletRequest request,	ModelMap modelMap){
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.debug("Permisos guardados");
 		return null;
 	}
 	/**
@@ -95,19 +101,10 @@ public class UsuariosController extends BaseController{
 	 * @param modelMap
 	 * @return
 	 */
-	@RequestMapping(value="/Agregar_Usuario_Contrasenia", method = RequestMethod.POST)
+	@RequestMapping(value="/gurdar_contrasena", method = RequestMethod.POST)
 	public String agregaContrasenia(HttpServletRequest request,	ModelMap modelMap){
-		return null;
-	}
-	/**
-	 * Cuando el usuario da clic al boton continuar e ingresa las contraseñas a validar
-	 * @param usuariosDTO
-	 * @param modelMap
-	 * @param httpServletRequest
-	 * @return
-	 */
-	@RequestMapping(value = "/Agregar_Usuarios_Validar_Contrasenia", method = RequestMethod.POST)
-	public String validaContrasenia(UsuariosDTO usuariosDTO, ModelMap modelMap, HttpServletRequest httpServletRequest){
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.debug("Contraseña guardada");
 		return null;
 	}
 	/**
@@ -117,8 +114,9 @@ public class UsuariosController extends BaseController{
 	 * @param httpServletRequest
 	 * @return
 	 */
-	@RequestMapping(value = "/Agregar_Usuario_Comprobante.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/comprobante.htm", method = RequestMethod.POST)
 	public String valida(UsuariosDTO usuariosDTO, ModelMap modelMap, HttpServletRequest httpServletRequest){
+		LOG.debug("Se imprime comprobante");
 		return null;
 	}
 	
