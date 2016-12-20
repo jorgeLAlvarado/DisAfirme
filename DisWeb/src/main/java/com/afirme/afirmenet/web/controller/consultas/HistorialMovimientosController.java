@@ -22,6 +22,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
 import com.afirme.afirmenet.service.consultas.HistorialService;
+import com.afirme.afirmenet.utils.AfirmeNetLog;
 
 
 
@@ -58,7 +59,7 @@ public class HistorialMovimientosController extends BaseController{
 	 */
 	@RequestMapping("/historial-operaciones.htm")
 	public String historial(ModelMap model, HttpServletRequest request) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 
@@ -74,7 +75,7 @@ public class HistorialMovimientosController extends BaseController{
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value ="/historial-resultados.htm", method = RequestMethod.POST)
 	public String resultados(ModelMap model, HttpServletRequest request) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -87,7 +88,7 @@ public class HistorialMovimientosController extends BaseController{
 	 */
 	@RequestMapping("/historial-comprobante.htm")
 	public String comprobante(ModelMap model, HttpServletRequest request) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -101,7 +102,7 @@ public class HistorialMovimientosController extends BaseController{
 	 */
 	private String urlComprobante(TransferenciaBase comprobante, ModelMap modelMap, AfirmeNetUser afirmeNetUser){
 		
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
