@@ -4,6 +4,7 @@ package com.afirme.afirmenet.web.empresas.controller.configuraciones.seguridad;
 import javax.servlet.http.HttpServletRequest;
 
 import com.afirme.afirmenet.utils.AfirmeNetLog;
+import com.afirme.afirmenet.web.controller.base.BaseController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.exception.AfirmeNetException;
 import com.afirme.afirmenet.ibs.generics.Util;
+import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.service.contrato.ContratoService;
 
@@ -31,7 +33,7 @@ import com.afirme.afirmenet.service.contrato.ContratoService;
  */
 @Controller
 @RequestMapping("/configuraciones/seguridad/correo")
-public class ConfigSeguridadCambioCorreoController {
+public class ConfigSeguridadCambioCorreoController extends BaseController {
 	static final AfirmeNetLog LOG = new AfirmeNetLog(ConfigSeguridadCambioCorreoController.class);
 	
 	@Autowired
@@ -50,6 +52,8 @@ public class ConfigSeguridadCambioCorreoController {
 	 */
 	@RequestMapping(value = "/Seguridad_Cambio_Correo.htm", method = RequestMethod.POST)
 	public String goCambioCorreoCuentaAfirme(HttpServletRequest request,	ModelMap modelMap) {
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.debug("Se solicito cambio de correo");
 		return null;
 	}
 	
@@ -63,6 +67,7 @@ public class ConfigSeguridadCambioCorreoController {
 	 */
 	@RequestMapping(value = "/Seguridad_Cambio_Correo_Confirmar.htm", method = RequestMethod.POST)
 	public String confirmarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		return null;	
 	}
 	
