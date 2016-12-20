@@ -50,7 +50,7 @@ public class LogoutController extends BaseController {
 	@RequestMapping(value = "/logout.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutSeguro(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 
@@ -58,21 +58,21 @@ public class LogoutController extends BaseController {
 	@RequestMapping(value = "/logoutEnrolamiento.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutSeguroEnrolamiento(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
 	@RequestMapping(value = "/CEP-SPEI.htm", method = RequestMethod.POST)
 	public String cepSPEI(HttpServletRequest request, ModelMap modelMap) {				
 		
-		
+		LOG.debug("Funciona este metodo");
 		return null;		
 	}
 	
 	@RequestMapping(value = "/logoutVersionClasica.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutVersionClasica(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	

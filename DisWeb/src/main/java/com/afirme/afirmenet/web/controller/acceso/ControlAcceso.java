@@ -61,19 +61,19 @@ public class ControlAcceso{
 	
 	@RequestMapping(value = "/validaContrato.htm", method = RequestMethod.POST)
 	public String validaContrato(Login login,ModelMap modelMap) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 
 	@RequestMapping(value = "/sincroniza.htm", method = RequestMethod.POST)
 	public String sincroniza(@ModelAttribute("login") Login login, ModelMap modelMap) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 
 	@RequestMapping(value = "/sincronizacionToken", method = RequestMethod.POST)
 	public void sincronizacionToken(@ModelAttribute("sincronizacion") Login login, ModelMap modelMap) {
-		
+		LOG.debug("Funciona este metodo");
 	}
 	
 	/**
@@ -87,7 +87,7 @@ public class ControlAcceso{
 	
 	@RequestMapping(value = "/validaUsrActivacion.htm", method = RequestMethod.POST)
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -100,7 +100,7 @@ public class ControlAcceso{
 	 */
 	@RequestMapping(value = "/preguntaSecreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -117,7 +117,7 @@ public class ControlAcceso{
 	@RequestMapping(value = "/guardaPregSecreta.htm", method = RequestMethod.POST)
 	public String guardaPreguntaSecreta(@ModelAttribute("activacion") Login login, 
 			ModelMap modelMap, HttpServletRequest request, RedirectAttributes redirect) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	

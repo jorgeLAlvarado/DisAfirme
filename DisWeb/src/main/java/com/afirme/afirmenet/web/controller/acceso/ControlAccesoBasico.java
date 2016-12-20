@@ -54,7 +54,7 @@ public class ControlAccesoBasico  extends BaseController{
 	 */
 	@RequestMapping(value = "/validaUsrActivacion.htm", method = RequestMethod.POST)
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -67,7 +67,7 @@ public class ControlAccesoBasico  extends BaseController{
 	 */
 	@RequestMapping(value = "/preguntaSecreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -84,7 +84,7 @@ public class ControlAccesoBasico  extends BaseController{
 	@RequestMapping(value = "/guardaPregSecreta.htm", method = RequestMethod.POST)
 	public String guardaPreguntaSecreta(@ModelAttribute("activacion") Login login, 
 			ModelMap modelMap, HttpServletRequest request, RedirectAttributes redirect) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -92,19 +92,19 @@ public class ControlAccesoBasico  extends BaseController{
 	public String establecePassword(@ModelAttribute("login") Login login, 
 			ModelMap modelMap, HttpServletRequest request) {
 		
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
 	@RequestMapping(value = "/alias.htm", method = RequestMethod.POST)
 	public String capturaAlias(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
 	@RequestMapping(value = "/aliasConfirma.htm", method = RequestMethod.POST)
 	public String confirmaAlias(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		
+		LOG.debug("Funciona este metodo");
 			return null;
 		}		
 	}	
@@ -113,13 +113,13 @@ public class ControlAccesoBasico  extends BaseController{
 	@SuppressWarnings("rawtypes")
 	@RequestMapping(value = "/activacion.htm", method = RequestMethod.POST)
 	public String activacion(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		
+		LOG.debug("Funciona este metodo");
 		return AfirmeNetWebConstants.MV_LOGIN_DATOS_ACCESO;
 	}
 	
 	@RequestMapping(value = "/validaRespuesta.htm", method = RequestMethod.POST)
 	public String validaRespuesta(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		
+		LOG.debug("Funciona este metodo");
 			return null;
 	}
 	

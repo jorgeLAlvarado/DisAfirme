@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.afirme.afirmenet.controller.controlador;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 
 
@@ -41,7 +44,6 @@ public class LoginController extends BaseController {
 	
 	static final AfirmeNetLog LOG = new AfirmeNetLog(LoginController.class);
 	
-	
 	/**
 	 * Si la peticion viene desde el portal el contrato que captura el usuario esta en UserId.
 	 * 
@@ -53,7 +55,7 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/contrato.htm", method = RequestMethod.POST)
 	public String mostrarAvisoSeguridad(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
 		
-		
+		LOG.debug("Funciona este metodo");
 		
 		return null;
 	}
@@ -61,6 +63,7 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/avisoSeguridad.htm", method = RequestMethod.POST)
 	public String mostrarDatosAcceso(@ModelAttribute("login") Login login,ModelMap modelMap,
 			HttpServletRequest request, HttpServletResponse response) {
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 
@@ -68,7 +71,7 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/datosAcceso.htm", method = RequestMethod.POST)
 	public String mostrarHome(@ModelAttribute("login") Login login,
 			HttpServletRequest request, ModelMap modelMap) throws AfirmeNetException{
-		
+		LOG.debug("Funciona este metodo");
 		return null;
 
 	}
@@ -77,6 +80,7 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/terminos.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String mostrarTerminos() {
+		LOG.debug("Funciona este metodo");
 		return null;
 	}
 	
@@ -90,7 +94,7 @@ public class LoginController extends BaseController {
 	 */
 	public boolean validaTokenLogIn(String passCode, AfirmeNetUser afirmeNetUser, ModelMap modelMap, Login login) {
 		
-		
+		LOG.debug("Funciona este metodo");
 		
 		return false;
 	}
