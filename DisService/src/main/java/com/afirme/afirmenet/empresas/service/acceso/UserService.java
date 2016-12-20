@@ -21,7 +21,7 @@ import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 public interface UserService {
 	
 	/**
-	 * Se verifica eue el usuario se encuentre registrado
+	 * Se verifica que el usuario se encuentre registrado
 	 * @param contrato
 	 * @return
 	 */

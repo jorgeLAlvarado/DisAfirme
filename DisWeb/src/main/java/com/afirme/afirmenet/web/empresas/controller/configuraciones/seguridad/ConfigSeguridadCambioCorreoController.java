@@ -37,7 +37,7 @@ public class ConfigSeguridadCambioCorreoController {
 	@Autowired
 	private ContratoService contratoService;
 	@Autowired
-	private UserService userService; // UserDaoImpl.java
+	private UserService userService; 
 	
 
 	
