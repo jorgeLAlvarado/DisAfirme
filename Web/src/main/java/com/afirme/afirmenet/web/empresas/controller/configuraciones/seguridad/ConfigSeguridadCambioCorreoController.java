@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
-import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
+import com.afirme.afirmenet.utils.AfirmeNetWebConstants;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

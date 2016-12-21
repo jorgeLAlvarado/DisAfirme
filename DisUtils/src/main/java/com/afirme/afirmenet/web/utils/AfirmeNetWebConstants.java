@@ -15,6 +15,7 @@ public class AfirmeNetWebConstants {
     
     public static final String MOSTRAR_AVATAR = "/site/administrador/avatar";
     public static final String MOSTRAR_ALIAS = "/site/administrador/alias";
+    public static final String PRUEBA = "prueba";
 
     
 	// ### Inicia definicion de Paths ###//
