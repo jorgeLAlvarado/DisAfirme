@@ -23,7 +23,7 @@ import com.afirme.afirmenet.web.empresas.controller.TDC.ConsultaTDCController;
  * @version 1.0.0
  */
 @Controller
-@RequestMapping(value= "/consultasaldosmovimentos")
+@RequestMapping(value= "/consulta_saldos_movimentos")
 public class ConsultaSaldosMovimientoController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ConsultaSaldosMovimientoController.class); 

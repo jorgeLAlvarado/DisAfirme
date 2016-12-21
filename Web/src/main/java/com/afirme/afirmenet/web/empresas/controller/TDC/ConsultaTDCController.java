@@ -17,7 +17,7 @@ import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
  * @version 1.0.0
  */
 @Controller
-@RequestMapping(value= "/consultasmovimientoTDC")
+@RequestMapping(value= "/consulta_saldos_movimiento_tdc")
 public class ConsultaTDCController {
 	
 	
