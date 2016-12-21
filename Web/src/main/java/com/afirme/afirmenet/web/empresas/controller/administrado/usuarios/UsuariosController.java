@@ -68,8 +68,10 @@ public class UsuariosController extends BaseController{
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info("<<tokendisponibles()");
-		LOG.info(">>");
-		return null;
+		Boolean soloDisponibles = false;
+		userService.getTokens(soloDisponibles);
+		LOG.info(">>tokendisponibles()");
+		return AfirmeNetWebConstants.TOKENS_DISPONIBLES;
 	}
 	/**
 	 * Cuando el usuario da clic al boton de agregar usuario en el token a asignar
