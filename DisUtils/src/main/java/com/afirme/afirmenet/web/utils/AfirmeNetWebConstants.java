@@ -7,8 +7,8 @@ public class AfirmeNetWebConstants {
 	// ### Definicion de JavaPath para Beans ###//
 	public static final String JAVA_PATH = "com.afirme.afirmenet.ibs";
 	// ### Administrador de usuarios
-	public static final String LISTAR_USUARIOS = "/site/administrador/ADMIN_Home-usuarios";
-	public static final String TOKENS_DISPONIBLES = "/site/administrador/ADMIN_Home-usuarios-tokens";
+	public static final String LISTAR_USUARIOS = "/site/administrador/admin_home-usuarios";
+	public static final String TOKENS_DISPONIBLES = "/site/administrador/admin_home-usuarios-tokens";
 	// ### Administrador de home
     public static final String LISTAR_NOTIFICACIONES = "/site/administrador/";
     public static final String LISTAR_AUTORIZACIONES = "/site/administrador/";
