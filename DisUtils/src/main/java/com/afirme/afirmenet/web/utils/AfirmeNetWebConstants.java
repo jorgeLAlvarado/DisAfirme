@@ -18,11 +18,10 @@ public class AfirmeNetWebConstants {
     public static final String PRUEBA = "prueba";
 
     // ### Administrador de Usuarios
-    
-    public static final String AGREGAR_USUARIO_PASO_1 ="/site/admin_agregar_usuarios_alt";
-    public static final String AGREGAR_USUARIO_PASO_2 ="/site/admin_agregar_usuarios_paso_2";
-    public static final String AGREGAR_USUARIO_PASO_3 ="/site/admin_agregar_usuarios_paso_3";
-    public static final String AGREGAR_USUARIO_PASO_4 ="/site/admin_agregar_usuarios_paso_4";
+    public static final String MV_AGREGAR_USUARIO_PASO_1 ="/site/admin_agregar_usuarios_alt";
+    public static final String MV_AGREGAR_USUARIO_PASO_2 ="/site/admin_agregar_usuarios_paso_2";
+    public static final String MV_AGREGAR_USUARIO_PASO_3 ="/site/admin_agregar_usuarios_paso_3";
+    public static final String MV_AGREGAR_USUARIO_PASO_4 ="/site/admin_agregar_usuarios_paso_4";
 	// ### Inicia definicion de Paths ###//
 	public static final String MODAL = "/base/include/modal";
 	public static final String MODAL_EASY_SOLUTIONS = "/site/acceso/modalEasySolutions";
