@@ -11,10 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.empresas.dao.acceso.UserDao;
-import com.afirme.afirmenet.empresas.dao.administrador.usuarios.UsuariosDao;
-import com.afirme.afirmenet.empresas.service.acceso.AliasAvatarDTO;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
-import com.afirme.afirmenet.empresas.services.impl.token.Token;
 
 /**
  * Created on Dic 14, 2016 3:39:05 PM by Jorge
@@ -84,11 +81,6 @@ public class UserServiceImpl implements UserService {
 	
 	public String obtenerFechaNacimiento(String cliente) {
 		return null;
-	}
-
-
-	public boolean registraCambioAlias(AliasAvatarDTO aliasAvatarDTO) throws Exception {
-		return false;
 	}
 	
 	

@@ -88,14 +88,6 @@ public interface UserService {
 	public String obtenerAvatar(String contrato);
 
 	/**
-	 * Se registra el cambio de alias 
-	 * @param aliasAvatarDTO
-	 * @return
-	 * @throws Exception
-	 */
-	public boolean registraCambioAlias(AliasAvatarDTO aliasAvatarDTO) throws Exception;
-
-	/**
 	 * Se obtiene la fecha de nacimiento del usuario
 	 * @param cliente
 	 * @return
