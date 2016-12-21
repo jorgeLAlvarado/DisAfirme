@@ -100,7 +100,7 @@ public class HomeController  extends BaseController{
 	 * @return pagina JSP
 	 */
 	
-	@RequestMapping(value = "/notificaciones.htm", method = RequestMethod.GET)
+	@RequestMapping(value = "/notificaciones_pendientes.htm", method = RequestMethod.GET)
 	public String notificaciones(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
 		LOG.info("<<notificaciones()");
 		Boolean notificaciones = false;
@@ -118,7 +118,7 @@ public class HomeController  extends BaseController{
 	 * @return pagina JSP
 	 */
 	
-	@RequestMapping(value = "/autorizaciones.htm", method = RequestMethod.GET)
+	@RequestMapping(value = "/autorizaciones_pendientes.htm", method = RequestMethod.GET)
 	public String autorizacoinesPendientes(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
 		LOG.info("<<autorizacoinesPendientes()");
 		Boolean autorizaciones = false;
