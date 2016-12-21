@@ -20,52 +20,59 @@ public interface ConsultaSaldoMovimientoService {
 	 */
 	
 	
-	public String consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion);
 	
+	public List<ConsultaSaldosMovimientosInversiones> consultaInversion(ConsultaSaldosMovimientosInversiones consultaInversion);
 	/**
 	 * @param detalleProducto
 	 */
-	public String detalleProducto(List<ConsultaSaldosMovimientosInversiones> detalleProducto);
 	
+	public List<ConsultaSaldosMovimientosInversiones> detalleProducto (ConsultaSaldosMovimientosInversiones detalleProducto);
 	/**
 	 * @param cuentas
 	 */
-	public String cuentas(List<ConsultaSaldosMovimientos> cuentas);
 	
+	public List<ConsultaSaldosMovimientos> cuentas (ConsultaSaldosMovimientos cuentas);
 	/**
 	 * @param consultaSaldos
 	 */
-	public List<ConsultaSaldosMovimientos> saldosMovimientos(ConsultaSaldosMovimientos consultaSaldos);
+	
+	public List<ConsultaSaldosMovimientos> consultaSaldos(ConsultaSaldosMovimientos consultaSaldos);
 	
 	/**
 	 * @param ultimosMovimientos
 	 */
-	public String ultimosMovimientos(List<ConsultaSaldosMovimientos> ultimosMovimientos);
+	
+	public  List<ConsultaSaldosMovimientos> ultimosMovimientos (ConsultaSaldosMovimientos ultimosMovimientos);
+	
 	
 	/**
 	 * @param movimientoMes
 	 */
-	public String movimientosMes(List<ConsultaSaldosMovimientos> movimientoMes);
+	
+	public List<ConsultaSaldosMovimientos> movimientosMes (ConsultaSaldosMovimientos moviminetoMes);
 	
 	/**
 	 * @param retenidos
 	 */
-	public String retenidos(List<ConsultaSaldosMovimientos> retenidos);
+	public List<ConsultaSaldosMovimientos> retenidos (ConsultaSaldosMovimientos retenidos);
 	
 	/**
 	 * @param buscarHistorico
 	 */
-	public String buscarHistorico(List<ConsultaSaldosMovimientos> buscarHistorico);
+	
+	public List<ConsultaSaldosMovimientos> buscarHistorico (ConsultaSaldosMovimientos buscarHistorico);
 	
 	
 	/**
 	 * @param cuentasLC
 	 */
-	public String cuentasLC(List<ConsultaSaldosMovimientosLC> cuentasLC);
+	
+	public List<ConsultaSaldosMovimientosLC> cuentasLC (ConsultaSaldosMovimientosLC cuentasLC);
 	
 	/**
 	 * @param prestamo
 	 */
-	public String informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo);
+
+	public List<ConsultaSaldosMovimientosLC> informacionPrestamo (ConsultaSaldosMovimientosLC prestamo);
 
 }
