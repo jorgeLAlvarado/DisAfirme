@@ -24,7 +24,7 @@ import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
-import com.afirme.afirmenet.web.empresas.utils.AfirmeNetWebConstants;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 
 
@@ -127,7 +127,7 @@ public class LoginController extends BaseController {
 		LOG.info(">>mostraravatar()");
 		userService.getobtenerAvatar(avatar);
 		
-		return AfirmeNetWebConstants.MOASTRAR_AVATAR;
+		return AfirmeNetWebConstants.MOSTRAR_AVATAR;
 	}
 
 	@RequestMapping(value = "/alias.htm", method = RequestMethod.GET)
