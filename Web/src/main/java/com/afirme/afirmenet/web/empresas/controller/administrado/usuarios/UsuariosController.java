@@ -64,13 +64,13 @@ public class UsuariosController extends BaseController{
 	 */
 	
 	@RequestMapping(value = "/ADMIN_Home-usuarios-tokens.htm", method = RequestMethod.POST)
-	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
+	public String tokenDisponibles(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		LOG.info("<<tokendisponibles()");
+		LOG.info("<<tokenDisponibles()");
 		Boolean soloDisponibles = false;
 		userService.getTokens(soloDisponibles);
-		LOG.info(">>tokendisponibles()");
+		LOG.info(">>tokenDisponibles()");
 		return AfirmeNetWebConstants.TOKENS_DISPONIBLES;
 	}
 	/**

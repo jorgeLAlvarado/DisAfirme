@@ -11,7 +11,7 @@ public class AfirmeNetWebConstants {
 	public static final String TOKENS_DISPONIBLES = "/site/administrador/ADMIN_Home-usuarios-tokens";
 	// ### Administrador de home
     public static final String LISTAR_NOTIFICACIONES = "/site/administrador/";
-	
+    public static final String LISTAR_AUTORIZACIONES = "/site/administrador/";
 	// ### Inicia definicion de Paths ###//
 	public static final String MODAL = "/base/include/modal";
 	public static final String MODAL_EASY_SOLUTIONS = "/site/acceso/modalEasySolutions";
