@@ -43,12 +43,12 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/list_usuarios.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/lista_usuarios.htm", method = RequestMethod.POST)
 	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		
-		LOG.debug("Se enlista de usuarios");
+		LOG.info("<<listaUsuarios()");
+		LOG.info(">>listaUsuarios()");
 		
 		return null;
 	}
@@ -63,7 +63,8 @@ public class UsuariosController extends BaseController{
 	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		LOG.debug("Se enlista de usuarios");
+		LOG.info("<<tokendisponibles()");
+		LOG.info(">>");
 		return null;
 	}
 	/**
