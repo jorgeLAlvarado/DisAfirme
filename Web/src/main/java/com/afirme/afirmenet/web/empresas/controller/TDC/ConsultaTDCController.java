@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
+import com.afirme.afirmenet.utils.AfirmeNetLog;
+import com.afirme.afirmenet.web.controller.acceso.ControlAcceso;
 
 /**
  * Controller para generar las consultas de TDC.
@@ -21,7 +23,8 @@ import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
 public class ConsultaTDCController {
 	
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(ConsultaTDCController.class); 
+	//private static final Logger LOG = LoggerFactory.getLogger(ConsultaTDCController.class); 
+	static final AfirmeNetLog LOG = new AfirmeNetLog(ConsultaTDCController.class);
 	
 	@Autowired
 	private ConsultaTDCService consultaTDCService;
@@ -44,8 +47,8 @@ public class ConsultaTDCController {
 	public String obtenerConsulta(){
 		
 		
-		
-		LOGGER.debug("Funciona este metodo");
+		LOG.info("<< obtenerConsulta()");
+		LOG.info(">> obtenerConsulta()");
 		return null;
 		}
 	

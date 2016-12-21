@@ -10,6 +10,9 @@
         <dependent-module archiveName="DisService-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/DisService/DisService">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="DisBeans-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/DisBeans/DisBeans">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/DisWeb/target/classes"/>
         <property name="context-root" value="AfirmeNetP"/>
     </wb-module>
