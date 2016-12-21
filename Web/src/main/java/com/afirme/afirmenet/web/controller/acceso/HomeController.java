@@ -103,10 +103,16 @@ public class HomeController  extends BaseController{
 	 * @param model
 	 * @return pagina JSP
 	 */
+	
 	@RequestMapping(value = "/notificaciones.htm", method = RequestMethod.GET)
 	public String notificaciones(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
-		LOG.debug("Funciona este metodo");
-		return null;
+		LOG.info("<<notificaciones()");
+		Boolean usuarios = false;
+		actividadesPendientesService.getdatosUsuario(usuarios);
+		LOG.info(">>notificaciones()");
+		actividadesPendientesService.getdatosUsuario(usuarios);
+		
+		return AfirmeNetWebConstants.LISTAR_USUARIOS;
 	}
 	
 }

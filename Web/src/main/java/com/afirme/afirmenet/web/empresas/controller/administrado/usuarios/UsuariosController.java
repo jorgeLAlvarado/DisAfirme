@@ -44,7 +44,7 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/lista_usuarios.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/ADMIN_Home-usuarios.htm", method = RequestMethod.POST)
 	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
@@ -63,7 +63,7 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/tokens_disponibles.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/ADMIN_Home-usuarios-tokens.htm", method = RequestMethod.POST)
 	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
