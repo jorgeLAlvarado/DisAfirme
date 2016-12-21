@@ -107,7 +107,7 @@ public interface UserService {
 	 * @param usuarioDTO
 	 * @return
 	 */	
-	public List<UsuariosDTO> getdatosUsuario(String datos);
+	public List<UsuariosDTO> getdatosUsuario(Boolean usuarios);
 	
 	/**
 	 * consulta tokens disponibles

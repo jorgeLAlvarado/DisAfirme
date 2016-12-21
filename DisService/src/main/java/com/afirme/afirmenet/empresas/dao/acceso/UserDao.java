@@ -112,7 +112,7 @@ public interface UserDao {
 	 * @param datos
 	 * @return
 	 */
-	public List<UsuariosDTO> getdatosUsuario(String datos);	
+	public List<UsuariosDTO> getdatosUsuario(Boolean usuarios);	
 	
 	/**Consulta para los Tokens disponibles en administrador
 	 * @param datos

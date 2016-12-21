@@ -107,7 +107,7 @@ public class UserDaoImpl implements UserDao {
 		return null;
 	}
 	
-	public List<UsuariosDTO> getdatosUsuario(String datos) {
+	public List<UsuariosDTO> getdatosUsuario(Boolean usuarios) {
 		
 		return null;
 	}

@@ -87,8 +87,8 @@ public class UserServiceImpl implements UserService {
 	private UserService listaUsuarios;
 	
 	
-	public List<UsuariosDTO> getdatosUsuario (String datos ){
-		return listaUsuarios.getdatosUsuario(datos);
+	public List<UsuariosDTO> getdatosUsuario (Boolean usuarios){
+		return listaUsuarios.getdatosUsuario(usuarios);
 	
 
     }
