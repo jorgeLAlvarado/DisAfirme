@@ -13,8 +13,8 @@ public class AfirmeNetWebConstants {
     public static final String LISTAR_NOTIFICACIONES = "/site/administrador/notificaciones_pendientes";
     public static final String LISTAR_AUTORIZACIONES = "/site/administrador/autorizaciones_pendientes";
     
-    public static final String MOASTRAR_AVATAR = "/site/administrador/autorizaciones_pendientes";
-    public static final String MOSTRAR_ALIAS = "/site/administrador/autorizaciones_pendientes";
+    public static final String MOASTRAR_AVATAR = "/site/administrador/avatar";
+    public static final String MOSTRAR_ALIAS = "/site/administrador/alias";
     
     
 	// ### Inicia definicion de Paths ###//
