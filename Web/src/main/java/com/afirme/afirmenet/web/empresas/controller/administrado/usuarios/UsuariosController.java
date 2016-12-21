@@ -85,7 +85,7 @@ public class UsuariosController extends BaseController{
 		//Se verifica logueo para extraer datos
 		LOG.info("<<agregaUsuarios()");
 		LOG.info(">>agregaUsuarios()");
-		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_PASO_1;
+		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_ALTA;
 	}
 	/**
 	 * Cuando el usuario da clic al boton continuar
@@ -99,7 +99,7 @@ public class UsuariosController extends BaseController{
 		//Se verifica que el usuario esta logueado para extraer datos
 		LOG.info("<<agregaPermisos()");
 		LOG.info(">>agregaPermisos()");
-		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_PASO_2;
+		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_AGREGAR_PERMISOS;
 	}
 	/**
 	 * Cuando el actor da clic al boton continuar despues de permisos se muestra la pantalla para la contraseña
@@ -112,7 +112,7 @@ public class UsuariosController extends BaseController{
 	public String agregaContrasenia(HttpServletRequest request,	ModelMap modelMap){
 		LOG.info("<<agregaCotrasenia()");
 		LOG.info(">>agregaContrasenia()");
-		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_PASO_3;
+		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_AGREGAR_CONTRASENA;
 	}
 	/**
 	 * Cuando se valida la contraseña y todos los datos estan correctos
@@ -127,7 +127,7 @@ public class UsuariosController extends BaseController{
 		LOG.info("<<confirmacion()");
 		userService.registrarUsuario(usuariosDTO);
 		LOG.info("<<confirmacion()");
-		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_PASO_4;
+		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_CONFIRMACION;
 	}
 	
 	/**
