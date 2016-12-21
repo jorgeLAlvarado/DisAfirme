@@ -5,6 +5,8 @@ import java.math.BigInteger;
 import com.afirme.afirmenet.model.transferencia.ComprobanteBase;
 
 /**
+ * Model para administrar usuarios
+ * 
  * Created on Dic 14, 2016 3:39:05 PM by Jorge
  * <br><br>
  * @author Jorge Luis Alvarado
