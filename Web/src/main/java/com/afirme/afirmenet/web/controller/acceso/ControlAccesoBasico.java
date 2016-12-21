@@ -18,7 +18,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
+import com.afirme.afirmenet.empresas.service.acceso.PreguntaSecretaService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
+import com.afirme.afirmenet.ibs.beans.JBAvatar;
 import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 import com.afirme.afirmenet.beas.login.Contrato;
 import com.afirme.afirmenet.model.Login;
@@ -93,8 +95,7 @@ public class ControlAccesoBasico  extends BaseController{
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
 
 		// extrae lista de preguntas del sistema
-		ArrayList<PreguntaSecreta> listadoPreguntas = (ArrayList<PreguntaSecreta>) preguntaService
-				.getListadoPreguntas();
+		ArrayList<PreguntaSecreta> listadoPreguntas = null; //modificar//
 		// extrae lista de preguntas utilizadas en el contrato
 		HashMap<String, String> preguntasContrato = (HashMap<String, String>) preguntaService
 				.getPregUsadas(login.getContrato());
@@ -117,34 +118,59 @@ public class ControlAccesoBasico  extends BaseController{
 	public String guardaPreguntaSecreta(@ModelAttribute("activacion") Login login, 
 			ModelMap modelMap, HttpServletRequest request, RedirectAttributes redirect) {
 
-
+		
+		preguntaService.guardaPreguntaUsada(login.getContrato());
 		LOG.info(">> guardaPreguntaSecreta()");
 		LOG.info("<< guardaPreguntaSecreta()");
 		return null;
 	}
 	
+	/**
+	 * establese la contraseña
+	 * @param login
+	 * @param modelMap
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/establece_pwd.htm", method = RequestMethod.POST)
 	public String establecePassword(@ModelAttribute("login") Login login, 
 			ModelMap modelMap, HttpServletRequest request) {
 		
+		passwordService.setPassword(login.getContrato());
 		LOG.info(">> establecePassword()");
 		LOG.info("<< establecePassword()");
 		return null;
 	}
 	
+	/**
+	 * metodo para capturar el alias
+	 * @param login
+	 * @param modelMap
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/alias.htm", method = RequestMethod.POST)
 	public String capturaAlias(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
 
 
+		ArrayList<JBAvatar> lstAvatar = (ArrayList<JBAvatar>) logInService.getListAvatar();
 		LOG.info(">> capturaAlias()");
 		LOG.info("<< capturaAlias()");
 		return null;
 	}
 	
+	/**
+	 * confirmacion del alias
+	 * @param login
+	 * @param modelMap
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/alias_confirma.htm", method = RequestMethod.POST)
 	public String confirmaAlias(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
 
-
+	
+		userService.actualizarAliasLogin(login.getContrato(), login.getAlias(), login.getAvatar());
 		LOG.info(">> confirmaAlias()");
 		LOG.info("<< confirmaAlias()");
 		return null;
@@ -152,20 +178,37 @@ public class ControlAccesoBasico  extends BaseController{
 	}	
 	
 	
+	/**
+	 * activacion de cuenta
+	 * @param login
+	 * @param modelMap
+	 * @param request
+	 * @param resp
+	 * @return
+	 * @throws IOException
+	 */
 	@SuppressWarnings("rawtypes")
 	@RequestMapping(value = "/activacion.htm", method = RequestMethod.POST)
 	public String activacion(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
 
-
+		modelMap.addAttribute("login", login);
 		LOG.info(">> activacion()");
 		LOG.info("<< activacion()");
 		return null;
 	}
 	
+	/**
+	 * validacion de respuesta
+	 * @param login
+	 * @param modelMap
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/validaRespuesta.htm", method = RequestMethod.POST)
 	public String validaRespuesta(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
 
-
+		login.setAvatar(((Login)modelMap.get("acceso")).getAvatar());
+		login.setAlias(((Login)modelMap.get("acceso")).getAlias());
 		LOG.info(">> validaRespuesta()");
 		LOG.info("<< validaRespuesta()");
 		return null;

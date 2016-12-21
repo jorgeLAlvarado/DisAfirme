@@ -1,5 +1,6 @@
 package com.afirme.afirmenet.web.controller.acceso;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -19,8 +20,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.Login;
+import com.afirme.afirmenet.model.base.TokenModel;
+import com.afirme.afirmenet.service.FinDiaService;
+import com.afirme.afirmenet.empresas.service.acceso.LogInService;
+import com.afirme.afirmenet.empresas.service.acceso.UserService;
+import com.afirme.afirmenet.ibs.beans.JBLogList;
+import com.afirme.afirmenet.ibs.beans.JBLogin;
+import com.afirme.afirmenet.service.contrato.ContratoService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 
 
@@ -46,6 +55,15 @@ public class LoginController extends BaseController {
 	
 	static final AfirmeNetLog LOG = new AfirmeNetLog(LoginController.class);
 	
+	@Autowired
+	private ContratoService contratoService;
+	@Autowired
+	private LogInService logInService;
+	@Autowired
+	private FinDiaService finDiaService;
+	@Autowired
+	private UserService userService;
+	
 	/**
 	 * Si la peticion viene desde el portal el contrato que captura el usuario esta en UserId.
 	 * 
@@ -57,33 +75,79 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/contrato.htm", method = RequestMethod.POST)
 	public String mostrarAvisoSeguridad(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
 		
-		LOG.debug("Funciona este metodo: retorna la vista del contrato del usuario");
+		String contrato = request.getParameter("UserId") == null ? "" : request.getParameter("UserId").trim();
+		login.setContrato( contrato );
+		LOG.info(">> mostrarAvisoSeguridad()");
+		LOG.info("<< mostrarAvisoSeguridad()");
 		
 		return null;
 	}
 
+	/**
+	 * muestra los datos de acceso
+	 * @param login
+	 * @param modelMap
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	@RequestMapping(value = "/aviso_seguridad.htm", method = RequestMethod.POST)
 	public String mostrarDatosAcceso(@ModelAttribute("login") Login login,ModelMap modelMap,
 			HttpServletRequest request, HttpServletResponse response) {
-		LOG.debug("Funciona este metodo: Muesta el aviso de seguridad de AFIRME");
+
+		try {
+			com.afirme.afirmenet.beas.login.JBLogin loginUser = contratoService.getDatosLogIn(login.getContrato());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		LOG.info(">> mostrarDatosAcceso()");
+		LOG.info("<< mostrarDatosAcceso()");
+		
 		return null;
 	}
 
 
+	/**
+	 * Muesta el HOME de inicio
+	 * @param login
+	 * @param request
+	 * @param modelMap
+	 * @return
+	 * @throws AfirmeNetException
+	 */
 	@RequestMapping(value = "/datos_acceso.htm", method = RequestMethod.POST)
 	public String mostrarHome(@ModelAttribute("login") Login login,
 			HttpServletRequest request, ModelMap modelMap) throws AfirmeNetException{
-		LOG.debug("Funciona este metodo: entra al home de acceso");
+
+		//modificar
+		private String usuario = login.getContrato();
+		//modificar
+		logInService.lookupChangeParameter(usuario);
+		
+		LOG.info(">> mostrarHome()");
+		LOG.info("<< mostrarHome()");
+		
 		return null;
 
 	}
 
 
+	/**
+	 * muestra los terminos y condiciones de AFIRME
+	 * @return
+	 */
 	@RequestMapping(value = "/terminos.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String mostrarTerminos() {
-		LOG.debug("Funciona este metodo: muesta los terminos y condiciones de AFIRME");
-		return null;
+
+
+		
+		LOG.info(">> mostrarTerminos()");
+		LOG.info("<< mostrarTerminos()");
+
+		return AfirmeNetWebConstants.MV_HOME_TERMINOS;
 	}
 	
 	/**
@@ -96,8 +160,11 @@ public class LoginController extends BaseController {
 	 */
 	public boolean validaTokenLogIn(String passCode, AfirmeNetUser afirmeNetUser, ModelMap modelMap, Login login) {
 		
-		LOG.debug("Funciona este metodo: valida el token");
-		
+		TokenModel respToken = null;
+		login.setIntentosToken(respToken.getIntentos());
+		LOG.info(">> validaTokenLogIn()");
+		LOG.info("<< validaTokenLogIn()");
+
 		return false;
 	}
 

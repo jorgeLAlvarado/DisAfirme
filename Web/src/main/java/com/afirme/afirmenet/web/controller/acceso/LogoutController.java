@@ -15,6 +15,7 @@ import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.log.LogService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.model.AfirmeNetUser;
 
 
 /**
@@ -45,32 +46,79 @@ public class LogoutController extends BaseController {
 	@Autowired
 	private LogService logService;
 
+	/**
+	 * Validacion de sesion correcta
+	 * @param modelMap
+	 * @param request
+	 * @param resp
+	 * @return
+	 * @throws IOException
+	 */
 	@RequestMapping(value = "/logout.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutSeguro(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		LOG.debug("Funciona este metodo: finalisa sesion");
+
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.info(">> logOutSeguro()");
+		LOG.info("<< logOutSeguro()");
+		
 		return null;
 	}
 
 	
+	/**
+	 * validacion de sesion incorrecta
+	 * @param modelMap
+	 * @param request
+	 * @param resp
+	 * @return
+	 * @throws IOException
+	 */
 	@RequestMapping(value = "/logout_enrolamiento.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutSeguroEnrolamiento(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		LOG.debug("Funciona este metodo: Termina sesion de Enrolamiento");
+
+		request.getSession().invalidate();
+		LOG.info(">> logOutSeguroEnrolamiento()");
+		LOG.info("<< logOutSeguroEnrolamiento()");
+		
 		return null;
 	}
 	
+	/**
+	 * manda la seccion de SPEI
+	 * @param request
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(value = "/cep_spei.htm", method = RequestMethod.POST)
 	public String cepSPEI(HttpServletRequest request, ModelMap modelMap) {				
 		
-		LOG.debug("Funciona este metodo: Cierra CEP-SPEI ");
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		logInService.updateINOUT(afirmeNetUser.getContrato(), "N");
+		request.getSession().invalidate();
+		LOG.info(">> cepSPEI()");
+		LOG.info("<< cepSPEI()");
+		
 		return null;		
 	}
 	
+	/**
+	 * manda al cierre de seccion clasica
+	 * @param modelMap
+	 * @param request
+	 * @param resp
+	 * @return
+	 * @throws IOException
+	 */
 	@RequestMapping(value = "/logout_version_clasica.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutVersionClasica(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		LOG.debug("Funciona este metodo: manda fin de sesion");
+
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.info(">> logOutVersionClasica()");
+		LOG.info("<< logOutVersionClasica()");
+		
 		return null;
 	}
 	

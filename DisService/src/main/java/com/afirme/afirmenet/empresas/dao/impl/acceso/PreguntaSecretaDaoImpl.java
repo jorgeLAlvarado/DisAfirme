@@ -47,7 +47,7 @@ public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 	}
 
 	/**
-	 * Da la cuenta del Contacto
+	 * Mapeae de la pregunta secreta
 	 * @param contacto
 	 * @return
 	 */
@@ -59,7 +59,7 @@ public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 	}
 
 	/**
-	 * Da la cuenta del Contacto
+	 * Da una lista de la preguntas secretas
 	 * @param contacto
 	 * @return
 	 */
@@ -70,7 +70,7 @@ public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 	}
 
 	/**
-	 * Da la cuenta del Contacto
+	 * da resupesta de confirmacion de la pregunta secreta
 	 * @param contacto
 	 * @return
 	 */
@@ -82,7 +82,7 @@ public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 	}
 
 	/**
-	 * Da la cuenta del Contacto
+	 * guarda la pregunta secreta del contacto
 	 * @param contacto
 	 * @return
 	 */
