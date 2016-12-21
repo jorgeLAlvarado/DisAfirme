@@ -107,12 +107,12 @@ public class HomeController  extends BaseController{
 	@RequestMapping(value = "/notificaciones.htm", method = RequestMethod.GET)
 	public String notificaciones(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
 		LOG.info("<<notificaciones()");
-		Boolean usuarios = false;
-		actividadesPendientesService.getdatosUsuario(usuarios);
+		Boolean notificaciones = false;
+		actividadesPendientesService.getNotificacionesPendientes(notificaciones);
 		LOG.info(">>notificaciones()");
-		actividadesPendientesService.getdatosUsuario(usuarios);
+		actividadesPendientesService.getNotificacionesPendientes(notificaciones);
 		
-		return AfirmeNetWebConstants.LISTAR_USUARIOS;
+		return AfirmeNetWebConstants.LISTAR_NOTIFICACIONES;
 	}
 	
 }

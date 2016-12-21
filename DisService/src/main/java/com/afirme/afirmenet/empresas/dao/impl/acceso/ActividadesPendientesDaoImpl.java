@@ -17,7 +17,7 @@ import com.afirme.afirmenet.empresas.dao.acceso.ActividadesPendientesDao;
 public class ActividadesPendientesDaoImpl implements ActividadesPendientesDao{
 	
 	
-	public List<Notificaciones> getNotificacionesPendientes (String datos){
+	public List<Notificaciones> getNotificacionesPendientes (Boolean notificaciones){
 		
 		return null;
 	}

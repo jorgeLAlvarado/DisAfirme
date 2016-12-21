@@ -12,6 +12,8 @@ import com.afirme.afirmenet.empresas.service.consultasaldosmovimientos.ConsultaS
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
+import com.afirme.afirmenet.utils.AfirmeNetLog;
+import com.afirme.afirmenet.web.controller.acceso.ControlAcceso;
 import com.afirme.afirmenet.web.empresas.controller.TDC.ConsultaTDCController;
 
 /**
@@ -26,7 +28,7 @@ import com.afirme.afirmenet.web.empresas.controller.TDC.ConsultaTDCController;
 @RequestMapping(value= "/consulta_saldos_movimentos")
 public class ConsultaSaldosMovimientoController {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(ConsultaSaldosMovimientoController.class); 
+	static final AfirmeNetLog LOG = new AfirmeNetLog(ConsultaSaldosMovimientoController.class);
 
 	@Autowired
 	private ConsultaSaldoMovimientoService consultaSaldoMovimientoService;
@@ -40,7 +42,8 @@ public class ConsultaSaldosMovimientoController {
 	@RequestMapping(value = "/consulta_cuenta.htm")
 	public String cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 		
-		LOGGER.debug("Funciona este metodo consultaCuenta");
+		LOG.info("<<cuentas()");
+		LOG.info(">>cuentas()");
 		return null;
 
 	}
@@ -51,7 +54,8 @@ public class ConsultaSaldosMovimientoController {
 	 */
 	@RequestMapping(value = "/consulta_credito.htm")
 	public String credito(ConsultaSaldosMovimientosLC consultaCredito) {
-		LOGGER.debug("Funciona este metodo consultaCredito");
+		LOG.info("<<credito()");
+		LOG.info(">>credito()");
 		return null;
 
 	}
@@ -62,7 +66,8 @@ public class ConsultaSaldosMovimientoController {
 	 */
 	@RequestMapping(value = "/consulta_inversion.htm")
 	public String inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
-		LOGGER.debug("Funciona este metodo consultaInversion");
+		LOG.info("<<inversion()");
+		LOG.info(">>inversion()");
 		
 		return null;
 
@@ -74,7 +79,8 @@ public class ConsultaSaldosMovimientoController {
 	 */
 	@RequestMapping(value = "/consulta_detalle.htm")
 	public String detalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
-		LOGGER.debug("Funciona este metodo consultaDetalle");
+		LOG.info("<<detalleMovimiento()");
+		LOG.info(">>detalleMovimiento()");
 		return null;
 
 	}
@@ -85,7 +91,8 @@ public class ConsultaSaldosMovimientoController {
 	 */
 	@RequestMapping(value = "/prestamo.htm")
 	public String prestamo(ConsultaSaldosMovimientosLC prestamo) {
-		LOGGER.debug("Funciona este metodo prestamo");
+		LOG.info("<<prestamo()");
+		LOG.info(">>prestamo()");
 		return null;
 
 	}
@@ -94,9 +101,10 @@ public class ConsultaSaldosMovimientoController {
 	 * Consulta de prestamo
 	 * @param detalleProducto
 	 */
-	@RequestMapping(value = "/detalleProducto.htm")
+	@RequestMapping(value = "/detalle_producto.htm")
 	public String detalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
-		LOGGER.debug("Funciona este metodo detalleProducto");
+		LOG.info("<<detalleProducto()");
+		LOG.info(">>detalleProducto()");
 		return null;
 
 	}

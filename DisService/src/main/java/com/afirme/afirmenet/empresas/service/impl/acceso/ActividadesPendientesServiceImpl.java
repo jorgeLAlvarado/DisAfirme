@@ -17,7 +17,7 @@ public class ActividadesPendientesServiceImpl implements ActividadesPendientesSe
 	
 	private ActividadesPendientesDao actividadesPendientesDao;
 
-	public List<Notificaciones> getNotificacionesPendientes(String datos) {
+	public List<Notificaciones> getNotificacionesPendientes(Boolean notificaciones) {
 		
 		return null;
 	}
