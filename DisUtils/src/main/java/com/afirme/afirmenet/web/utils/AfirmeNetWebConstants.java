@@ -12,6 +12,11 @@ public class AfirmeNetWebConstants {
 	// ### Administrador de home
     public static final String LISTAR_NOTIFICACIONES = "/site/administrador/notificaciones_pendientes";
     public static final String LISTAR_AUTORIZACIONES = "/site/administrador/autorizaciones_pendientes";
+    
+    public static final String MOASTRAR_AVATAR = "/site/administrador/autorizaciones_pendientes";
+    public static final String MOSTRAR_ALIAS = "/site/administrador/autorizaciones_pendientes";
+    
+    
 	// ### Inicia definicion de Paths ###//
 	public static final String MODAL = "/base/include/modal";
 	public static final String MODAL_EASY_SOLUTIONS = "/site/acceso/modalEasySolutions";

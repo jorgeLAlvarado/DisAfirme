@@ -17,7 +17,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
+import com.afirme.afirmenet.beas.login.Contrato;
 import com.afirme.afirmenet.model.Login;
+import com.afirme.afirmenet.service.contrato.ContratoService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
 
@@ -44,8 +46,7 @@ public class ControlAccesoBasico  extends BaseController{
 	
 	static final AfirmeNetLog LOG = new AfirmeNetLog(ControlAccesoBasico.class);
 	
-	//@Autowired
-	//private ContratoService contratoService;
+	
 	
 	@Autowired
 	private PasswordService passwordService;
@@ -59,7 +60,8 @@ public class ControlAccesoBasico  extends BaseController{
 	@Autowired
 	private UserService userService;
 	
-	
+	@Autowired
+	private ContratoService contratoService;
 	/**
 	 * Método que valida la información de Contrato y verifica el estatus del Token.
 	 * Si la información es correcta redirige a 'contratoBanca', de lo contrario, permanece en 'activaToken'
@@ -70,7 +72,10 @@ public class ControlAccesoBasico  extends BaseController{
 	 */
 	@RequestMapping(value = "/valida_usr_activacion.htm", method = RequestMethod.POST)
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo: Valida el usuario activo");
+
+		Contrato contrato = contratoService.getDatosContrato(login.getContrato());
+		LOG.info(">> validaUsuarioActivacion()");
+		LOG.info("<< validaUsuarioActivacion()");
 		return null;
 	}
 	
@@ -83,7 +88,10 @@ public class ControlAccesoBasico  extends BaseController{
 	 */
 	@RequestMapping(value = "/pregunta_secreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo: Manda a llamar la pregunta secreta");
+
+
+		LOG.info(">> preguntaSecreta()");
+		LOG.info("<< preguntaSecreta()");
 		return null;
 	}
 	
@@ -100,7 +108,10 @@ public class ControlAccesoBasico  extends BaseController{
 	@RequestMapping(value = "/guarda_preg_secreta.htm", method = RequestMethod.POST)
 	public String guardaPreguntaSecreta(@ModelAttribute("activacion") Login login, 
 			ModelMap modelMap, HttpServletRequest request, RedirectAttributes redirect) {
-		LOG.debug("Funciona este metodo: se guarda la pregunta secreta");
+
+
+		LOG.info(">> guardaPreguntaSecreta()");
+		LOG.info("<< guardaPreguntaSecreta()");
 		return null;
 	}
 	
@@ -108,20 +119,27 @@ public class ControlAccesoBasico  extends BaseController{
 	public String establecePassword(@ModelAttribute("login") Login login, 
 			ModelMap modelMap, HttpServletRequest request) {
 		
-		LOG.debug("Funciona este metodo metodo para gruardar contrasela");
+		LOG.info(">> establecePassword()");
+		LOG.info("<< establecePassword()");
 		return null;
 	}
 	
 	@RequestMapping(value = "/alias.htm", method = RequestMethod.POST)
 	public String capturaAlias(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo: metodo para guardar el alias");
+
+
+		LOG.info(">> capturaAlias()");
+		LOG.info("<< capturaAlias()");
 		return null;
 	}
 	
 	@RequestMapping(value = "/alias_confirma.htm", method = RequestMethod.POST)
 	public String confirmaAlias(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo: confirma alias");
-			return null;
+
+
+		LOG.info(">> confirmaAlias()");
+		LOG.info("<< confirmaAlias()");
+		return null;
 				
 	}	
 	
@@ -129,14 +147,20 @@ public class ControlAccesoBasico  extends BaseController{
 	@SuppressWarnings("rawtypes")
 	@RequestMapping(value = "/activacion.htm", method = RequestMethod.POST)
 	public String activacion(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-		LOG.debug("Funciona este metodo: activacion");
+
+
+		LOG.info(">> activacion()");
+		LOG.info("<< activacion()");
 		return null;
 	}
 	
 	@RequestMapping(value = "/validaRespuesta.htm", method = RequestMethod.POST)
 	public String validaRespuesta(@ModelAttribute("login") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo: valida la respuiesta");
-			return null;
+
+
+		LOG.info(">> validaRespuesta()");
+		LOG.info("<< validaRespuesta()");
+		return null;
 	}
 	
 	
