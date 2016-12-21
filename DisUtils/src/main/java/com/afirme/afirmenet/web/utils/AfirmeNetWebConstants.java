@@ -15,7 +15,7 @@ public class AfirmeNetWebConstants {
     
     public static final String MOASTRAR_AVATAR = "/site/administrador/avatar";
     public static final String MOSTRAR_ALIAS = "/site/administrador/alias";
-    
+
     
 	// ### Inicia definicion de Paths ###//
 	public static final String MODAL = "/base/include/modal";
