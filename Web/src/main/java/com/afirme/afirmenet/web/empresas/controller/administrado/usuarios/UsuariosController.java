@@ -81,7 +81,8 @@ public class UsuariosController extends BaseController{
 	@RequestMapping(value="/agregar_usuario.htm", method = RequestMethod.POST)
 	public String agregaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
-		LOG.debug("Se enlistan usuarios");
+		LOG.info("<<agregaUsuarios()");
+		LOG.info(">>agregaUsuarios()");
 		return null;
 	}
 	/**
@@ -94,7 +95,8 @@ public class UsuariosController extends BaseController{
 	@RequestMapping(value="/agregar_permisos.htm", method = RequestMethod.POST)
 	public String agregaPermisos(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica que el usuario esta logueado para extraer datos
-		LOG.debug("Se enlistan usuarios");
+		LOG.info("<<agregaPermisos()");
+		LOG.info(">>agregaPermisos()");
 		return null;
 	}
 	/**
@@ -106,7 +108,8 @@ public class UsuariosController extends BaseController{
 	
 	@RequestMapping(value="/agregar_contrasena.htm", method = RequestMethod.POST)
 	public String agregaContrasenia(HttpServletRequest request,	ModelMap modelMap){
-		LOG.debug("Contraseña guardada");
+		LOG.info("<<agregaCotrasenia()");
+		LOG.info(">>agregaContrasenia()");
 		return null;
 	}
 	/**
@@ -118,9 +121,10 @@ public class UsuariosController extends BaseController{
 	 */
 	
 	@RequestMapping(value = "/confirmacion.htm", method = RequestMethod.POST)
-	public String valida(UsuariosDTO usuariosDTO, ModelMap modelMap, HttpServletRequest httpServletRequest){
-		LOG.debug("Se confirman datos de nuevo usuario");
+	public String confirmacion(UsuariosDTO usuariosDTO, ModelMap modelMap, HttpServletRequest httpServletRequest){
+		LOG.info("<<confirmacion()");
 		userService.registrarUsuario(usuariosDTO);
+		LOG.info("<<confirmacion()");
 		return null;
 	}
 	
