@@ -2,21 +2,17 @@ package com.afirme.afirmenet.web.empresas.controller.consultasaldosmovimientos;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.empresas.service.consultasaldosmovimientos.ConsultaSaldoMovimientoService;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.controller.acceso.ControlAcceso;
-import com.afirme.afirmenet.web.empresas.controller.TDC.ConsultaTDCController;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 /**
  * Controller para generar las consultas.
@@ -41,11 +37,10 @@ public class ConsultaSaldosMovimientoController {
 	 * @param consultaCuenta
 	 * @return
 	 */
-	@RequestMapping(value = "/consulta_cuenta.htm")
+	@RequestMapping(value = "/consultas_resumen-de-mis-cuentas.htm")
 	public String cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 		
 		LOG.info("<<cuentas()");
-<<<<<<< HEAD
 		
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
 		consultaMovimiento.setNombreCuenta(null);
@@ -53,15 +48,8 @@ public class ConsultaSaldosMovimientoController {
 		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.consultaSaldos(consultaMovimiento);
 		
-=======
-<<<<<<< HEAD
-=======
-		List<ConsultaSaldosMovimientos> consultaSaldos = null;
-		consultaSaldoMovimientoService.consultaSaldosMovimientosCuentas(consultaSaldos);
->>>>>>> origin/master
->>>>>>> origin/master
 		LOG.info(">>cuentas()");
-		return null;
+		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE;
 
 	}
 
@@ -78,7 +66,7 @@ public class ConsultaSaldosMovimientoController {
 		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService.cuentasLC(consultaMovimiento);
 		LOG.info(">>credito()");
-		return AfirmeNetWebConstants.MV_CONSULTA_CREDITO;
+		return AfirmeNetWebConstants.PRUEBA;
 
 	}
 
@@ -96,7 +84,7 @@ public class ConsultaSaldosMovimientoController {
 		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService.consultaInversion(consultaMovimiento);
 		LOG.info(">>inversion()");
 		
-		return AfirmeNetWebConstants.MV_CONSULTA_CREDITO;
+		return AfirmeNetWebConstants.PRUEBA;
 
 	}
 
@@ -113,7 +101,7 @@ public class ConsultaSaldosMovimientoController {
 		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.movimientosMes(consultaMovimiento);
 		LOG.info(">>detalleMovimiento()");
-		return null;
+		return AfirmeNetWebConstants.PRUEBA;
 
 	}
 
@@ -130,7 +118,7 @@ public class ConsultaSaldosMovimientoController {
 		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService.informacionPrestamo(consultaMovimiento);
 		LOG.info(">>prestamo()");
-		return null;
+		return AfirmeNetWebConstants.PRUEBA;
 
 	}
 
@@ -147,7 +135,7 @@ public class ConsultaSaldosMovimientoController {
 		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService.detalleProducto(consultaMovimiento);
 		LOG.info(">>detalleProducto()");
-		return null;
+		return AfirmeNetWebConstants.PRUEBA;
 
 	}
 
