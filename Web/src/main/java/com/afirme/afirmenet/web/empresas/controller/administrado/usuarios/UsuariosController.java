@@ -15,6 +15,7 @@ import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 /**
  * Controlador para administrar usuarios
  * 
@@ -52,7 +53,7 @@ public class UsuariosController extends BaseController{
 		userService.getdatosUsuario(usuarios);
 		LOG.info(">>listaUsuarios()");
 		
-		return null;
+		return AfirmeNetWebConstants.LISTAR_USUARIOS;
 	}
 	/**
 	 * Consulta de tokens
