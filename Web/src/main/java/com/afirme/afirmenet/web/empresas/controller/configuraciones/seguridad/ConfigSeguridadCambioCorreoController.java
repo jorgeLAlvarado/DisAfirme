@@ -50,7 +50,7 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 * @param modelMap
 	 * @return String
 	 */
-	@RequestMapping(value = "/Seguridad_Cambio_Correo.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/seguridad_cambio_correo.htm", method = RequestMethod.POST)
 	public String goCambioCorreoCuentaAfirme(HttpServletRequest request,	ModelMap modelMap) {
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.debug("Se solicito cambio de correo");
@@ -65,7 +65,7 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 * @param request
 	 * @return String
 	 */
-	@RequestMapping(value = "/Seguridad_Cambio_Correo_Confirmar.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/seguridad_cambio_correo_confirmar.htm", method = RequestMethod.POST)
 	public String confirmarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		return null;	
@@ -83,7 +83,7 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 * 3.- y luego inserta el nuevo cambio para el cliente<br>
 	 * <br>
 	 */
-	@RequestMapping(value = "/Seguridad_Cambio_Correo_Comprobante.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/seguridad_cambio_correo_comprobante.htm", method = RequestMethod.POST)
 	public String guardarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
 		return null;
 	}
