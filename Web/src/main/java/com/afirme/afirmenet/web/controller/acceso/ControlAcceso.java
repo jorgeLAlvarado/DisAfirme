@@ -21,6 +21,7 @@ import com.afirme.afirmenet.beas.login.Contrato;
 import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.service.contrato.ContratoService;
+import com.afirme.afirmenet.service.token.TokenService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 /**
  * Controller para las pantallas de las url donde se debe mostrar la pantalla de login.
