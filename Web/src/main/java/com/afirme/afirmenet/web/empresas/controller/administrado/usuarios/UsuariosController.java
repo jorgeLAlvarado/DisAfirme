@@ -54,7 +54,7 @@ public class UsuariosController extends BaseController{
 		LOG.info(">>listaUsuarios()");
 		userService.getdatosUsuario(usuarios);
 		
-		return AfirmeNetWebConstants.LISTAR_USUARIOS;
+		return AfirmeNetWebConstants.MV_LISTAR_USUARIOS;
 	}
 	/**
 	 * Consulta de tokens
@@ -71,7 +71,7 @@ public class UsuariosController extends BaseController{
 		Boolean soloDisponibles = false;
 		userService.getTokens(soloDisponibles);
 		LOG.info(">>tokenDisponibles()");
-		return AfirmeNetWebConstants.TOKENS_DISPONIBLES;
+		return AfirmeNetWebConstants.MV_TOKENS_DISPONIBLES;
 	}
 	/**
 	 * Cuando el usuario da clic al boton de agregar usuario en el token a asignar

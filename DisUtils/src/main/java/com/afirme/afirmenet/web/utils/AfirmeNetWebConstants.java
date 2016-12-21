@@ -7,14 +7,14 @@ public class AfirmeNetWebConstants {
 	// ### Definicion de JavaPath para Beans ###//
 	public static final String JAVA_PATH = "com.afirme.afirmenet.ibs";
 	// ### Administrador de usuarios
-	public static final String LISTAR_USUARIOS = "/site/administrador/admin_home-usuarios";
-	public static final String TOKENS_DISPONIBLES = "/site/administrador/admin_home-usuarios-tokens";
+	public static final String MV_LISTAR_USUARIOS = "/site/administrador/admin_home-usuarios";
+	public static final String MV_TOKENS_DISPONIBLES = "/site/administrador/admin_home-usuarios-tokens";
 	// ### Administrador de home
-    public static final String LISTAR_NOTIFICACIONES = "/site/administrador/notificaciones_pendientes";
-    public static final String LISTAR_AUTORIZACIONES = "/site/administrador/autorizaciones_pendientes";
+    public static final String MV_LISTAR_NOTIFICACIONES = "/site/administrador/notificaciones_pendientes";
+    public static final String MV_LISTAR_AUTORIZACIONES = "/site/administrador/autorizaciones_pendientes";
     
-    public static final String MOSTRAR_AVATAR = "/site/administrador/avatar";
-    public static final String MOSTRAR_ALIAS = "/site/administrador/alias";
+    public static final String MV_MOSTRAR_AVATAR = "/site/administrador/avatar";
+    public static final String MV_MOSTRAR_ALIAS = "/site/administrador/alias";
     public static final String PRUEBA = "prueba";
 
     // ### Administrador de Usuarios

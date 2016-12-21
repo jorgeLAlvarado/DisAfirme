@@ -196,7 +196,7 @@ public class LoginController extends BaseController {
 		LOG.info(">>mostraravatar()");
 		userService.getobtenerAvatar(avatar);
 		
-		return AfirmeNetWebConstants.MOSTRAR_AVATAR;
+		return AfirmeNetWebConstants.MV_MOSTRAR_AVATAR;
 	}
 
 	@RequestMapping(value = "/alias.htm", method = RequestMethod.GET)
@@ -207,6 +207,6 @@ public class LoginController extends BaseController {
 		LOG.info(">>mostraralias()");
 		userService.getobtenerAlias(alias);
 		
-		return AfirmeNetWebConstants.MOSTRAR_ALIAS;
+		return AfirmeNetWebConstants.MV_MOSTRAR_ALIAS;
 	}
 }

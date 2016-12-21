@@ -108,7 +108,7 @@ public class HomeController  extends BaseController{
 		LOG.info(">>notificaciones()");
 		actividadesPendientesService.getNotificacionesPendientes(notificaciones);
 		
-		return AfirmeNetWebConstants.LISTAR_NOTIFICACIONES;
+		return AfirmeNetWebConstants.MV_LISTAR_NOTIFICACIONES;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class HomeController  extends BaseController{
 		LOG.info(">>autorizacoinesPendientes()");
 		actividadesPendientesService.getAutorizacionesPendientes(autorizaciones);
 		
-		return AfirmeNetWebConstants.LISTAR_AUTORIZACIONES;
+		return AfirmeNetWebConstants.MV_LISTAR_AUTORIZACIONES;
 	}
 	
 }
