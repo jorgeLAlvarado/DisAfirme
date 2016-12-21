@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.afirme.afirmenet.empresas.service.acceso.ActividadesPendientesService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
-import com.afirme.afirmenet.web.empresas.utils.AfirmeNetWebConstants;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 /**
  * Controller principal que atiende las peticiones mas genericas como /, /index,
