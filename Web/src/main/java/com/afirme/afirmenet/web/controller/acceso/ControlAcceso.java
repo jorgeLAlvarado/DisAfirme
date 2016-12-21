@@ -16,6 +16,7 @@ import com.afirme.afirmenet.beas.login.JBAvatar;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.OTPService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
+import com.afirme.afirmenet.empresas.service.acceso.PreguntaSecretaService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.beas.login.Contrato;
 import com.afirme.afirmenet.beas.login.PreguntaSecreta;
