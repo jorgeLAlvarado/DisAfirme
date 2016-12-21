@@ -56,7 +56,7 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info("<<goCambioCorreoCuentaAfirme()");
 		LOG.info(">>goCambioCorreoCuentaAfirme()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO;
 	}
 	
 	/**
@@ -69,8 +69,10 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 */
 	@RequestMapping(value = "/seguridad_cambio_correo_confirmar.htm", method = RequestMethod.POST)
 	public String confirmarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
+		LOG.info("<<confirmarDatos()");
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		return null;	
+		LOG.info(">>confirmarDatos()");
+		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO_CONFIRMAR;	
 	}
 	
 	/**
@@ -87,7 +89,9 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 */
 	@RequestMapping(value = "/seguridad_cambio_correo_comprobante.htm", method = RequestMethod.POST)
 	public String guardarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
-		return null;
+		LOG.info("<<confirmarDatos()");
+		LOG.info(">>confirmarDatos()");
+		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO_COMPROBANTE;
 	}
 	
 	/**

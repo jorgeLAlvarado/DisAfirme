@@ -22,8 +22,6 @@ public class AfirmeNetWebConstants {
     public static final String MV_AGREGAR_USUARIO_AGREGAR_PERMISOS ="/site/admin_agregar_usuario_agregar_permisos";
     public static final String MV_AGREGAR_USUARIO_AGREGAR_CONTRASENA ="/site/admin_agregar_usuarios_agregar_contrasena";
     public static final String MV_AGREGAR_USUARIO_CONFIRMACION ="/site/admin_agregar_usuarios_confirmacion";
-    // ### Administrador cambio de correo
-    
 	// ### Inicia definicion de Paths ###//
 	public static final String MODAL = "/base/include/modal";
 	public static final String MODAL_EASY_SOLUTIONS = "/site/acceso/modalEasySolutions";
