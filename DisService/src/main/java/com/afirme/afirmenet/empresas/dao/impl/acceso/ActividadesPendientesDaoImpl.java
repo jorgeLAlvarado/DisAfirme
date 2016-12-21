@@ -21,7 +21,7 @@ public class ActividadesPendientesDaoImpl implements ActividadesPendientesDao{
 		
 		return null;
 	}
-	public List<Notificaciones> getAutorizacionesPendientes (String datos){
+	public List<Notificaciones> getAutorizacionesPendientes (Boolean autorizaciones){
 		
 		return null;
 	}

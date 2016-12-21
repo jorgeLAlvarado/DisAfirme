@@ -16,6 +16,6 @@ public interface ActividadesPendientesDao {
 	
 	public List<Notificaciones> getNotificacionesPendientes (Boolean notificaciones);
 	
-	public List<Notificaciones> getAutorizacionesPendientes (String datos);
+	public List<Notificaciones> getAutorizacionesPendientes (Boolean autorizaciones);
 
 }

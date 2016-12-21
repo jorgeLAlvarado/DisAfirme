@@ -22,7 +22,7 @@ public class ActividadesPendientesServiceImpl implements ActividadesPendientesSe
 		return null;
 	}
 
-	public List<Notificaciones> getAutorizacionesPendientes(String datos) {
+	public List<Notificaciones> getAutorizacionesPendientes(Boolean autorizaciones) {
 
 		return null;
 	}
