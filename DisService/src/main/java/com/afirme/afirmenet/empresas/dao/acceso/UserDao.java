@@ -107,8 +107,6 @@ public interface UserDao {
 	 * @return
 	 */
 	public boolean registrarUsuario(UsuariosDTO usuarioDTO);
-	// +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+//
-	
 	
 	/**Consulta para listar usuarios en administrador
 	 * @param datos
