@@ -61,20 +61,29 @@ public class ControlAcceso{
 	
 	@RequestMapping(value = "/valida_contrato.htm", method = RequestMethod.POST)
 	public String validaContrato(Login login,ModelMap modelMap) {
+		
+		Boolean flag = otpService.usaTokens(login.getContrato());
 		LOG.info(">> validaContrato()");
 		LOG.info("<< validaContrato()");
+		
 		return null;
 	}
 
 	@RequestMapping(value = "/sincroniza.htm", method = RequestMethod.POST)
 	public String sincroniza(@ModelAttribute("login") Login login, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo sincroniza las notificasiones");
+
+		modelMap.put("sincronizacion", login);
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
 		return null;
 	}
 
 	@RequestMapping(value = "/sincronizacion_token", method = RequestMethod.POST)
 	public void sincronizacionToken(@ModelAttribute("sincronizacion") Login login, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo sincroniza el token");
+		
+		
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
 	}
 	
 	/**
@@ -88,7 +97,9 @@ public class ControlAcceso{
 	
 	@RequestMapping(value = "/valida_usr_activacion.htm", method = RequestMethod.POST)
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
-		LOG.debug("Funciona este metodo Validacin de usuario activo");
+		
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
 		return null;
 	}
 	
@@ -101,7 +112,9 @@ public class ControlAcceso{
 	 */
 	@RequestMapping(value = "/pregunta_secreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo: manda la pregunta secreta");
+		
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
 		return null;
 	}
 	
@@ -118,7 +131,9 @@ public class ControlAcceso{
 	@RequestMapping(value = "/guarda_preg_secreta.htm", method = RequestMethod.POST)
 	public String guardaPreguntaSecreta(@ModelAttribute("activacion") Login login, 
 			ModelMap modelMap, HttpServletRequest request, RedirectAttributes redirect) {
-		LOG.debug("Funciona este metodo: guardar respuesta de pregunta secreta");
+		
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
 		return null;
 	}
 	
