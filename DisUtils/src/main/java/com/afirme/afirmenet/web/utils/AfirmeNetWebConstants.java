@@ -6,6 +6,8 @@ import java.util.List;
 public class AfirmeNetWebConstants {
 	// ### Definicion de JavaPath para Beans ###//
 	public static final String JAVA_PATH = "com.afirme.afirmenet.ibs";
+	// ## Pruebas
+	public static final String PRUEBA = "Prueba";
 	// ### Administrador de usuarios
 	public static final String LISTAR_USUARIOS = "/site/administrador/admin_home-usuarios";
 	public static final String TOKENS_DISPONIBLES = "/site/administrador/admin_home-usuarios-tokens";
@@ -83,6 +85,7 @@ public class AfirmeNetWebConstants {
 	public static final String MV_CONSULTAS_EDO_CTA_CANCELACION_COMPROBANTE = "site/consultas/edocta/cancelacion/edocta_Cancelacion_Comprobante";
 	public static final String MV_CONSULTAS_EDO_CTA_EMISION_SELECCIONA = "site/consultas/edocta/emision/edocta_Emision_Selecciona";
 	public static final String MV_CONSULTAS_EDO_CTA_EMISION_COMPROBANTE = "site/consultas/edocta/emision/edocta_Emision_Comprobante";
+	public static final String MV_CONSULTA_DETALLE = "/site/consultas/consultas_rdmc_detalle";
 	//OJOS
 	public static final String MV_CONSULTAS_SM_PRESTAMO = "site/consultas/sm/detalle_prestamo";
 	public static final String MV_CONSULTAS_SM_INVERSION= "site/consultas/sm/detalle_inversion";

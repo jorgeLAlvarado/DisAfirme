@@ -1,10 +1,9 @@
 package com.afirme.afirmenet.empresas.service.consultasaldosmovimientos;
 
-import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
-
 import java.util.List;
 
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
+import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
 
 /**
@@ -19,6 +18,8 @@ public interface ConsultaSaldoMovimientoService {
 	/**
 	 * @param consultaInversion
 	 */
+	
+	
 	public String consultaInversion(List<ConsultaSaldosMovimientosInversiones> consultaInversion);
 	
 	/**
@@ -34,7 +35,7 @@ public interface ConsultaSaldoMovimientoService {
 	/**
 	 * @param consultaSaldos
 	 */
-	public String consultaSaldosMovimientosCuentas(List<ConsultaSaldosMovimientos> consultaSaldos);
+	public List<ConsultaSaldosMovimientos> saldosMovimientos(ConsultaSaldosMovimientos consultaSaldos);
 	
 	/**
 	 * @param ultimosMovimientos
