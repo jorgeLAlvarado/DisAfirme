@@ -21,13 +21,24 @@ public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 	static final AfirmeNetLog LOG = new AfirmeNetLog(PreguntaSecretaDaoImpl.class);
 
 	
-	
+
+	/**
+	 * Da la pregunta secreta
+	 * @param contacto
+	 * @return
+	 */
 	@Override
 	public List<String> getPregunta(String idContrato) {
 		
 		return null;
 	}
 
+
+	/**
+	 * Da la cuenta del Contacto
+	 * @param contacto
+	 * @return
+	 */
 	@Override
 	public String getPreguntaSecretaEncrypt(String idContrato, int idPregunta) {
 		
@@ -35,6 +46,11 @@ public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 		return null;
 	}
 
+	/**
+	 * Da la cuenta del Contacto
+	 * @param contacto
+	 * @return
+	 */
 	@Override
 	public Map<String, String> getPregUsadas(String idContrato) {
 		
@@ -42,12 +58,22 @@ public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 		return null;
 	}
 
+	/**
+	 * Da la cuenta del Contacto
+	 * @param contacto
+	 * @return
+	 */
 	@Override
 	public List<PreguntaSecreta> getListadoPreguntas() {
 		
 		return null;
 	}
 
+	/**
+	 * Da la cuenta del Contacto
+	 * @param contacto
+	 * @return
+	 */
 	@Override
 	public boolean setPreguntaSecreta(String idContrato, int idPregunta, String pregunta, String respuesta) {
 		
@@ -55,6 +81,11 @@ public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 		return false;
 	}
 
+	/**
+	 * Da la cuenta del Contacto
+	 * @param contacto
+	 * @return
+	 */
 	@Override
 	public boolean guardaPreguntaUsada(String idContrato, int idPregunta) {
 		
