@@ -61,7 +61,8 @@ public class ControlAcceso{
 	
 	@RequestMapping(value = "/valida_contrato.htm", method = RequestMethod.POST)
 	public String validaContrato(Login login,ModelMap modelMap) {
-		LOG.debug("Funciona este metodo: validacion de contrato");
+		LOG.info(">> validaContrato()");
+		LOG.info("<< validaContrato()");
 		return null;
 	}
 
