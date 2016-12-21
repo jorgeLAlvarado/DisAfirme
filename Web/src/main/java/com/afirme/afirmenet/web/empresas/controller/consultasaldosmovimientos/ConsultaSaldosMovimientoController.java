@@ -94,7 +94,7 @@ public class ConsultaSaldosMovimientoController {
 	 * Consulta de prestamo
 	 * @param detalleProducto
 	 */
-	@RequestMapping(value = "/detalleProducto.htm")
+	@RequestMapping(value = "/detalle_producto.htm")
 	public String detalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
 		LOGGER.debug("Funciona este metodo detalleProducto");
 		return null;
