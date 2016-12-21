@@ -92,13 +92,21 @@ public interface UserDao {
 	 * @param contrato
 	 * @return
 	 */
-	public String obtenerAvatar(String contrato);
+	public String getobtenerAvatar(Boolean avatar);
 
+	/**
+	 * Consulta para obtener el alias asociado a una cuenta
+	 * @param contrato
+	 * @return
+	 */
+	public String getobtenerAlias(Boolean alias);
+	
 	/**
 	 * Obtener la fecha de naciemiento del usuario registrado
 	 * @param cliente
 	 * @return
 	 */
+	
 	public String obtenerFechaNacimiento(String cliente);
 	
 	/**

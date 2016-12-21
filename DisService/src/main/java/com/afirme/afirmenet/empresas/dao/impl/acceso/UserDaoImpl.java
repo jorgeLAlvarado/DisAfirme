@@ -92,8 +92,13 @@ public class UserDaoImpl implements UserDao {
 		return false;
 	}
 
-	public String obtenerAvatar(String contrato) {
+	public String getobtenerAvatar(Boolean avatar) {
 	
+		return null;
+	}
+	
+	public String getobtenerAlias(Boolean alias) {
+		
 		return null;
 	}
 
