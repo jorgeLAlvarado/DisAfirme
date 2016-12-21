@@ -6,6 +6,8 @@ import java.util.List;
 public class AfirmeNetWebConstants {
 	// ### Definicion de JavaPath para Beans ###//
 	public static final String JAVA_PATH = "com.afirme.afirmenet.ibs";
+	// ## Pruebas
+	public static final String PRUEBA = "Prueba";
 	// ### Administrador de usuarios
 	public static final String LISTAR_USUARIOS = "/site/administrador/ADMIN_Home-usuarios";
 	public static final String TOKENS_DISPONIBLES = "/site/administrador/ADMIN_Home-usuarios-tokens";

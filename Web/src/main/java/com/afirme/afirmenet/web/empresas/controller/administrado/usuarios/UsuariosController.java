@@ -85,7 +85,7 @@ public class UsuariosController extends BaseController{
 		//Se verifica logueo para extraer datos
 		LOG.info("<<agregaUsuarios()");
 		LOG.info(">>agregaUsuarios()");
-		return null;
+		return AfirmeNetWebConstants.PRUEBA;
 	}
 	/**
 	 * Cuando el usuario da clic al boton continuar
