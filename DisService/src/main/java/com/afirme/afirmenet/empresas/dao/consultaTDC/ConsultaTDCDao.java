@@ -2,7 +2,7 @@ package com.afirme.afirmenet.empresas.dao.consultaTDC;
 
 import java.util.List;
 
-import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
+import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientosTDC;
 
 /**
  * Created on Dic 14, 2016 3:39:05 PM by Noé
@@ -14,26 +14,26 @@ public interface ConsultaTDCDao {
 	/**
 	 * @param consultaSaldos
 	 */
-	public String consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos);
+	public String consultaTDC(List<ConsulatasSaldosMovimientosTDC> consultaSaldos);
 
 	/**
 	 * @param consultaDespuesCorte
 	 */
-	public String consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte);
+	public String consultaDespuesCorte(List<ConsulatasSaldosMovimientosTDC> consultaDespuesCorte);
 
 	/**
 	 * @param consultaMovimientoCorte
 	 */
-	public String consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte);
+	public String consultaMovimientoCorte(List<ConsulatasSaldosMovimientosTDC> consultaMovimientoCorte);
 
 	/**
 	 * @param consultaMovimientoCorteAtras
 	 */
-	public String consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras);
+	public String consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientosTDC> consultaMovimientoCorteAtras);
 
 	/**
 	 * @param consultaPromocionesPlazos
 	 */
-	public String consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos);
+	public String consultaPromocionesPlazos(List<ConsulatasSaldosMovimientosTDC> consultaPromocionesPlazos);
 
 }

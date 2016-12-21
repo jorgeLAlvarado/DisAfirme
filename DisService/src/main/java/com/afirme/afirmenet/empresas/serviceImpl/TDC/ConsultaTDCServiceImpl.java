@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.empresas.dao.consultaTDC.ConsultaTDCDao;
 import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
-import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
+import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientosTDC;
 
 /**
  * Created on Dic 14, 2016 3:39:05 PM by Noe
@@ -21,25 +21,35 @@ public class ConsultaTDCServiceImpl implements ConsultaTDCService{
 	@Autowired
 	private ConsultaTDCDao consultaTDC;
 	
-	public String consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos) {
+	@Override
+	public List<ConsulatasSaldosMovimientosTDC> consultaTDC(ConsulatasSaldosMovimientosTDC consultaSaldos) {
+		// TODO Auto-generated method stub
 		return null;
-		
 	}
-	public String consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte) {
+	@Override
+	public List<ConsulatasSaldosMovimientosTDC> consultaDespuesCorte(
+			ConsulatasSaldosMovimientosTDC consultaDespuesCorte) {
+		// TODO Auto-generated method stub
 		return null;
-		
 	}
-	public String consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte) {
+	@Override
+	public List<ConsulatasSaldosMovimientosTDC> consultaMovimientoCorte(
+			ConsulatasSaldosMovimientosTDC consultaMovimientoCorte) {
+		// TODO Auto-generated method stub
 		return null;
-		
 	}
-	public String consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras) {
+	@Override
+	public List<ConsulatasSaldosMovimientosTDC> consultaMovimientoCorteAtras(
+			ConsulatasSaldosMovimientosTDC consultaMovimientoCorteAtras) {
+		// TODO Auto-generated method stub
 		return null;
-		
 	}
-	public String consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos) {
+	@Override
+	public List<ConsulatasSaldosMovimientosTDC> consultaPromocionesPlazos(
+			ConsulatasSaldosMovimientosTDC consultaPromocionesPlazos) {
+		// TODO Auto-generated method stub
 		return null;
-		
 	}
+	
 
 }

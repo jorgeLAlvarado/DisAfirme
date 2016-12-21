@@ -9,7 +9,7 @@ import com.afirme.afirmenet.model.pagos.servicios.Servicio;
  * @author Noe
  * @version 1.0.0
  */
-public class ConsulatasSaldosMovimientos {
+public class ConsulatasSaldosMovimientosTDC {
 	
 	private String nombre;
 	private String tipoTarjeta;
