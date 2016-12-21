@@ -15,24 +15,30 @@ import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimi
 import com.afirme.afirmenet.web.empresas.controller.TDC.ConsultaTDCController;
 
 /**
+ * Controller para generar las consultas.
+ * <br><br>
  * @author Noe Galarza
  *
  * Modificado on dic 14, 2016 3:12:21 PM by Noe Galarza
  * @version 1.0.0
  */
 @Controller
+@RequestMapping(value= "/consultasaldosmovimentos")
 public class ConsultaSaldosMovimientoController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ConsultaSaldosMovimientoController.class); 
 
 	@Autowired
-	private ConsultaSaldoMovimientoService consultaInversion;
+	private ConsultaSaldoMovimientoService consultaSaldoMovimientoService;
 
+	
 	/**
+	 * Consulta de cuenta
 	 * @param consultaCuenta
+	 * @return
 	 */
 	@RequestMapping(value = "/consulta_cuenta.htm")
-	public String Cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
+	public String cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 		
 		LOGGER.debug("Funciona este metodo consultaCuenta");
 		return null;
@@ -40,50 +46,56 @@ public class ConsultaSaldosMovimientoController {
 	}
 
 	/**
+	 * Consulta de credito
 	 * @param consultaCredito
 	 */
 	@RequestMapping(value = "/consulta_credito.htm")
-	public String Credito(ConsultaSaldosMovimientosLC consultaCredito) {
+	public String credito(ConsultaSaldosMovimientosLC consultaCredito) {
 		LOGGER.debug("Funciona este metodo consultaCredito");
 		return null;
 
 	}
 
 	/**
+	 * Consulta de inversion
 	 * @param consultaInversion
 	 */
 	@RequestMapping(value = "/consulta_inversion.htm")
 	public String inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
 		LOGGER.debug("Funciona este metodo consultaInversion");
+		
 		return null;
 
 	}
 
 	/**
+	 * Consulta de Detalle
 	 * @param consultaDetalle
 	 */
 	@RequestMapping(value = "/consulta_detalle.htm")
-	public String DetalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
+	public String detalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
 		LOGGER.debug("Funciona este metodo consultaDetalle");
 		return null;
 
 	}
 
 	/**
+	 * Consulta de prestamo
 	 * @param prestamo
 	 */
 	@RequestMapping(value = "/prestamo.htm")
-	public String Prestamo(ConsultaSaldosMovimientosLC prestamo) {
+	public String prestamo(ConsultaSaldosMovimientosLC prestamo) {
 		LOGGER.debug("Funciona este metodo prestamo");
 		return null;
 
 	}
 
 	/**
+	 * Consulta de prestamo
 	 * @param detalleProducto
 	 */
 	@RequestMapping(value = "/detalleProducto.htm")
-	public String DetalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
+	public String detalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
 		LOGGER.debug("Funciona este metodo detalleProducto");
 		return null;
 
