@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -53,8 +54,9 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	@RequestMapping(value = "/seguridad_cambio_correo.htm", method = RequestMethod.POST)
 	public String goCambioCorreoCuentaAfirme(HttpServletRequest request,	ModelMap modelMap) {
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		LOG.debug("Se solicito cambio de correo");
-		return null;
+		LOG.info("<<goCambioCorreoCuentaAfirme()");
+		LOG.info(">>goCambioCorreoCuentaAfirme()");
+		return AfirmeNetWebConstants.PRUEBA;
 	}
 	
 	/**
