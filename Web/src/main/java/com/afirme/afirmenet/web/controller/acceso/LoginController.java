@@ -42,6 +42,10 @@ import com.afirme.afirmenet.web.empresas.utils.AfirmeNetWebConstants;
  * Modificado on dic 13, 2016 11:12:21 AM by Bayron 
  * 
  * @author Bayron Gamboa Martinez
+ * 
+ * Modificado on dic 21, 2016 3:21:21 PM by Selene 
+ * 
+ * @author Selene Mena Quiñones
  */
 @Controller
 @RequestMapping("/login")
