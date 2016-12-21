@@ -89,12 +89,8 @@ public class AfirmeNetWebConstants {
 	public static final String MV_CONSULTAS_EDO_CTA_CANCELACION_COMPROBANTE = "site/consultas/edocta/cancelacion/edocta_Cancelacion_Comprobante";
 	public static final String MV_CONSULTAS_EDO_CTA_EMISION_SELECCIONA = "site/consultas/edocta/emision/edocta_Emision_Selecciona";
 	public static final String MV_CONSULTAS_EDO_CTA_EMISION_COMPROBANTE = "site/consultas/edocta/emision/edocta_Emision_Comprobante";
-<<<<<<< HEAD
 	public static final String MV_CONSULTA_DETALLE = "/site/consultas/consultas_rdmc_detalle";
 	public static final String MV_CONSULTA_CREDITO = "/site/consultas/consulta_credito";
-	
-=======
->>>>>>> origin/master
 	//OJOS
 	public static final String MV_CONSULTAS_SM_PRESTAMO = "site/consultas/sm/detalle_prestamo";
 	public static final String MV_CONSULTAS_SM_INVERSION= "site/consultas/sm/detalle_inversion";
