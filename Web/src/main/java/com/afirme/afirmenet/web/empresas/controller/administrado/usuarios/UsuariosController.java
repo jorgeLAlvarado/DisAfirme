@@ -115,6 +115,7 @@ public class UsuariosController extends BaseController{
 	@RequestMapping(value = "/confirmacion.htm", method = RequestMethod.POST)
 	public String valida(UsuariosDTO usuariosDTO, ModelMap modelMap, HttpServletRequest httpServletRequest){
 		LOG.debug("Se confirman datos de nuevo usuario");
+		userService.registrarUsuario(usuariosDTO);
 		return null;
 	}
 	
