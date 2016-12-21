@@ -36,7 +36,7 @@ import com.afirme.afirmenet.utils.AfirmeNetConstants;
 import com.afirme.afirmenet.utils.time.TimeUtils;
 import com.afirme.afirmenet.web.config.InitConfig;
 import com.afirme.afirmenet.model.AfirmeNetUser;
-import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
+import com.afirme.afirmenet.web.util;
 
 /**
  * Super clase {@link @Controller} que encapsula atributos generales que seran
