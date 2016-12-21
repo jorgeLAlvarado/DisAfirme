@@ -10,8 +10,8 @@ public class AfirmeNetWebConstants {
 	public static final String LISTAR_USUARIOS = "/site/administrador/admin_home-usuarios";
 	public static final String TOKENS_DISPONIBLES = "/site/administrador/admin_home-usuarios-tokens";
 	// ### Administrador de home
-    public static final String LISTAR_NOTIFICACIONES = "/site/administrador/";
-    public static final String LISTAR_AUTORIZACIONES = "/site/administrador/";
+    public static final String LISTAR_NOTIFICACIONES = "/site/administrador/notificaciones_pendientes";
+    public static final String LISTAR_AUTORIZACIONES = "/site/administrador/autorizaciones_pendientes";
 	// ### Inicia definicion de Paths ###//
 	public static final String MODAL = "/base/include/modal";
 	public static final String MODAL_EASY_SOLUTIONS = "/site/acceso/modalEasySolutions";
