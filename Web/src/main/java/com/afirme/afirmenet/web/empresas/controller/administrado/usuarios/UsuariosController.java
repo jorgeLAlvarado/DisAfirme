@@ -48,6 +48,8 @@ public class UsuariosController extends BaseController{
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info("<<listaUsuarios()");
+		Boolean usuarios = false;
+		userService.getdatosUsuario(usuarios);
 		LOG.info(">>listaUsuarios()");
 		
 		return null;
