@@ -3,7 +3,6 @@ package com.afirme.afirmenet.empresas.service.impl.acceso;
 
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
-import com.afirme.afirmenet.utils.time.TimeUtils;
 
 import java.util.List;
 
