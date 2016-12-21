@@ -34,5 +34,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="/DisUtils"/>
+	<classpathentry kind="src" path="/AfirmeNetPWeb"/>
+	<classpathentry kind="src" path="/AfirmeNetEWeb"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

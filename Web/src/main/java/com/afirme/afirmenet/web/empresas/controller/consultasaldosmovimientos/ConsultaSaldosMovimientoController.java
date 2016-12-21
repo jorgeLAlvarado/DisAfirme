@@ -2,17 +2,21 @@ package com.afirme.afirmenet.web.empresas.controller.consultasaldosmovimientos;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.empresas.service.consultasaldosmovimientos.ConsultaSaldoMovimientoService;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosLC;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
+import com.afirme.afirmenet.web.controller.acceso.ControlAcceso;
+import com.afirme.afirmenet.web.empresas.controller.TDC.ConsultaTDCController;
 
 /**
  * Controller para generar las consultas.
@@ -37,10 +41,11 @@ public class ConsultaSaldosMovimientoController {
 	 * @param consultaCuenta
 	 * @return
 	 */
-	@RequestMapping(value = "/consultas_resumen-de-mis-cuentas.htm")
+	@RequestMapping(value = "/consulta_cuenta.htm")
 	public String cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 		
 		LOG.info("<<cuentas()");
+<<<<<<< HEAD
 		
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
 		consultaMovimiento.setNombreCuenta(null);
@@ -48,8 +53,15 @@ public class ConsultaSaldosMovimientoController {
 		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.consultaSaldos(consultaMovimiento);
 		
+=======
+<<<<<<< HEAD
+=======
+		List<ConsultaSaldosMovimientos> consultaSaldos = null;
+		consultaSaldoMovimientoService.consultaSaldosMovimientosCuentas(consultaSaldos);
+>>>>>>> origin/master
+>>>>>>> origin/master
 		LOG.info(">>cuentas()");
-		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE;
+		return null;
 
 	}
 

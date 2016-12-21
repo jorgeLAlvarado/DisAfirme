@@ -1,5 +1,6 @@
 package com.afirme.afirmenet.web.controller.acceso;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -17,10 +18,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.afirme.afirmenet.empresas.service.acceso.ActividadesPendientesService;
+import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 
 
@@ -38,6 +42,10 @@ import com.afirme.afirmenet.web.controller.base.BaseController;
  * Modificado on dic 13, 2016 11:12:21 AM by Bayron 
  * 
  * @author Bayron Gamboa Martinez
+ * 
+ * Modificado on dic 21, 2016 3:21:21 PM by Selene 
+ * 
+ * @author Selene Mena Quiñones
  */
 @Controller
 @RequestMapping("/login")
@@ -45,6 +53,9 @@ public class LoginController extends BaseController {
 
 	
 	static final AfirmeNetLog LOG = new AfirmeNetLog(LoginController.class);
+	
+	@Autowired
+	private UserService userService;
 	
 	/**
 	 * Si la peticion viene desde el portal el contrato que captura el usuario esta en UserId.
@@ -100,6 +111,33 @@ public class LoginController extends BaseController {
 		
 		return false;
 	}
+	
+	/**
+	 * Metodo para mostrar las autorizaciones pendientes
+	 * 
+	 * @param model
+	 * @return pagina JSP
+	 */
+	
+	@RequestMapping(value = "/avatar.htm", method = RequestMethod.GET)
+	public String mostraravatar(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
+		LOG.info("<<mostraravatar()");
+		Boolean avatar = false;
+		userService.getobtenerAvatar(avatar);
+		LOG.info(">>mostraravatar()");
+		userService.getobtenerAvatar(avatar);
+		
+		return AfirmeNetWebConstants.MOSTRAR_AVATAR;
+	}
 
-
+	@RequestMapping(value = "/alias.htm", method = RequestMethod.GET)
+	public String mostraralias(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
+		LOG.info("<<mostraralias()");
+		Boolean alias = false;
+		userService.getobtenerAlias(alias);
+		LOG.info(">>mostraralias()");
+		userService.getobtenerAlias(alias);
+		
+		return AfirmeNetWebConstants.MOSTRAR_ALIAS;
+	}
 }

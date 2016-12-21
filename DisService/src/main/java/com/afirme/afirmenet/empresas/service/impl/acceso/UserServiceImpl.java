@@ -68,7 +68,13 @@ public class UserServiceImpl implements UserService {
 	}
 
 	
-	public String obtenerAvatar(String contrato) {
+	public String getobtenerAvatar(Boolean avatar) {
+		
+		return null;
+	}
+	
+	public String getobtenerAlias(Boolean alias) {
+		
 		return null;
 	}
 

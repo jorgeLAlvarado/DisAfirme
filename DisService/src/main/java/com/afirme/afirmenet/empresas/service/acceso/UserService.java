@@ -82,10 +82,17 @@ public interface UserService {
 
 	/**
 	 * Se obtiene el avatar del usuario para loguear
-	 * @param contrato
+	 * @param avatar
 	 * @return
 	 */
-	public String obtenerAvatar(String contrato);
+	public String getobtenerAvatar(Boolean avatar);
+	
+	/**
+	 * Se obtiene el alias del usuario para loguear
+	 * @param alias
+	 * @return
+	 */
+	public String getobtenerAlias(Boolean alias);
 
 	/**
 	 * Se obtiene la fecha de nacimiento del usuario
