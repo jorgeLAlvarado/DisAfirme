@@ -45,10 +45,6 @@ public class ControlAcceso{
 	@Autowired(required=true)
 	private OTPService otpService;
 	@Autowired
-	private OTPAdminService otpAdminService;
-	@Autowired
-	private OTPAgenteService otpAgenteService;
-	@Autowired
 	private ContratoService contratoService;
 	@Autowired
 	private PreguntaSecretaService preguntaService;

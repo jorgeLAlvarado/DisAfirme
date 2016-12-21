@@ -1,6 +1,8 @@
 package com.afirme.afirmenet.web.controller.acceso;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
+import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 import com.afirme.afirmenet.beas.login.Contrato;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.service.contrato.ContratoService;
@@ -51,8 +54,8 @@ public class ControlAccesoBasico  extends BaseController{
 	@Autowired
 	private PasswordService passwordService;
 	
-	//@Autowired
-	//private PreguntaSecretaService preguntaService;
+	@Autowired
+	private PreguntaSecretaService preguntaService;
 	
 	@Autowired
 	private LogInService logInService;
@@ -89,7 +92,12 @@ public class ControlAccesoBasico  extends BaseController{
 	@RequestMapping(value = "/pregunta_secreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
 
-
+		// extrae lista de preguntas del sistema
+		ArrayList<PreguntaSecreta> listadoPreguntas = (ArrayList<PreguntaSecreta>) preguntaService
+				.getListadoPreguntas();
+		// extrae lista de preguntas utilizadas en el contrato
+		HashMap<String, String> preguntasContrato = (HashMap<String, String>) preguntaService
+				.getPregUsadas(login.getContrato());
 		LOG.info(">> preguntaSecreta()");
 		LOG.info("<< preguntaSecreta()");
 		return null;
