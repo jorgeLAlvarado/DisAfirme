@@ -47,6 +47,7 @@ public class UsuariosController extends BaseController{
 	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		
 		LOG.debug("Se enlista de usuarios");
 		
 		return null;
