@@ -1,10 +1,10 @@
 package com.afirme.afirmenet.web.controller.acceso;
 
-<<<<<<< HEAD
+
 import java.sql.SQLException;
-=======
+
 import java.io.IOException;
->>>>>>> origin/master
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -66,15 +66,14 @@ public class LoginController extends BaseController {
 	static final AfirmeNetLog LOG = new AfirmeNetLog(LoginController.class);
 	
 	@Autowired
-<<<<<<< HEAD
+
 	private ContratoService contratoService;
 	@Autowired
 	private LogInService logInService;
 	@Autowired
 	private FinDiaService finDiaService;
 	@Autowired
-=======
->>>>>>> origin/master
+
 	private UserService userService;
 	
 	/**
