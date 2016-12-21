@@ -44,7 +44,7 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/lista_usuarios.htm", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin_home-usuarios.htm", method = RequestMethod.POST)
 	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
@@ -63,14 +63,14 @@ public class UsuariosController extends BaseController{
 	 * @return
 	 */
 	
-	@RequestMapping(value = "/tokens_disponibles.htm", method = RequestMethod.POST)
-	public String tokendisponibles(HttpServletRequest request,	ModelMap modelMap){
+	@RequestMapping(value = "/admin_home-usuarios-tokens.htm", method = RequestMethod.POST)
+	public String tokenDisponibles(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		LOG.info("<<tokendisponibles()");
+		LOG.info("<<tokenDisponibles()");
 		Boolean soloDisponibles = false;
 		userService.getTokens(soloDisponibles);
-		LOG.info(">>tokendisponibles()");
+		LOG.info(">>tokenDisponibles()");
 		return AfirmeNetWebConstants.TOKENS_DISPONIBLES;
 	}
 	/**
@@ -85,7 +85,7 @@ public class UsuariosController extends BaseController{
 		//Se verifica logueo para extraer datos
 		LOG.info("<<agregaUsuarios()");
 		LOG.info(">>agregaUsuarios()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_ALTA;
 	}
 	/**
 	 * Cuando el usuario da clic al boton continuar
@@ -99,7 +99,7 @@ public class UsuariosController extends BaseController{
 		//Se verifica que el usuario esta logueado para extraer datos
 		LOG.info("<<agregaPermisos()");
 		LOG.info(">>agregaPermisos()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_AGREGAR_PERMISOS;
 	}
 	/**
 	 * Cuando el actor da clic al boton continuar despues de permisos se muestra la pantalla para la contraseña
@@ -112,7 +112,7 @@ public class UsuariosController extends BaseController{
 	public String agregaContrasenia(HttpServletRequest request,	ModelMap modelMap){
 		LOG.info("<<agregaCotrasenia()");
 		LOG.info(">>agregaContrasenia()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_AGREGAR_CONTRASENA;
 	}
 	/**
 	 * Cuando se valida la contraseña y todos los datos estan correctos
@@ -127,7 +127,7 @@ public class UsuariosController extends BaseController{
 		LOG.info("<<confirmacion()");
 		userService.registrarUsuario(usuariosDTO);
 		LOG.info("<<confirmacion()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_CONFIRMACION;
 	}
 	
 	/**

@@ -2,7 +2,6 @@ package com.afirme.afirmenet.web.controller.acceso;
 
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,12 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.afirme.afirmenet.empresas.service.acceso.ActividadesPendientesService;
-import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
-import com.afirme.afirmenet.ibs.beans.consultas.Cuenta;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
-import com.afirme.afirmenet.web.empresas.model.AfirmeNetUser;
-import com.afirme.afirmenet.web.empresas.utils.AfirmeNetWebConstants;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 /**
  * Controller principal que atiende las peticiones mas genericas como /, /index,
@@ -98,15 +94,39 @@ public class HomeController  extends BaseController{
 	
 	
 	/**
-	 * Metodo de las notificaciones y autorizaciones
+	 * Metodo para mostrar las notificaciones pendientes
 	 * 
 	 * @param model
 	 * @return pagina JSP
 	 */
-	@RequestMapping(value = "/notificaciones.htm", method = RequestMethod.GET)
+	
+	@RequestMapping(value = "/notificaciones_pendientes.htm", method = RequestMethod.GET)
 	public String notificaciones(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
-		LOG.debug("Funciona este metodo");
-		return null;
+		LOG.info("<<notificaciones()");
+		Boolean notificaciones = false;
+		actividadesPendientesService.getNotificacionesPendientes(notificaciones);
+		LOG.info(">>notificaciones()");
+		actividadesPendientesService.getNotificacionesPendientes(notificaciones);
+		
+		return AfirmeNetWebConstants.LISTAR_NOTIFICACIONES;
+	}
+
+	/**
+	 * Metodo para mostrar las autorizaciones pendientes
+	 * 
+	 * @param model
+	 * @return pagina JSP
+	 */
+	
+	@RequestMapping(value = "/autorizaciones_pendientes.htm", method = RequestMethod.GET)
+	public String autorizacoinesPendientes(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
+		LOG.info("<<autorizacoinesPendientes()");
+		Boolean autorizaciones = false;
+		actividadesPendientesService.getAutorizacionesPendientes(autorizaciones);
+		LOG.info(">>autorizacoinesPendientes()");
+		actividadesPendientesService.getAutorizacionesPendientes(autorizaciones);
+		
+		return AfirmeNetWebConstants.LISTAR_AUTORIZACIONES;
 	}
 	
 }

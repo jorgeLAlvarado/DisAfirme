@@ -16,13 +16,11 @@ import com.afirme.afirmenet.beas.login.JBAvatar;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.OTPService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
-import com.afirme.afirmenet.empresas.service.acceso.PreguntaSecretaService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
 import com.afirme.afirmenet.beas.login.Contrato;
 import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.service.contrato.ContratoService;
-import com.afirme.afirmenet.service.token.TokenService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 /**
  * Controller para las pantallas de las url donde se debe mostrar la pantalla de login.
@@ -46,6 +44,10 @@ public class ControlAcceso{
 	
 	@Autowired(required=true)
 	private OTPService otpService;
+	@Autowired
+	private OTPAdminService otpAdminService;
+	@Autowired
+	private OTPAgenteService otpAgenteService;
 	@Autowired
 	private ContratoService contratoService;
 	@Autowired
@@ -84,9 +86,15 @@ public class ControlAcceso{
 	@RequestMapping(value = "/sincronizacion_token", method = RequestMethod.POST)
 	public void sincronizacionToken(@ModelAttribute("sincronizacion") Login login, ModelMap modelMap) {
 		
+<<<<<<< HEAD
+		
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
+=======
 		mailService.sendAlertaSincrTok(mail, login.getContrato(), login.getSerialToken());
 		LOG.info(">> sincronizacionToken()");
 		LOG.info("<< sincronizacionToken()");
+>>>>>>> origin/master
 	}
 	
 	/**
@@ -101,9 +109,14 @@ public class ControlAcceso{
 	@RequestMapping(value = "/valida_usr_activacion.htm", method = RequestMethod.POST)
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
 		
+<<<<<<< HEAD
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
+=======
 		Contrato contrato = contratoService.getDatosContrato(login.getContrato());
 		LOG.info(">> sincronizacionToken()");
 		LOG.info("<< sincronizacionToken()");
+>>>>>>> origin/master
 		return null;
 	}
 	
@@ -117,6 +130,10 @@ public class ControlAcceso{
 	@RequestMapping(value = "/pregunta_secreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
 		
+<<<<<<< HEAD
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
+=======
 		// extrae lista de preguntas del sistema
 		ArrayList<PreguntaSecreta> listadoPreguntas = (ArrayList<PreguntaSecreta>) preguntaService
 				.getListadoPreguntas();
@@ -125,6 +142,7 @@ public class ControlAcceso{
 				.getPregUsadas(login.getContrato());
 		LOG.info(">> preguntaSecreta()");
 		LOG.info("<< preguntaSecreta()");
+>>>>>>> origin/master
 		return null;
 	}
 	
@@ -142,6 +160,10 @@ public class ControlAcceso{
 	public String guardaPreguntaSecreta(@ModelAttribute("activacion") Login login, 
 			ModelMap modelMap, HttpServletRequest request, RedirectAttributes redirect) {
 		
+<<<<<<< HEAD
+		LOG.info(">> sincroniza()");
+		LOG.info("<< sincroniza()");
+=======
 		// TODO: validacion de sesion
 		String pregunta = request.getParameter("pregunta") != null ? request.getParameter("pregunta") : "";
 		String respuesta = request.getParameter("respuesta") != null ? request.getParameter("respuesta") : "";
@@ -150,6 +172,7 @@ public class ControlAcceso{
 		// maneja el error para no terminar la app
 		LOG.info(">> guardaPreguntaSecreta()");
 		LOG.info("<< guardaPreguntaSecreta()");
+>>>>>>> origin/master
 		return null;
 	}
 	

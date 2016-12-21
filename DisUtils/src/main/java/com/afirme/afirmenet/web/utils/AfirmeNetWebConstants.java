@@ -6,11 +6,24 @@ import java.util.List;
 public class AfirmeNetWebConstants {
 	// ### Definicion de JavaPath para Beans ###//
 	public static final String JAVA_PATH = "com.afirme.afirmenet.ibs";
-	// ## Pruebas
-	public static final String PRUEBA = "Prueba";
 	// ### Administrador de usuarios
-	public static final String LISTAR_USUARIOS = "/site/administrador/ADMIN_Home-usuarios";
-	public static final String TOKENS_DISPONIBLES = "/site/administrador/ADMIN_Home-usuarios-tokens";
+	public static final String LISTAR_USUARIOS = "/site/administrador/admin_home-usuarios";
+	public static final String TOKENS_DISPONIBLES = "/site/administrador/admin_home-usuarios-tokens";
+	// ### Administrador de home
+    public static final String LISTAR_NOTIFICACIONES = "/site/administrador/notificaciones_pendientes";
+    public static final String LISTAR_AUTORIZACIONES = "/site/administrador/autorizaciones_pendientes";
+    
+    public static final String MOSTRAR_AVATAR = "/site/administrador/avatar";
+    public static final String MOSTRAR_ALIAS = "/site/administrador/alias";
+    public static final String PRUEBA = "prueba";
+
+    // ### Administrador de Usuarios
+    public static final String MV_AGREGAR_USUARIO_ALTA ="/site/admin_agregar_usuarios_alta";
+    public static final String MV_AGREGAR_USUARIO_AGREGAR_PERMISOS ="/site/admin_agregar_usuario_agregar_permisos";
+    public static final String MV_AGREGAR_USUARIO_AGREGAR_CONTRASENA ="/site/admin_agregar_usuarios_agregar_contrasena";
+    public static final String MV_AGREGAR_USUARIO_CONFIRMACION ="/site/admin_agregar_usuarios_confirmacion";
+    // ### Administrador cambio de correo
+    
 	// ### Inicia definicion de Paths ###//
 	public static final String MODAL = "/base/include/modal";
 	public static final String MODAL_EASY_SOLUTIONS = "/site/acceso/modalEasySolutions";
@@ -78,6 +91,7 @@ public class AfirmeNetWebConstants {
 	public static final String MV_CONSULTAS_EDO_CTA_EMISION_SELECCIONA = "site/consultas/edocta/emision/edocta_Emision_Selecciona";
 	public static final String MV_CONSULTAS_EDO_CTA_EMISION_COMPROBANTE = "site/consultas/edocta/emision/edocta_Emision_Comprobante";
 	public static final String MV_CONSULTA_DETALLE = "/site/consultas/consultas_rdmc_detalle";
+	public static final String MV_CONSULTA_CREDITO = "/site/consultas/consulta_credito";
 	//OJOS
 	public static final String MV_CONSULTAS_SM_PRESTAMO = "site/consultas/sm/detalle_prestamo";
 	public static final String MV_CONSULTAS_SM_INVERSION= "site/consultas/sm/detalle_inversion";
