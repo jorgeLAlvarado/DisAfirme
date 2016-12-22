@@ -27,6 +27,7 @@ import com.afirme.afirmenet.model.configuraciones.AliasAvatarDTO;
 import com.afirme.afirmenet.service.consultas.HistorialService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 
 
@@ -69,7 +70,7 @@ public class HistorialMovimientosController extends BaseController{
 				AfirmeNetUser afirmeNetUser = getSessionUser(request);
 				LOG.debug("Se enlista de usuarios");
 				LOG.debug("Funciona este metodo");
-		return null;
+		return AfirmeNetWebConstants.MV_CONSULTAS_HISTORIAL_BUSQUEDA;
 	}
 
 	/**
@@ -86,9 +87,9 @@ public class HistorialMovimientosController extends BaseController{
 	public String resultados(ModelMap model, HttpServletRequest request) {
 		//Se verifica logueo para extraer datos
 				AfirmeNetUser afirmeNetUser = getSessionUser(request);
-				LOG.debug("Se enlista de usuarios");
-				LOG.debug("Funciona este metodo");
-		return null;
+				LOG.info(">> resultados()");
+				LOG.info("<< resultados()");
+		return AfirmeNetWebConstants.MV_CONSULTAS_HISTORIAL_RESULTADOS;
 	}
 	
 	/**
@@ -102,9 +103,9 @@ public class HistorialMovimientosController extends BaseController{
 	public String comprobante(ModelMap model, HttpServletRequest request) {
 		//Se verifica logueo para extraer datos
 				AfirmeNetUser afirmeNetUser = getSessionUser(request);
-				LOG.debug("Se enlista de usuarios");
-				LOG.debug("Funciona este metodo");
-		return null;
+				LOG.info(">> comprobante()");
+				LOG.info("<< comprobante()");
+		return AfirmeNetWebConstants.MV_CONSULTAS_HISTORIAL_RESULTADOS;
 	}
 	
 	

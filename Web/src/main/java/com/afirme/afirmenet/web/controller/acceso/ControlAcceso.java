@@ -12,6 +12,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import com.afirme.afirmenet.beas.login.JBAvatar;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.OTPService;
@@ -24,6 +26,7 @@ import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.service.contrato.ContratoService;
 import com.afirme.afirmenet.service.token.TokenService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 /**
  * Controller para las pantallas de las url donde se debe mostrar la pantalla de login.
  * 
@@ -73,7 +76,7 @@ public class ControlAcceso{
 		LOG.info(">> validaContrato()");
 		LOG.info("<< validaContrato()");
 		
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN_AVISO_SEGURIDAD;
 	}
 
 	@RequestMapping(value = "/sincroniza.htm", method = RequestMethod.POST)
@@ -82,7 +85,7 @@ public class ControlAcceso{
 		modelMap.put("sincronizacion", login);
 		LOG.info(">> sincroniza()");
 		LOG.info("<< sincroniza()");
-		return null;
+		return AfirmeNetWebConstants.MV_SYNC_TOKEN;
 	}
 
 	@RequestMapping(value = "/sincronizacion_token", method = RequestMethod.POST)
@@ -113,7 +116,7 @@ public class ControlAcceso{
 		Contrato contrato = contratoService.getDatosContrato(login.getContrato());
 		LOG.info(">> sincronizacionToken()");
 		LOG.info("<< sincronizacionToken()");
-		return null;
+		return AfirmeNetWebConstants.MV_ACTIVA_CONTRATO;
 	}
 	
 	/**
@@ -129,14 +132,13 @@ public class ControlAcceso{
 		LOG.info(">> sincroniza()");
 		LOG.info("<< sincroniza()");
 		// extrae lista de preguntas del sistema
-		ArrayList<PreguntaSecreta> listadoPreguntas = (ArrayList<PreguntaSecreta>) preguntaService
-				.getListadoPreguntas();
+		ArrayList<PreguntaSecreta> listadoPreguntas = (ArrayList<PreguntaSecreta>) preguntaService.getListadoPreguntas();
 		// extrae lista de preguntas utilizadas en el contrato
 		HashMap<String, String> preguntasContrato = (HashMap<String, String>) preguntaService
 				.getPregUsadas(login.getContrato());
 		LOG.info(">> preguntaSecreta()");
 		LOG.info("<< preguntaSecreta()");
-		return null;
+		return AfirmeNetWebConstants.MV_PREG_SEGURIDAD;
 	}
 	
 	/**
@@ -164,7 +166,7 @@ public class ControlAcceso{
 		// maneja el error para no terminar la app
 		LOG.info(">> guardaPreguntaSecreta()");
 		LOG.info("<< guardaPreguntaSecreta()");
-		return null;
+		return preguntaSecreta(login, modelMap);
 	}
 	
 	
