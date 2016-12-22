@@ -76,7 +76,7 @@ public class ConsultaSaldosMovimientoController {
 		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService.cuentasLC(consultaMovimiento);
 		LOG.info(">>credito()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_CREDITO ;
 
 	}
 
@@ -99,7 +99,7 @@ public class ConsultaSaldosMovimientoController {
 				.consultaInversion(consultaMovimiento);
 		LOG.info(">>inversion()");
 
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_INVERSION;
 
 	}
 
@@ -120,7 +120,7 @@ public class ConsultaSaldosMovimientoController {
 		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.movimientosMes(consultaMovimiento);
 		LOG.info(">>detalleMovimiento()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE_MOVIMIENTO;
 
 	}
 
@@ -142,7 +142,7 @@ public class ConsultaSaldosMovimientoController {
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService
 				.informacionPrestamo(consultaMovimiento);
 		LOG.info(">>prestamo()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_PRESTAMO;
 
 	}
 
@@ -164,7 +164,7 @@ public class ConsultaSaldosMovimientoController {
 		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService
 				.detalleProducto(consultaMovimiento);
 		LOG.info(">>detalleProducto()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE_PRODUCTO;
 
 	}
 

@@ -59,7 +59,7 @@ public class ConsultaTDCController {
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService.consultaTDC(consultaMovimiento);
 		
 		LOG.info(">> obtenerConsulta()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_TDC;
 		}
 
 
@@ -83,7 +83,7 @@ public class ConsultaTDCController {
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService. consultaDespuesCorte(consultaMovimiento);
 		
 		LOG.info(">> obtenerMovimientoDespuesCorte()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_MOVIMIENTO_DESPUES_CORTE;
 		}
 	
 	/**
@@ -105,7 +105,7 @@ public class ConsultaTDCController {
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService.consultaMovimientoCorte(consultaMovimiento);
 		
 		LOG.info(">> obtenerMovimientoCorte()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_MOVIMIENTO_DESPUES_CORTE;
 		}
 	
 	
@@ -128,7 +128,7 @@ public class ConsultaTDCController {
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService.consultaMovimientoCorteAtras(consultaMovimiento);
 		
 		LOG.info(">> obtenerMovimientoCorteAtras()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_MOVIMIENTO_CORTE_ATRAS;
 		}
 	
 	
@@ -151,7 +151,7 @@ public class ConsultaTDCController {
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService.consultaPromocionesPlazos(consultaMovimiento);
 		
 		LOG.info(">>obtenerPromocionesPlazos()");
-		return AfirmeNetWebConstants.PRUEBA;
+		return AfirmeNetWebConstants.MV_CONSULTA_PROMOCIONES_PLAZO;
 		}
 	
 	
