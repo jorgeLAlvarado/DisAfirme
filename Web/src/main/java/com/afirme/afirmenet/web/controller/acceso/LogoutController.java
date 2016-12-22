@@ -15,6 +15,7 @@ import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.log.LogService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 import com.afirme.afirmenet.model.AfirmeNetUser;
 
 
@@ -62,7 +63,7 @@ public class LogoutController extends BaseController {
 		LOG.info(">> logOutSeguro()");
 		LOG.info("<< logOutSeguro()");
 		
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 
 	
@@ -82,7 +83,7 @@ public class LogoutController extends BaseController {
 		LOG.info(">> logOutSeguroEnrolamiento()");
 		LOG.info("<< logOutSeguroEnrolamiento()");
 		
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 	
 	/**
@@ -100,7 +101,7 @@ public class LogoutController extends BaseController {
 		LOG.info(">> cepSPEI()");
 		LOG.info("<< cepSPEI()");
 		
-		return null;		
+		return AfirmeNetWebConstants.MV_LOGIN;		
 	}
 	
 	/**
@@ -119,7 +120,7 @@ public class LogoutController extends BaseController {
 		LOG.info(">> logOutVersionClasica()");
 		LOG.info("<< logOutVersionClasica()");
 		
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 	
 }

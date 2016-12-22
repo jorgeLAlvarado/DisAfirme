@@ -92,7 +92,7 @@ public class LoginController extends BaseController {
 		LOG.info(">> mostrarAvisoSeguridad()");
 		LOG.info("<< mostrarAvisoSeguridad()");
 		
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN_AVISO_SEGURIDAD;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class LoginController extends BaseController {
 		LOG.info(">> mostrarDatosAcceso()");
 		LOG.info("<< mostrarDatosAcceso()");
 		
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN_DATOS_ACCESO;
 	}
 
 
@@ -141,7 +141,7 @@ public class LoginController extends BaseController {
 		LOG.info(">> mostrarHome()");
 		LOG.info("<< mostrarHome()");
 		
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN_DATOS_ACCESO;
 
 	}
 
