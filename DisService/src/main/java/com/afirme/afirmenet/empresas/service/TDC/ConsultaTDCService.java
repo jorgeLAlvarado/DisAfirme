@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientos;
+import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientosInversiones;
+import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientosTDC;
 
 /**
  * Created on Dic 14, 2016 3:39:05 PM by Noe
@@ -17,27 +18,36 @@ public interface ConsultaTDCService {
 	/**
 	 * @param consultaSaldos
 	 */
-	public String consultaTDC(List<ConsulatasSaldosMovimientos> consultaSaldos);
+	
+	
+	public List<ConsulatasSaldosMovimientosTDC> consultaTDC (ConsulatasSaldosMovimientosTDC consultaSaldos);
 
 	/**
 	 * @param consultaDespuesCorte
 	 */
-	public String consultaDespuesCorte(List<ConsulatasSaldosMovimientos> consultaDespuesCorte);
+	
+	
+	public List<ConsulatasSaldosMovimientosTDC> consultaDespuesCorte (ConsulatasSaldosMovimientosTDC consultaDespuesCorte);
 
 	/**
 	 * @param consultaMovimientoCorte
 	 */
-	public String consultaMovimientoCorte(List<ConsulatasSaldosMovimientos> consultaMovimientoCorte);
+	
+	
+	public List<ConsulatasSaldosMovimientosTDC> consultaMovimientoCorte (ConsulatasSaldosMovimientosTDC consultaMovimientoCorte);
 
 	/**
 	 * @param consultaMovimientoCorteAtras
 	 */
-	public String consultaMovimientoCorteAtras(List<ConsulatasSaldosMovimientos> consultaMovimientoCorteAtras);
+	
+	
+	public List<ConsulatasSaldosMovimientosTDC> consultaMovimientoCorteAtras (ConsulatasSaldosMovimientosTDC consultaMovimientoCorteAtras);
 
 	/**
 	 * @param consultaPromocionesPlazos
 	 */
-	public String consultaPromocionesPlazos(List<ConsulatasSaldosMovimientos> consultaPromocionesPlazos);
+	
+	public List<ConsulatasSaldosMovimientosTDC> consultaPromocionesPlazos (ConsulatasSaldosMovimientosTDC consultaPromocionesPlazos);
 
 
 }

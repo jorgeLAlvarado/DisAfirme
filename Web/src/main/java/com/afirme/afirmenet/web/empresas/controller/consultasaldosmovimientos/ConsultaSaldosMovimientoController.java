@@ -15,39 +15,41 @@ import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 /**
- * Controller para generar las consultas.
- * <br><br>
+ * Controller para generar las consultas. <br>
+ * <br>
+ * 
  * @author Noe Galarza
  *
- * Modificado on dic 14, 2016 3:12:21 PM by Noe Galarza
+ *         Modificado on dic 14, 2016 3:12:21 PM by Noe Galarza
  * @version 1.0.0
  */
 @Controller
-@RequestMapping(value= "/consulta_saldos_movimentos")
+@RequestMapping(value = "/consulta_saldos_movimentos")
 public class ConsultaSaldosMovimientoController {
-	
+
 	static final AfirmeNetLog LOG = new AfirmeNetLog(ConsultaSaldosMovimientoController.class);
 
 	@Autowired
 	private ConsultaSaldoMovimientoService consultaSaldoMovimientoService;
 
-	
 	/**
 	 * Consulta de cuenta
+	 * 
 	 * @param consultaCuenta
-	 * @return
+	 * @return AfirmeNetWebConstants.MV_CONSULTA_DETALLE
 	 */
 	@RequestMapping(value = "/consultas_resumen-de-mis-cuentas.htm")
 	public String cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
-		
+
 		LOG.info("<<cuentas()");
-		
+
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
+		// List<EstadoCuenta> edoCuentaActivar =
+		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.consultaSaldos(consultaMovimiento);
-		
+
 		LOG.info(">>cuentas()");
 		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE;
 
@@ -55,15 +57,19 @@ public class ConsultaSaldosMovimientoController {
 
 	/**
 	 * Consulta de credito
+	 * 
 	 * @param consultaCredito
+	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
+
 	@RequestMapping(value = "/consulta_credito.htm")
 	public String credito(ConsultaSaldosMovimientosLC consultaCredito) {
 		LOG.info("<<credito()");
 		ConsultaSaldosMovimientosLC consultaMovimiento = new ConsultaSaldosMovimientosLC();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
+		// List<EstadoCuenta> edoCuentaActivar =
+		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService.cuentasLC(consultaMovimiento);
 		LOG.info(">>credito()");
 		return AfirmeNetWebConstants.PRUEBA;
@@ -72,7 +78,9 @@ public class ConsultaSaldosMovimientoController {
 
 	/**
 	 * Consulta de inversion
+	 * 
 	 * @param consultaInversion
+	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
 	@RequestMapping(value = "/consulta_inversion.htm")
 	public String inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
@@ -80,17 +88,21 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientosInversiones consultaMovimiento = new ConsultaSaldosMovimientosInversiones();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
-		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService.consultaInversion(consultaMovimiento);
+		// List<EstadoCuenta> edoCuentaActivar =
+		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
+		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService
+				.consultaInversion(consultaMovimiento);
 		LOG.info(">>inversion()");
-		
+
 		return AfirmeNetWebConstants.PRUEBA;
 
 	}
 
 	/**
 	 * Consulta de Detalle
+	 * 
 	 * @param consultaDetalle
+	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
 	@RequestMapping(value = "/consulta_detalle.htm")
 	public String detalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
@@ -98,7 +110,8 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
+		// List<EstadoCuenta> edoCuentaActivar =
+		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.movimientosMes(consultaMovimiento);
 		LOG.info(">>detalleMovimiento()");
 		return AfirmeNetWebConstants.PRUEBA;
@@ -107,7 +120,9 @@ public class ConsultaSaldosMovimientoController {
 
 	/**
 	 * Consulta de prestamo
+	 * 
 	 * @param prestamo
+	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
 	@RequestMapping(value = "/prestamo.htm")
 	public String prestamo(ConsultaSaldosMovimientosLC prestamo) {
@@ -115,8 +130,10 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientosLC consultaMovimiento = new ConsultaSaldosMovimientosLC();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
-		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService.informacionPrestamo(consultaMovimiento);
+		// List<EstadoCuenta> edoCuentaActivar =
+		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
+		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService
+				.informacionPrestamo(consultaMovimiento);
 		LOG.info(">>prestamo()");
 		return AfirmeNetWebConstants.PRUEBA;
 
@@ -124,7 +141,9 @@ public class ConsultaSaldosMovimientoController {
 
 	/**
 	 * Consulta de detalle producto
+	 * 
 	 * @param detalleProducto
+	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
 	@RequestMapping(value = "/detalle_producto.htm")
 	public String detalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
@@ -132,8 +151,10 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientosInversiones consultaMovimiento = new ConsultaSaldosMovimientosInversiones();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
-		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService.detalleProducto(consultaMovimiento);
+		// List<EstadoCuenta> edoCuentaActivar =
+		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
+		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService
+				.detalleProducto(consultaMovimiento);
 		LOG.info(">>detalleProducto()");
 		return AfirmeNetWebConstants.PRUEBA;
 
