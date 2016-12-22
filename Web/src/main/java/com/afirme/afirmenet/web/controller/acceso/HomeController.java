@@ -41,13 +41,19 @@ public class HomeController  extends BaseController{
 	@RequestMapping("test/dispatcher")
 	public String dispatcher(
 			ModelMap model, HttpServletRequest request) {
-		return null;
+		String nextAction = (String)request.getParameter("nextAction");
+		if(nextAction.equals("123")){
+			return AfirmeNetWebConstants.MV_HOME;
+		}else{
+			return "site/comun/testContenidoAjax";
+		}
+		
 	}
 
 	@RequestMapping("/esperando")
 	public String esperando(@RequestParam(required = true) String nextAction,
 			ModelMap model) {
-		return null;
+		return "site/comun/progressBar";
 	}
 	
 	/**
@@ -59,7 +65,9 @@ public class HomeController  extends BaseController{
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
 		
-		return null;
+		LOG.info("<<home()");
+		LOG.info(">>home()");
+		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 	
 	/**
@@ -70,8 +78,9 @@ public class HomeController  extends BaseController{
 	 */
 	@RequestMapping(value = "/login.htm", method = RequestMethod.GET)
 	public String login(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
-		LOG.debug("Funciona este metodo");
-		return null;
+		LOG.info("<<login()");
+		LOG.info(">>login()");
+		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 	
 	/**
@@ -82,14 +91,16 @@ public class HomeController  extends BaseController{
 	 */
 	@RequestMapping(value = "/index.htm", method = RequestMethod.GET)
 	public String index(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
-		LOG.debug("Funciona este metodo");
-		return null;
+		LOG.info("<<index()");
+		LOG.info(">>index()");
+		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 	
 	@RequestMapping(value = "/home.htm", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, ModelMap modelMap) {
-		LOG.debug("Funciona este metodo");
-		return null;
+		LOG.info("<<home()");
+		LOG.info(">>home()");
+		return AfirmeNetWebConstants.MV_HOME;
 	}
 	
 	
