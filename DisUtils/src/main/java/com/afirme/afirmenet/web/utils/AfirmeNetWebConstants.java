@@ -95,11 +95,11 @@ public class AfirmeNetWebConstants {
 	public static final String MV_CONSULTA_PRESTAMO = "/site/consultas/consulta_prestamo";
 	public static final String MV_CONSULTA_DETALLE_PRODUCTO = "/site/consultas/consulta_detalle_producto";
 	// #CONSULTA TDC
-	public static final String MV_CONSULTA_TDC = "/site/consultas/consulta_tdc";
-	public static final String MV_CONSULTA_MOVIMIENTO_DESPUES_CORTE = "/site/consultas/consulta_movimiento_despues_corte";
-	public static final String MV_CONSULTA_MOVIMIENTO_CORTE = "/site/consultas/consulta_movimiento_corte";
-	public static final String MV_CONSULTA_MOVIMIENTO_CORTE_ATRAS = "/site/consultas/consulta_movimiento_corte_atras";
-	public static final String MV_CONSULTA_PROMOCIONES_PLAZO = "/site/consultas/consulta_promociones_plazo";
+	public static final String MV_CONSULTA_TDC = "/site/tdc/consulta_tdc";
+	public static final String MV_CONSULTA_MOVIMIENTO_DESPUES_CORTE = "/site/tdc/consulta_movimiento_despues_corte";
+	public static final String MV_CONSULTA_MOVIMIENTO_CORTE = "/site/tdc/consulta_movimiento_corte";
+	public static final String MV_CONSULTA_MOVIMIENTO_CORTE_ATRAS = "/site/tdc/consulta_movimiento_corte_atras";
+	public static final String MV_CONSULTA_PROMOCIONES_PLAZO = "/site/tdc/consulta_promociones_plazo";
 	
 	//OJOS
 	public static final String MV_CONSULTAS_SM_PRESTAMO = "site/consultas/sm/detalle_prestamo";
