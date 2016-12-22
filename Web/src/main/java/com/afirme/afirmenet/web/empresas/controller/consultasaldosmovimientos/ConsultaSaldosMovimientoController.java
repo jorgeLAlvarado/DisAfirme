@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.empresas.service.consultasaldosmovimientos.ConsultaSaldoMovimientoService;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
@@ -24,7 +25,8 @@ import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
  * @version 1.0.0
  */
 @Controller
-@RequestMapping(value = "/consulta_saldos_movimentos")
+@RequestMapping(value = "/consulta_saldos_movimentos",method = { RequestMethod.POST,
+		RequestMethod.GET })
 public class ConsultaSaldosMovimientoController {
 
 	static final AfirmeNetLog LOG = new AfirmeNetLog(ConsultaSaldosMovimientoController.class);
@@ -38,7 +40,8 @@ public class ConsultaSaldosMovimientoController {
 	 * @param consultaCuenta
 	 * @return AfirmeNetWebConstants.MV_CONSULTA_DETALLE
 	 */
-	@RequestMapping(value = "/consultas_resumen-de-mis-cuentas.htm")
+	@RequestMapping(value = "/consultas_resumen-de-mis-cuentas.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 
 		LOG.info("<<cuentas()");
@@ -62,7 +65,8 @@ public class ConsultaSaldosMovimientoController {
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
 
-	@RequestMapping(value = "/consulta_credito.htm")
+	@RequestMapping(value = "/consulta_credito.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String credito(ConsultaSaldosMovimientosLC consultaCredito) {
 		LOG.info("<<credito()");
 		ConsultaSaldosMovimientosLC consultaMovimiento = new ConsultaSaldosMovimientosLC();
@@ -82,7 +86,8 @@ public class ConsultaSaldosMovimientoController {
 	 * @param consultaInversion
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
-	@RequestMapping(value = "/consulta_inversion.htm")
+	@RequestMapping(value = "/consulta_inversion.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
 		LOG.info("<<inversion()");
 		ConsultaSaldosMovimientosInversiones consultaMovimiento = new ConsultaSaldosMovimientosInversiones();
@@ -104,7 +109,8 @@ public class ConsultaSaldosMovimientoController {
 	 * @param consultaDetalle
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
-	@RequestMapping(value = "/consulta_detalle.htm")
+	@RequestMapping(value = "/consulta_detalle.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String detalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
 		LOG.info("<<detalleMovimiento()");
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
@@ -124,7 +130,8 @@ public class ConsultaSaldosMovimientoController {
 	 * @param prestamo
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
-	@RequestMapping(value = "/prestamo.htm")
+	@RequestMapping(value = "/prestamo.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String prestamo(ConsultaSaldosMovimientosLC prestamo) {
 		LOG.info("<<prestamo()");
 		ConsultaSaldosMovimientosLC consultaMovimiento = new ConsultaSaldosMovimientosLC();
@@ -145,7 +152,8 @@ public class ConsultaSaldosMovimientoController {
 	 * @param detalleProducto
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
-	@RequestMapping(value = "/detalle_producto.htm")
+	@RequestMapping(value = "/detalle_producto.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String detalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
 		LOG.info("<<detalleProducto()");
 		ConsultaSaldosMovimientosInversiones consultaMovimiento = new ConsultaSaldosMovimientosInversiones();

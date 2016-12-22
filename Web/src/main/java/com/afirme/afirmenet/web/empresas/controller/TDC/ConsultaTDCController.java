@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
@@ -44,7 +45,8 @@ public class ConsultaTDCController {
 	 * 
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
-	@RequestMapping(value = "/consulta_tdc.htm")
+	@RequestMapping(value = "/consulta_tdc.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String obtenerConsulta(){
 		
 		
@@ -67,7 +69,8 @@ public class ConsultaTDCController {
 	 * 
 	 * @returnAfirmeNetWebConstants.PRUEBA;
 	 */
-	@RequestMapping(value = "/consulta_tdc_despues_corte.htm")
+	@RequestMapping(value = "/consulta_tdc_despues_corte.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String obtenerMovimientoDespuesCorte(){
 		
 		
@@ -88,7 +91,8 @@ public class ConsultaTDCController {
 	 * 
 	 * @return AfirmeNetWebConstants.PRUEBA;
 	 */
-	@RequestMapping(value = "/consulta_tdc_despues_corte.htm")
+	@RequestMapping(value = "/consulta_tdc_despues_corte.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String obtenerMovimientoCorte(){
 		
 		
@@ -110,7 +114,8 @@ public class ConsultaTDCController {
 	 * 
 	 * @return AfirmeNetWebConstants.PRUEBA;
 	 */
-	@RequestMapping(value = "/consulta_tdc_despues_corte_atras.htm")
+	@RequestMapping(value = "/consulta_tdc_despues_corte_atras.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String obtenerMovimientoCorteAtras(){
 		
 		
@@ -132,7 +137,8 @@ public class ConsultaTDCController {
 	 * 
 	 * @return AfirmeNetWebConstants.PRUEBA;
 	 */
-	@RequestMapping(value = "/consulta_tdc_promociones.htm")
+	@RequestMapping(value = "/consulta_tdc_promociones.htm",method = { RequestMethod.POST,
+			RequestMethod.GET })
 	public String obtenerPromocionesPlazos(){
 		
 		
