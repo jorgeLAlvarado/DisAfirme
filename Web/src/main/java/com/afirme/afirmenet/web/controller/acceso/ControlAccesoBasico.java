@@ -1,6 +1,8 @@
 package com.afirme.afirmenet.web.controller.acceso;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,20 +16,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.afirme.afirmenet.beas.login.Contrato;
+import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
-import com.afirme.afirmenet.empresas.service.acceso.PreguntaSecretaService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
-<<<<<<< HEAD
 import com.afirme.afirmenet.ibs.beans.JBAvatar;
-import com.afirme.afirmenet.beas.login.PreguntaSecreta;
-=======
->>>>>>> origin/master
-import com.afirme.afirmenet.beas.login.Contrato;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.service.contrato.ContratoService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 
 /**
@@ -82,7 +81,7 @@ public class ControlAccesoBasico  extends BaseController{
 		Contrato contrato = contratoService.getDatosContrato(login.getContrato());
 		LOG.info(">> validaUsuarioActivacion()");
 		LOG.info("<< validaUsuarioActivacion()");
-		return null;
+		return AfirmeNetWebConstants.MV_ACTIVA_CONTRATO_BASICO;
 	}
 	
 	/**
@@ -95,18 +94,17 @@ public class ControlAccesoBasico  extends BaseController{
 	@RequestMapping(value = "/pregunta_secreta.htm", method = RequestMethod.POST)
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
 
-<<<<<<< HEAD
+
 		// extrae lista de preguntas del sistema
 		ArrayList<PreguntaSecreta> listadoPreguntas = null; //modificar//
 		// extrae lista de preguntas utilizadas en el contrato
 		HashMap<String, String> preguntasContrato = (HashMap<String, String>) preguntaService
 				.getPregUsadas(login.getContrato());
-=======
 
->>>>>>> origin/master
+
 		LOG.info(">> preguntaSecreta()");
 		LOG.info("<< preguntaSecreta()");
-		return null;
+		return AfirmeNetWebConstants.MV_PREG_SEGURIDAD_BASICO;
 	}
 	
 
@@ -127,7 +125,7 @@ public class ControlAccesoBasico  extends BaseController{
 		preguntaService.guardaPreguntaUsada(login.getContrato());
 		LOG.info(">> guardaPreguntaSecreta()");
 		LOG.info("<< guardaPreguntaSecreta()");
-		return null;
+		return preguntaSecreta(login, modelMap);
 	}
 	
 	/**
@@ -144,7 +142,7 @@ public class ControlAccesoBasico  extends BaseController{
 		passwordService.setPassword(login.getContrato());
 		LOG.info(">> establecePassword()");
 		LOG.info("<< establecePassword()");
-		return null;
+		return establecePassword(login, modelMap, request);
 	}
 	
 	/**
@@ -161,7 +159,7 @@ public class ControlAccesoBasico  extends BaseController{
 		ArrayList<JBAvatar> lstAvatar = (ArrayList<JBAvatar>) logInService.getListAvatar();
 		LOG.info(">> capturaAlias()");
 		LOG.info("<< capturaAlias()");
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN_AVATAR_BASICO;
 	}
 	
 	/**
@@ -178,7 +176,7 @@ public class ControlAccesoBasico  extends BaseController{
 		userService.actualizarAliasLogin(login.getContrato(), login.getAlias(), login.getAvatar());
 		LOG.info(">> confirmaAlias()");
 		LOG.info("<< confirmaAlias()");
-		return null;
+		return AfirmeNetWebConstants.MV_ACTIVA_TOKEN;
 				
 	}	
 	
@@ -199,7 +197,7 @@ public class ControlAccesoBasico  extends BaseController{
 		modelMap.addAttribute("login", login);
 		LOG.info(">> activacion()");
 		LOG.info("<< activacion()");
-		return null;
+		return AfirmeNetWebConstants.MV_LOGIN_DATOS_ACCESO;
 	}
 	
 	/**
@@ -216,7 +214,7 @@ public class ControlAccesoBasico  extends BaseController{
 		login.setAlias(((Login)modelMap.get("acceso")).getAlias());
 		LOG.info(">> validaRespuesta()");
 		LOG.info("<< validaRespuesta()");
-		return null;
+		return AfirmeNetWebConstants.MV_RECUPERA_PREG_SEGU;
 	}
 	
 	
