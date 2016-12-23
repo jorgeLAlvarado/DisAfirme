@@ -89,9 +89,14 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/seguridad_cambio_correo_comprobante.htm", method = RequestMethod.POST)
-	public String guardarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) throws Exception {
+	public String guardarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
 		LOG.info("<<confirmarDatos()");
-		userService.actualizarCorreoLogin(correoElectronicoDTO);
+		boolean resultado = false;
+		try {
+			resultado = userService.actualizarCorreoLogin(correoElectronicoDTO);
+		} catch (Exception e) {
+			LOG.error("Error al actualizar el correo.", e);
+		}
 		LOG.info(">>confirmarDatos()");
 		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO_COMPROBANTE;
 	}
