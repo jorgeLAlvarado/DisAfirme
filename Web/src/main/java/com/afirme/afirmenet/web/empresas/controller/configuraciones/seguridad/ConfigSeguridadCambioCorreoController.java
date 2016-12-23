@@ -90,6 +90,7 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	@RequestMapping(value = "/seguridad_cambio_correo_comprobante.htm", method = RequestMethod.POST)
 	public String guardarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
 		LOG.info("<<confirmarDatos()");
+		
 		LOG.info(">>confirmarDatos()");
 		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO_COMPROBANTE;
 	}
