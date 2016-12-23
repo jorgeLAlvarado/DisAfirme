@@ -51,7 +51,6 @@ public class UsuariosController extends BaseController{
 		LOG.info("<<listaUsuarios()");
 		Boolean usuarios = false;
 		userService.getdatosUsuario(usuarios);
-		userService.getdatosUsuario(usuarios);
 		LOG.info(">>listaUsuarios()");
 		return AfirmeNetWebConstants.MV_LISTAR_USUARIOS;
 	}
