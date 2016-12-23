@@ -86,11 +86,12 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 * 2.- si existe lo pone con un status de cancelado<br>
 	 * 3.- y luego inserta el nuevo cambio para el cliente<br>
 	 * <br>
+	 * @throws Exception 
 	 */
 	@RequestMapping(value = "/seguridad_cambio_correo_comprobante.htm", method = RequestMethod.POST)
-	public String guardarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
+	public String guardarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) throws Exception {
 		LOG.info("<<confirmarDatos()");
-		
+		userService.actualizarCorreoLogin(correoElectronicoDTO);
 		LOG.info(">>confirmarDatos()");
 		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO_COMPROBANTE;
 	}
