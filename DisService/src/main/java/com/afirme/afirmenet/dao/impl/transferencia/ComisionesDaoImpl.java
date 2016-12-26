@@ -16,54 +16,22 @@ import com.afirme.afirmenet.utils.AfirmeNetConstants;
 @Service
 public class ComisionesDaoImpl implements ComisionesDao{
 	
-	@Autowired
-	private AS400Dao as400Dao;
-	
 	final private String AS400_LIBRARY = AfirmeNetConstants.getValorConfigPersonas(ConfigPersonas.JDBC_LIBNAME);
 	
 	@Override
 	public BigDecimal getNationalFee(TransaccionAS400 transaccion, BigDecimal monto) {
-		BigDecimal fee= new BigDecimal(0);
-		try {
-			String sql="SELECT RANCOMIS FROM "+AS400_LIBRARY+"INRANGOPF where RANTRAN=? AND RANGOCCY='MXP' AND RANGOINI<=? and RANGOFIN>=?";
-			Map<String, Object> result = as400Dao.getJdbcTemplate().queryForMap(
-					sql, new Object[] { transaccion.getValue(), monto, monto });
-			if (result.size() > 0) {
-				fee = new BigDecimal(result.get("RANCOMIS").toString());
-			}
-		} catch (EmptyResultDataAccessException ex) {}
-		return fee;
+		return null;
 	}
 
 	@Override
 	public BigDecimal getGeneralPIFee(String paqueteAfirmeNet) {
-		BigDecimal fee= new BigDecimal(0);
-		try {
-			String sql="SELECT EUSTNA FROM "+AS400_LIBRARY+"GRPUSR where GRPUID=?";
-			Map<String, Object> result = as400Dao.getJdbcTemplate().queryForMap(
-					sql, new Object[] { paqueteAfirmeNet });
-			if (result.size() > 0) {
-				fee = new BigDecimal(result.get("EUSTNA").toString());
-			}
-		} catch (EmptyResultDataAccessException ex) {}
-		return fee;
+		return null;
 	}
 
 	@Override
 	public Comision getEspecialPIFee(TransaccionAS400 transaccion,
 			String numeroCliente) {
-		Comision fee= null;
-		try {
-			String sql="SELECT ESPPOR, ESPFIJ FROM "+AS400_LIBRARY+"coaesppf where ESPCUN=? and ESPCDE=?";
-			Map<String, Object> result = as400Dao.getJdbcTemplate().queryForMap(
-					sql, new Object[] { new BigDecimal(numeroCliente), new BigDecimal(transaccion.getValue()) });
-			if (result.size() > 0) {
-				fee= new Comision();
-				fee.setFija(new BigDecimal(result.get("ESPFIJ").toString()));
-				fee.setPorcentaje(new BigDecimal(result.get("ESPPOR").toString()));
-			}
-		} catch (EmptyResultDataAccessException ex) {}
-		return fee;
+		return null;
 	}
 
 	
