@@ -73,10 +73,6 @@ import com.afirme.afirmenet.utils.time.TimeUtils;
 @Repository
 public class ComprobanteTransferenciaDaoImpl implements ComprobanteTransferenciaDao {
 
-	private final String TABLA_SPEI_DIA = "speimovpf";
-	private final String TABLA_SPEI_HISTORICA = "speihmopf";
-	final private String AS400_LIBRARY = AfirmeNetConstants.getValorConfigPersonas(ConfigPersonas.JDBC_LIBNAME);
-
 	@Override
 	public void insertaConfirmacionOperacion(Comprobante transferenciaBase) {
 	}
