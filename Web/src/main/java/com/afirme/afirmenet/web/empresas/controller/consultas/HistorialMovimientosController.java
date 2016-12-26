@@ -1,15 +1,11 @@
 package com.afirme.afirmenet.web.empresas.controller.consultas;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,16 +16,12 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import com.afirme.afirmenet.dao.transferencia.ComprobanteTransferenciaDao;
-import com.afirme.afirmenet.exception.AfirmeNetException;
-import com.afirme.afirmenet.ibs.beans.consultas.Cuenta;
 import com.afirme.afirmenet.ibs.beans.consultas.HistorialTipo;
-import com.afirme.afirmenet.ibs.beans.consultas.TipoTransaccion;
+import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.transferencia.TransferenciaBase;
 import com.afirme.afirmenet.service.consultas.HistorialService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.utils.time.TimeUtils;
 import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
-import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 /**
@@ -53,59 +45,6 @@ public class HistorialMovimientosController extends BaseController{
 	private ComprobanteTransferenciaDao comprobanteTransferenciaDao;
 	
 	/**
-	 * Metodo que atiende las peticiones al contexto /resumen-de-mis-cuentas.htm
-	 * En el cual se muestran el saldo de todas las cuentas del cliente de manera global 
-	 * 
-	 * cuando el usuario da click en en menu Consultas > Historial de operaciones
-	 * 
-	 * @param model
-	 * @return pagina JSP
-	 */
-	@RequestMapping("/historial-operaciones.htm")
-	public String historial(ModelMap model, HttpServletRequest request) {
-		LOG.debug("Atendiendo Peticion = "+request.getServletPath());
-		List<String> categorias=historialService.categorias(false);
-		List<TipoTransaccion> listaTransacciones=historialService.listaTransacciones(false);
-		model.addAttribute("categorias", categorias);
-		model.addAttribute("listaTransacciones", listaTransacciones);
-		return AfirmeNetWebConstants.MV_CONSULTAS_HISTORIAL_BUSQUEDA;
-	}
-
-	/**
-	 * Para mostrar los resultados de la busqueda por tipo de comprobantes seleccionado.
-	 * 
-	 * El usuario selecciona un tipo de operacion y rango de fechas y da click en buscar.
-	 * 
-	 * @param model
-	 * @param request
-	 * @return
-	 */
-	@SuppressWarnings("unchecked")
-	@RequestMapping(value ="/historial-resultados.htm", method = RequestMethod.POST)
-	public String resultados(ModelMap model, HttpServletRequest request) {
-		LOG.debug("Atendiendo Peticion = "+request.getServletPath());
-		AfirmeNetUser afirmeNetUser=getSessionUser(request);
-		String tipo=(String)request.getParameter("rdoTipo");
-		String strFechaDe=(String)request.getParameter("fechaDesde");
-		String strFechaA=(String)request.getParameter("fechaHasta");
-		String nombre="";
-		String pageCall = "";
-		
-		List<TipoTransaccion> listaTransacciones = (List<TipoTransaccion>) model.get("listaTransacciones");
-		for (TipoTransaccion tipoT : listaTransacciones) {
-			if (tipoT.getTipo().getValor().equals(tipo)) {
-				nombre=tipoT.getNombre();
-				break;
-			}
-		}
-		
-		
-		Date fechaDesde = TimeUtils.getDate(strFechaDe + " 01:01" , "dd/MMMM/yyyy HH:mm");
-		Date fechaHasta = TimeUtils.getDate(strFechaA + " 23:59" , "dd/MMMM/yyyy HH:mm");
-		HistorialTipo st=HistorialTipo.findByValue(tipo);
-	}
-	
-	/**
 	 * Para validar una operacion seleccionada, llenar los objetos que utiliza el view del comprobante.
 	 * 
 	 * @param model
@@ -114,6 +53,7 @@ public class HistorialMovimientosController extends BaseController{
 	 */
 	@RequestMapping("/historial-comprobante.htm")
 	public String comprobante(ModelMap model, HttpServletRequest request) {
+		LOG.info("<< comprobante()");
 		AfirmeNetUser afirmeNetUser=getSessionUser(request);
 		LOG.debug("Atendiendo Peticion = "+request.getServletPath());
  		String idSe=(String)request.getParameter("radio-res");
@@ -136,6 +76,7 @@ public class HistorialMovimientosController extends BaseController{
 		}
 		
 		String modelView=urlComprobante(comprobante, model, afirmeNetUser);
+		LOG.info(">> comprobante()");
 		return modelView;
 	}
 	
@@ -149,6 +90,7 @@ public class HistorialMovimientosController extends BaseController{
 	 */
 	private String urlComprobante(TransferenciaBase comprobante, ModelMap modelMap, AfirmeNetUser afirmeNetUser){
 		
+		LOG.info("<< urlComprobante()");
 		HistorialTipo tipo=HistorialTipo.findByValue(comprobante.getTransactionCode());
 		String modelView = AfirmeNetWebConstants.MV_CONSULTAS_HISTORIAL_RESULTADOS;
 		List<TransferenciaBase> comprobantesExito = new ArrayList<TransferenciaBase>(0);
@@ -157,35 +99,36 @@ public class HistorialMovimientosController extends BaseController{
 		comprobantesExito.add(comprobante);
 		
 		switch (tipo) {
-		case TRANSFERENCIA_SPEI:
-			modelView = AfirmeNetWebConstants.MV_TRANSFERENCIAS_NACIONALES_COMPROBANTE;
+		case TRANSFERENCIAS_INTERNACIONALES_DOLARES:
+			LOG.info("Atendiendo Peticion: TRANSFERENCIAS_INTERNACIONALES_DOLARES");
+			modelView = AfirmeNetWebConstants.MV_TRANSFERENCIAS_DOLARES_COMPROBANTE;
 			break;
-	
+		case TRANSFERENCIA_SPEI:
+			LOG.info("Atendiendo Peticion: TRANSFERENCIA_SPEI");
+			modelView = AfirmeNetWebConstants.MV_TRANSFERENCIAS_NACIONALES_COMPROBANTE;
 			}
+		LOG.info(">> urlComprobante()");
 		return modelView;	
 	}
 	
+	/**
+	 * 
+	 * Metodo utilizado para la impresion de un archivo PDF.
+	 * 
+	 * 
+	 * @param modelMap
+	 * @param sessionStatus
+	 * @param request
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping(value = "/printPDF", method = RequestMethod.GET)
 	public ResponseEntity<byte[]> getReimprimirPDF(ModelMap modelMap,
 			SessionStatus sessionStatus, HttpServletRequest request) {
 
-		byte[] reporteBytes;
-		try {
-			reporteBytes = (byte[]) modelMap.get("finalReport");
-			HttpHeaders headers = new HttpHeaders();
-			headers.setContentType(MediaType.parseMediaType("application/pdf"));
-			headers.setContentDispositionFormData("reimpresion.pdf","reimpresion.pdf");
-			headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
-			ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(
-					reporteBytes, headers, HttpStatus.OK);
-			
-			return response;
-		} catch (Exception e) {
-			throw new AfirmeNetException("0000",
-					"Ocurrio un error al generar el comprobante de pago de impuestos: "
-							+ e.getMessage());
-		}
+		LOG.info("<<ResponseEntity<byte[]> getReimprimirPDF");
+		LOG.info(">>ResponseEntity<byte[]> getReimprimirPDF");
+		return null;
 
 	}
 	
