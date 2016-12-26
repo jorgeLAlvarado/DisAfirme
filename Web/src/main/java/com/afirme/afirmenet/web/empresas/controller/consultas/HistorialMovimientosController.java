@@ -41,8 +41,6 @@ public class HistorialMovimientosController extends BaseController{
 	@Autowired
 	private HistorialService historialService;
 	
-	@Autowired
-	private ComprobanteTransferenciaDao comprobanteTransferenciaDao;
 	
 	/**
 	 * Para validar una operacion seleccionada, llenar los objetos que utiliza el view del comprobante.
