@@ -103,10 +103,6 @@ public class HistorialMovimientosController extends BaseController{
 		Date fechaDesde = TimeUtils.getDate(strFechaDe + " 01:01" , "dd/MMMM/yyyy HH:mm");
 		Date fechaHasta = TimeUtils.getDate(strFechaA + " 23:59" , "dd/MMMM/yyyy HH:mm");
 		HistorialTipo st=HistorialTipo.findByValue(tipo);
-		List<Cuenta> cuentas = null;
-		if(HistorialTipo.ORDENES_DE_PAGO_CASH_EXPRESS.equals(st)){
-			cuentas = getCuentasPropiasMXP(afirmeNetUser);
-		}
 	}
 	
 	/**
