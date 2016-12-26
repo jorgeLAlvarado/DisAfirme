@@ -38,7 +38,7 @@ public class ConsultaSaldosMovimientoController {
 	 * Consulta de cuenta
 	 * 
 	 * @param consultaCuenta
-	 * @return AfirmeNetWebConstants.MV_CONSULTA_DETALLE
+	 * @return 
 	 */
 	@RequestMapping(value = "/consultas_rdmc_detalle.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
@@ -60,7 +60,7 @@ public class ConsultaSaldosMovimientoController {
 	 * Consulta de credito
 	 * 
 	 * @param consultaCredito
-	 * @return AfirmeNetWebConstants.PRUEBA
+	 * @return 
 	 */
 
 	@RequestMapping(value = "/consulta_credito.htm",method = { RequestMethod.POST,
@@ -80,7 +80,7 @@ public class ConsultaSaldosMovimientoController {
 	 * Consulta de inversion
 	 * 
 	 * @param consultaInversion
-	 * @return AfirmeNetWebConstants.PRUEBA
+	 * @return 
 	 */
 	@RequestMapping(value = "/consulta_inversion.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
@@ -101,7 +101,7 @@ public class ConsultaSaldosMovimientoController {
 	 * Consulta de Detalle
 	 * 
 	 * @param consultaDetalle
-	 * @return AfirmeNetWebConstants.PRUEBA
+	 * @return 
 	 */
 	@RequestMapping(value = "/consulta_detalle_movimiento.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
@@ -120,7 +120,7 @@ public class ConsultaSaldosMovimientoController {
 	 * Consulta de prestamo
 	 * 
 	 * @param prestamo
-	 * @return AfirmeNetWebConstants.PRUEBA
+	 * @return 
 	 */
 	@RequestMapping(value = "/consulta_prestamo.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
@@ -140,7 +140,7 @@ public class ConsultaSaldosMovimientoController {
 	 * Consulta de detalle producto
 	 * 
 	 * @param detalleProducto
-	 * @return AfirmeNetWebConstants.PRUEBA
+	 * @return 
 	 */
 	@RequestMapping(value = "/consulta_detalle_producto.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
