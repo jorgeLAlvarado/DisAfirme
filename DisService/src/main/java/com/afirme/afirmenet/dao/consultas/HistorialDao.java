@@ -11,11 +11,13 @@ import com.afirme.afirmenet.ibs.beans.consultas.TipoTransaccion;
  */
 public interface HistorialDao {
 	/**
+	 * Consulta para el tipo de transaccion
 	 * @param esBasicoSinToken
 	 * @return
 	 */
 	List<TipoTransaccion> listaTransacciones(boolean esBasicoSinToken);
 	/**
+	 * Consulta para la categoria
 	 * @param esBasicoSinToken
 	 * @return
 	 */
