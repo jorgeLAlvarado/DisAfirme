@@ -1,11 +1,9 @@
 package com.afirme.afirmenet.web.empresas.controller.acceso;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
@@ -14,19 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.afirme.afirmenet.beas.login.JBAvatar;
+import com.afirme.afirmenet.beas.login.Contrato;
+import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.acceso.OTPService;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
 import com.afirme.afirmenet.empresas.service.acceso.PreguntaSecretaService;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
-import com.afirme.afirmenet.beas.login.Contrato;
-import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.service.contrato.ContratoService;
 import com.afirme.afirmenet.service.token.TokenService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.controller.acceso.ControlAcceso;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 /**
  * Controller para las pantallas de las url donde se debe mostrar la pantalla de login.
@@ -128,9 +124,7 @@ public class ControlAcceso{
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
 		
 		LOG.info(">> sincroniza()");
-		LOG.info("<< sincroniza()");
 		Contrato contrato = contratoService.getDatosContrato(login.getContrato());
-		LOG.info(">> sincronizacionToken()");
 		LOG.info("<< sincronizacionToken()");
 		return AfirmeNetWebConstants.MV_ACTIVA_CONTRATO;
 	}
@@ -146,13 +140,11 @@ public class ControlAcceso{
 	public String preguntaSecreta(@ModelAttribute("activacion") Login login, ModelMap modelMap) {
 		
 		LOG.info(">> sincroniza()");
-		LOG.info("<< sincroniza()");
 		// extrae lista de preguntas del sistema
 		ArrayList<PreguntaSecreta> listadoPreguntas = (ArrayList<PreguntaSecreta>) preguntaService.getListadoPreguntas();
 		// extrae lista de preguntas utilizadas en el contrato
 		HashMap<String, String> preguntasContrato = (HashMap<String, String>) preguntaService
 				.getPregUsadas(login.getContrato());
-		LOG.info(">> preguntaSecreta()");
 		LOG.info("<< preguntaSecreta()");
 		return AfirmeNetWebConstants.MV_PREG_SEGURIDAD;
 	}
@@ -173,14 +165,12 @@ public class ControlAcceso{
 		
 
 		LOG.info(">> sincroniza()");
-		LOG.info("<< sincroniza()");
 		// TODO: validacion de sesion
 		String pregunta = request.getParameter("pregunta") != null ? request.getParameter("pregunta") : "";
 		String respuesta = request.getParameter("respuesta") != null ? request.getParameter("respuesta") : "";
 		String confirmacion = request.getParameter("confirmar") != null ? request.getParameter("confirmar") : "";
 		// se extrae el id de pregunta seleccionado, si no hubo seleccion, se
 		// maneja el error para no terminar la app
-		LOG.info(">> guardaPreguntaSecreta()");
 		LOG.info("<< guardaPreguntaSecreta()");
 		return preguntaSecreta(login, modelMap);
 	}

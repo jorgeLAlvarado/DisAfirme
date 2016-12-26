@@ -78,9 +78,8 @@ public class ControlAccesoBasico  extends BaseController{
 	 */
 	@RequestMapping(value = "/valida_usr_activacion.htm", method = RequestMethod.POST)
 	public String validaUsuarioActivacion(@ModelAttribute("activacion") Login login, ModelMap modelMap, HttpServletRequest request) {
-
-		Contrato contrato = contratoService.getDatosContrato(login.getContrato());
 		LOG.info(">> validaUsuarioActivacion()");
+		Contrato contrato = contratoService.getDatosContrato(login.getContrato());
 		LOG.info("<< validaUsuarioActivacion()");
 		return AfirmeNetWebConstants.MV_ACTIVA_CONTRATO_BASICO;
 	}
