@@ -29,7 +29,7 @@ import com.afirme.afirmenet.service.consultas.HistorialService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.utils.time.TimeUtils;
 import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
-import com.afirme.afirmenet.web.model.AfirmeNetUser;
+import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 /**
@@ -161,7 +161,8 @@ public class HistorialMovimientosController extends BaseController{
 			modelView = AfirmeNetWebConstants.MV_TRANSFERENCIAS_NACIONALES_COMPROBANTE;
 			break;
 	
-			}	
+			}
+		return modelView;	
 	}
 	
 	@ResponseBody
