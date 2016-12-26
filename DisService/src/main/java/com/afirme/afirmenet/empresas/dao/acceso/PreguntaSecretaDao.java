@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 /**
+ * clase de pregunta secreta
  * @author Jorge Luis Alvarado
  * @version 1.0.0
  * Created on Created on Dic 26, 2016 3:50:05 PM by Jorge
