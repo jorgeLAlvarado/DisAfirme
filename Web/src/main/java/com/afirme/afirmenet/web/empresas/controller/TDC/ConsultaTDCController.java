@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
 import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimientos;
 import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientosTDC;
+import com.afirme.afirmenet.web.empresas.controller.acceso.ControlAcceso;
 import com.afirme.afirmenet.web.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.controller.acceso.ControlAcceso;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 /**

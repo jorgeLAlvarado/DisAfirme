@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.web.controller.base;
+package com.afirme.afirmenet.web.empresas.controller.base;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,6 +16,7 @@ import com.afirme.afirmenet.exception.AfirmeNetException;
 import com.afirme.afirmenet.exception.AfirmeNetSessionExpiredException;
 import com.afirme.afirmenet.exception.ResourceNotFoundException;
 import com.afirme.afirmenet.exception.SocketFactoryException;
+import com.afirme.afirmenet.web.controller.base.GlobalExceptionController;
 import com.afirme.afirmenet.web.model.AfirmeNetUser;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 import com.ibm.db2.jcc.a.SqlException;

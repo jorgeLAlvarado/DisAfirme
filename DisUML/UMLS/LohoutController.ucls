@@ -21,9 +21,10 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="com.afirme.afirmenet.web.controller.acceso.LogoutController" project="DisWeb" 
-    file="/DisWeb/src/main/java/com/afirme/afirmenet/web/controller/acceso/LogoutController.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="com.afirme.afirmenet.web.empresas.controller.acceso.LogoutController" 
+    project="DisWeb" 
+    file="/DisWeb/src/main/java/com/afirme/afirmenet/web/empresas/controller/acceso/LogoutController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="602" y="427"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -33,16 +34,24 @@
   </class>  
   <association id="4">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="5" name="logInService"/>      
-      <multiplicity id="6" minimum="0" maximum="1"/>    
+      <attribute id="5" name="logInService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="6" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="7">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="8" name="logService"/>      
-      <multiplicity id="9" minimum="0" maximum="1"/>    
+      <attribute id="8" name="logService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="9" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  

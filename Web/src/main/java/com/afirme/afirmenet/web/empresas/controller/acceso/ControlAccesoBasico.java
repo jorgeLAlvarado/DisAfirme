@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.web.controller.acceso;
+package com.afirme.afirmenet.web.empresas.controller.acceso;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,7 +25,8 @@ import com.afirme.afirmenet.ibs.beans.JBAvatar;
 import com.afirme.afirmenet.model.Login;
 import com.afirme.afirmenet.service.contrato.ContratoService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.controller.acceso.ControlAccesoBasico;
+import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 

@@ -14,7 +14,7 @@ import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.configuraciones.UsuariosDTO;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
-import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 /**
  * Controlador para administrar usuarios

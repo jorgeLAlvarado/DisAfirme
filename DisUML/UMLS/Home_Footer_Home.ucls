@@ -11,8 +11,9 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.afirme.afirmenet.web.controller.acceso.HomeController" project="DisWeb" 
-    file="/DisWeb/src/main/java/com/afirme/afirmenet/web/controller/acceso/HomeController.java" binary="false" 
+  <class id="2" language="java" name="com.afirme.afirmenet.web.empresas.controller.acceso.HomeController" 
+    project="DisWeb" 
+    file="/DisWeb/src/main/java/com/afirme/afirmenet/web/empresas/controller/acceso/HomeController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="238" y="403"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -65,9 +66,10 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.afirme.afirmenet.web.controller.acceso.LogoutController" project="DisWeb" 
-    file="/DisWeb/src/main/java/com/afirme/afirmenet/web/controller/acceso/LogoutController.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="com.afirme.afirmenet.web.empresas.controller.acceso.LogoutController" 
+    project="DisWeb" 
+    file="/DisWeb/src/main/java/com/afirme/afirmenet/web/empresas/controller/acceso/LogoutController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="222" y="642"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -106,61 +108,61 @@
     </display>  
   </interface>  
   <association id="11">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="12" name="logService">        
-        <position height="0" width="0" x="-334" y="124"/>      
-      </attribute>      
-      <multiplicity id="13" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-334" y="124"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="14">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="15" name="logInService">        
-        <position height="0" width="0" x="-346" y="266"/>      
-      </attribute>      
-      <multiplicity id="16" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-346" y="266"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="17">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="18" name="actividadesPendientesDao">        
+      <attribute id="12" name="actividadesPendientesDao">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="19" minimum="0" maximum="1">        
+      <multiplicity id="13" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="20">    
+  <realization id="14">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="15">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="16" name="logService">        
+        <position height="0" width="0" x="-334" y="124"/>      
+      </attribute>      
+      <multiplicity id="17" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-334" y="124"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="18">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="5"/>  
   </realization>  
-  <association id="21">    
+  <association id="19">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="20" name="logInService">        
+        <position height="0" width="0" x="-346" y="266"/>      
+      </attribute>      
+      <multiplicity id="21" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-346" y="266"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="22">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="22" name="actividadesPendientesService">        
+      <attribute id="23" name="actividadesPendientesService">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1">        
+      <multiplicity id="24" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="24">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

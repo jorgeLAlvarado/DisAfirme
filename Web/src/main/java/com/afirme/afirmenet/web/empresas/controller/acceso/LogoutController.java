@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.web.controller.acceso;
+package com.afirme.afirmenet.web.empresas.controller.acceso;
 
 import java.io.IOException;
 
@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
 import com.afirme.afirmenet.empresas.service.log.LogService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.controller.acceso.LoginController;
+import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 import com.afirme.afirmenet.model.AfirmeNetUser;
 

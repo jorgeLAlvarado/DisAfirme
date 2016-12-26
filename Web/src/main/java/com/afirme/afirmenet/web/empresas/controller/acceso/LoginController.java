@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.web.controller.acceso;
+package com.afirme.afirmenet.web.empresas.controller.acceso;
 
 
 import java.sql.SQLException;
@@ -34,7 +34,8 @@ import com.afirme.afirmenet.ibs.beans.JBLogList;
 import com.afirme.afirmenet.ibs.beans.JBLogin;
 import com.afirme.afirmenet.service.contrato.ContratoService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.controller.acceso.LoginController;
+import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 

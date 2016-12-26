@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.web.controller.base;
+package com.afirme.afirmenet.web.empresas.controller.base;
 
 import java.io.IOException;
 import java.util.ArrayList;

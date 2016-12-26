@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.web.controller.base;
+package com.afirme.afirmenet.web.empresas.controller.base;
 
 import java.io.IOException;
 
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.enums.ConfigPersonas;
 import com.afirme.afirmenet.utils.AfirmeNetConstants;
+import com.afirme.afirmenet.web.controller.base.BaseController;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 @Controller

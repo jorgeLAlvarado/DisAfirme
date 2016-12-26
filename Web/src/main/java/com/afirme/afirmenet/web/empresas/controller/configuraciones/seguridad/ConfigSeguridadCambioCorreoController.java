@@ -4,7 +4,7 @@ package com.afirme.afirmenet.web.empresas.controller.configuraciones.seguridad;
 import javax.servlet.http.HttpServletRequest;
 
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-import com.afirme.afirmenet.web.controller.base.BaseController;
+import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 
 import org.springframework.beans.factory.annotation.Autowired;
