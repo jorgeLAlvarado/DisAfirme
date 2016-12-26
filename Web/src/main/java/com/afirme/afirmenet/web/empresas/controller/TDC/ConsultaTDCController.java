@@ -29,7 +29,7 @@ import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;
 public class ConsultaTDCController {
 	
 	
-	//private static final Logger LOG = LoggerFactory.getLogger(ConsultaTDCController.class); 
+
 	static final AfirmeNetLog LOG = new AfirmeNetLog(ConsultaTDCController.class);
 	
 	@Autowired
@@ -55,7 +55,6 @@ public class ConsultaTDCController {
 		ConsulatasSaldosMovimientosTDC consultaMovimiento = new ConsulatasSaldosMovimientosTDC();
 		consultaMovimiento.setNombre(null);
 		consultaMovimiento.setNumerTarjeta(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService.consultaTDC(consultaMovimiento);
 		
 		LOG.info(">> obtenerConsulta()");
@@ -79,7 +78,6 @@ public class ConsultaTDCController {
 		ConsulatasSaldosMovimientosTDC consultaMovimiento = new ConsulatasSaldosMovimientosTDC();
 		consultaMovimiento.setNombre(null);
 		consultaMovimiento.setNumerTarjeta(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService. consultaDespuesCorte(consultaMovimiento);
 		
 		LOG.info(">> obtenerMovimientoDespuesCorte()");
@@ -101,7 +99,6 @@ public class ConsultaTDCController {
 		ConsulatasSaldosMovimientosTDC consultaMovimiento = new ConsulatasSaldosMovimientosTDC();
 		consultaMovimiento.setNombre(null);
 		consultaMovimiento.setNumerTarjeta(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService.consultaMovimientoCorte(consultaMovimiento);
 		
 		LOG.info(">> obtenerMovimientoCorte()");
@@ -124,7 +121,6 @@ public class ConsultaTDCController {
 		ConsulatasSaldosMovimientosTDC consultaMovimiento = new ConsulatasSaldosMovimientosTDC();
 		consultaMovimiento.setNombre(null);
 		consultaMovimiento.setNumerTarjeta(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService.consultaMovimientoCorteAtras(consultaMovimiento);
 		
 		LOG.info(">> obtenerMovimientoCorteAtras()");
@@ -147,7 +143,6 @@ public class ConsultaTDCController {
 		ConsulatasSaldosMovimientosTDC consultaMovimiento = new ConsulatasSaldosMovimientosTDC();
 		consultaMovimiento.setNombre(null);
 		consultaMovimiento.setNumerTarjeta(0);
-		//List<EstadoCuenta> edoCuentaActivar = estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsulatasSaldosMovimientosTDC> consultaTDC = consultaTDCService.consultaPromocionesPlazos(consultaMovimiento);
 		
 		LOG.info(">>obtenerPromocionesPlazos()");

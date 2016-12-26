@@ -20,6 +20,5 @@ import com.afirme.afirmenet.ibs.beans.consultas.HistorialTipo;
 
 public interface HistorialService  {
 	
-	List<TransferenciaBase> buscaTransferencias(String contrtato, List<Cuenta> tipo, Date fechaDesde, Date fechaHasta);
 	List<TransferenciaBase> buscaTransferencias(String contrtato, List<Cuenta> cuentas, HistorialTipo tipo, Date fechaDesde, Date fechaHasta);
 }

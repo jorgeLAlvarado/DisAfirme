@@ -49,8 +49,6 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		// List<EstadoCuenta> edoCuentaActivar =
-		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.consultaSaldos(consultaMovimiento);
 
 		LOG.info(">>cuentas()");
@@ -72,8 +70,6 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientosLC consultaMovimiento = new ConsultaSaldosMovimientosLC();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		// List<EstadoCuenta> edoCuentaActivar =
-		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService.cuentasLC(consultaMovimiento);
 		LOG.info(">>credito()");
 		return AfirmeNetWebConstants.MV_CONSULTA_CREDITO ;
@@ -93,8 +89,6 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientosInversiones consultaMovimiento = new ConsultaSaldosMovimientosInversiones();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		// List<EstadoCuenta> edoCuentaActivar =
-		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService
 				.consultaInversion(consultaMovimiento);
 		LOG.info(">>inversion()");
@@ -116,8 +110,6 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		// List<EstadoCuenta> edoCuentaActivar =
-		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.movimientosMes(consultaMovimiento);
 		LOG.info(">>detalleMovimiento()");
 		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE_MOVIMIENTO;
@@ -137,8 +129,6 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientosLC consultaMovimiento = new ConsultaSaldosMovimientosLC();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		// List<EstadoCuenta> edoCuentaActivar =
-		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService
 				.informacionPrestamo(consultaMovimiento);
 		LOG.info(">>prestamo()");
@@ -159,8 +149,6 @@ public class ConsultaSaldosMovimientoController {
 		ConsultaSaldosMovimientosInversiones consultaMovimiento = new ConsultaSaldosMovimientosInversiones();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
-		// List<EstadoCuenta> edoCuentaActivar =
-		// estadoCuentaService.getEdoCuentaService(estadoCuenta);
 		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService
 				.detalleProducto(consultaMovimiento);
 		LOG.info(">>detalleProducto()");
