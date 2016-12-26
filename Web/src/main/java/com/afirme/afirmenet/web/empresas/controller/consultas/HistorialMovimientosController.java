@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
-import com.afirme.afirmenet.dao.transferencia.ComprobanteTransferenciaDao;
 import com.afirme.afirmenet.ibs.beans.consultas.HistorialTipo;
 import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.transferencia.TransferenciaBase;

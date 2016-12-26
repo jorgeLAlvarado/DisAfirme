@@ -53,8 +53,8 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 */
 	@RequestMapping(value = "/seguridad_cambio_correo.htm", method = RequestMethod.POST)
 	public String goCambioCorreoCuentaAfirme(HttpServletRequest request,	ModelMap modelMap) {
-		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info(">>goCambioCorreoCuentaAfirme()");
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info("<<goCambioCorreoCuentaAfirme()");
 		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO;
 	}
