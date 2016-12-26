@@ -44,14 +44,14 @@ public class ConsultaSaldosMovimientoController {
 			RequestMethod.GET })
 	public String cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 
-		LOG.info("<<cuentas()");
+		LOG.info("<< cuentas()");
 
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.consultaSaldos(consultaMovimiento);
 
-		LOG.info(">>cuentas()");
+		LOG.info(">> cuentas()");
 		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE;
 
 	}
@@ -66,12 +66,12 @@ public class ConsultaSaldosMovimientoController {
 	@RequestMapping(value = "/consulta_credito.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String credito(ConsultaSaldosMovimientosLC consultaCredito) {
-		LOG.info("<<credito()");
+		LOG.info("<< credito()");
 		ConsultaSaldosMovimientosLC consultaMovimiento = new ConsultaSaldosMovimientosLC();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService.cuentasLC(consultaMovimiento);
-		LOG.info(">>credito()");
+		LOG.info(">> credito()");
 		return AfirmeNetWebConstants.MV_CONSULTA_CREDITO ;
 
 	}
@@ -85,13 +85,13 @@ public class ConsultaSaldosMovimientoController {
 	@RequestMapping(value = "/consulta_inversion.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String inversion(ConsultaSaldosMovimientosInversiones consultaInversion) {
-		LOG.info("<<inversion()");
+		LOG.info("<< inversion()");
 		ConsultaSaldosMovimientosInversiones consultaMovimiento = new ConsultaSaldosMovimientosInversiones();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
 		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService
 				.consultaInversion(consultaMovimiento);
-		LOG.info(">>inversion()");
+		LOG.info(">> inversion()");
 
 		return AfirmeNetWebConstants.MV_CONSULTA_INVERSION;
 
@@ -106,12 +106,12 @@ public class ConsultaSaldosMovimientoController {
 	@RequestMapping(value = "/consulta_detalle_movimiento.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String detalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
-		LOG.info("<<detalleMovimiento()");
+		LOG.info("<< detalleMovimiento()");
 		ConsultaSaldosMovimientos consultaMovimiento = new ConsultaSaldosMovimientos();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
 		List<ConsultaSaldosMovimientos> consulta = consultaSaldoMovimientoService.movimientosMes(consultaMovimiento);
-		LOG.info(">>detalleMovimiento()");
+		LOG.info(">> detalleMovimiento()");
 		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE_MOVIMIENTO;
 
 	}
@@ -125,13 +125,13 @@ public class ConsultaSaldosMovimientoController {
 	@RequestMapping(value = "/consulta_prestamo.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String prestamo(ConsultaSaldosMovimientosLC prestamo) {
-		LOG.info("<<prestamo()");
+		LOG.info("<< prestamo()");
 		ConsultaSaldosMovimientosLC consultaMovimiento = new ConsultaSaldosMovimientosLC();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
 		List<ConsultaSaldosMovimientosLC> consulta = consultaSaldoMovimientoService
 				.informacionPrestamo(consultaMovimiento);
-		LOG.info(">>prestamo()");
+		LOG.info(">> prestamo()");
 		return AfirmeNetWebConstants.MV_CONSULTA_PRESTAMO;
 
 	}
@@ -145,13 +145,13 @@ public class ConsultaSaldosMovimientoController {
 	@RequestMapping(value = "/consulta_detalle_producto.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String detalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
-		LOG.info("<<detalleProducto()");
+		LOG.info("<< detalleProducto()");
 		ConsultaSaldosMovimientosInversiones consultaMovimiento = new ConsultaSaldosMovimientosInversiones();
 		consultaMovimiento.setNombreCuenta(null);
 		consultaMovimiento.setCantidad(0);
 		List<ConsultaSaldosMovimientosInversiones> consulta = consultaSaldoMovimientoService
 				.detalleProducto(consultaMovimiento);
-		LOG.info(">>detalleProducto()");
+		LOG.info(">> detalleProducto()");
 		return AfirmeNetWebConstants.MV_CONSULTA_DETALLE_PRODUCTO;
 
 	}

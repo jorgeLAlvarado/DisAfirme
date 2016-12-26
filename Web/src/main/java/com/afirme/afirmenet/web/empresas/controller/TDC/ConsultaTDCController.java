@@ -133,7 +133,7 @@ public class ConsultaTDCController {
 	 * 
 	 * @return AfirmeNetWebConstants.PRUEBA;
 	 */
-	@RequestMapping(value = "/consulta_tdc_promociones.htm",method = { RequestMethod.POST,
+	@RequestMapping(value = "/consulta_promociones_plazo.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String obtenerPromocionesPlazos(){
 		
