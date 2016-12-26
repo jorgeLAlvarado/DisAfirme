@@ -43,7 +43,7 @@ public class ConsultaTDCController {
 	/**
 	 *  Realiza la consulta de sueldos
 	 * 
-	 * @return AfirmeNetWebConstants.PRUEBA
+	 * @return 
 	 */
 	@RequestMapping(value = "/consulta_tdc.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
@@ -66,7 +66,7 @@ public class ConsultaTDCController {
 	/**
 	 * Consulta los movimientos despues de corte
 	 * 
-	 * @returnAfirmeNetWebConstants.PRUEBA;
+	 * @return
 	 */
 	@RequestMapping(value = "/consulta_tdc_despues_corte.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
@@ -87,7 +87,7 @@ public class ConsultaTDCController {
 	/**
 	 * consulta los movimientos tipo corte
 	 * 
-	 * @return AfirmeNetWebConstants.PRUEBA;
+	 * @return
 	 */
 	@RequestMapping(value = "/consulta_tdc_despues_corte.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
@@ -109,7 +109,7 @@ public class ConsultaTDCController {
 	/**
 	 * consulta lo moviminetos corte atras
 	 * 
-	 * @return AfirmeNetWebConstants.PRUEBA;
+	 * @return 
 	 */
 	@RequestMapping(value = "/consulta_tdc_despues_corte_atras.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
@@ -131,7 +131,7 @@ public class ConsultaTDCController {
 	/**
 	 * Consulta Promociones plazo
 	 * 
-	 * @return AfirmeNetWebConstants.PRUEBA;
+	 * @return
 	 */
 	@RequestMapping(value = "/consulta_promociones_plazo.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
