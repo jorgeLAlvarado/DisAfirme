@@ -51,7 +51,7 @@ public class HistorialMovimientosController extends BaseController{
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping("/historial-comprobante.htm")
+	@RequestMapping("/historial_comprobante.htm")
 	public String comprobante(ModelMap model, HttpServletRequest request) {
 		LOG.info("<< comprobante()");
 		AfirmeNetUser afirmeNetUser=getSessionUser(request);
