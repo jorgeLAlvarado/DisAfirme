@@ -25,27 +25,17 @@ public class HistorialDaoImpl implements HistorialDao {
 	
 	@Override
 	public List<TipoTransaccion> listaTransacciones(boolean esBasicoSinToken) {
-		String sql="select TIPO, NOMBRE, CATEGORIA from DC_HISTORIAL_TIPOS where Categoria<>'' and persona in (0, 2) order by categoria desc, nombre asc";
 
-		List<Map<String, Object>> listResult;
 		
 		try {
 			
-			listResult = db2Dao.getJdbcTemplate().queryForList(sql, new Object[] {});
+			LOG.info("Resultados");
 		} catch (Exception e) {
-			LOG.error("Error en la ejecucion de query: " + e.getMessage());
+			LOG.info("No es posible realizar");
 			return null;
 		}
 		
 		List<TipoTransaccion> result= new ArrayList<TipoTransaccion>();
-		
-		for (Map<String, Object> map : listResult) {
-			TipoTransaccion tt=new TipoTransaccion();
-			tt.setTipo(HistorialTipo.findByValue(DaoUtil.getString(map.get("TIPO"))));
-			tt.setCategoria(DaoUtil.getString(map.get("CATEGORIA")));
-			tt.setNombre(DaoUtil.getString(map.get("NOMBRE")));
-			result.add(tt);
-		}
 		
 		return result;
 	}
