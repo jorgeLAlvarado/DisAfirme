@@ -40,7 +40,7 @@ public class ConsultaSaldosMovimientoController {
 	 * @param consultaCuenta
 	 * @return AfirmeNetWebConstants.MV_CONSULTA_DETALLE
 	 */
-	@RequestMapping(value = "/consultas_resumen-de-mis-cuentas.htm",method = { RequestMethod.POST,
+	@RequestMapping(value = "/consultas_rdmc_detalle.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String cuentas(@ModelAttribute("consultaCuenta") ConsultaSaldosMovimientos consultaCuenta) {
 
@@ -103,7 +103,7 @@ public class ConsultaSaldosMovimientoController {
 	 * @param consultaDetalle
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
-	@RequestMapping(value = "/consulta_detalle.htm",method = { RequestMethod.POST,
+	@RequestMapping(value = "/consulta_detalle_movimiento.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String detalleMovimiento(ConsultaSaldosMovimientos consultaDetalle) {
 		LOG.info("<<detalleMovimiento()");
@@ -122,7 +122,7 @@ public class ConsultaSaldosMovimientoController {
 	 * @param prestamo
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
-	@RequestMapping(value = "/prestamo.htm",method = { RequestMethod.POST,
+	@RequestMapping(value = "/consulta_prestamo.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String prestamo(ConsultaSaldosMovimientosLC prestamo) {
 		LOG.info("<<prestamo()");
@@ -142,7 +142,7 @@ public class ConsultaSaldosMovimientoController {
 	 * @param detalleProducto
 	 * @return AfirmeNetWebConstants.PRUEBA
 	 */
-	@RequestMapping(value = "/detalle_producto.htm",method = { RequestMethod.POST,
+	@RequestMapping(value = "/consulta_detalle_producto.htm",method = { RequestMethod.POST,
 			RequestMethod.GET })
 	public String detalleProducto(ConsultaSaldosMovimientosInversiones detalleProducto) {
 		LOG.info("<<detalleProducto()");

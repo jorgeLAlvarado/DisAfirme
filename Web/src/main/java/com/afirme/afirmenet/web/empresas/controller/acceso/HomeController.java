@@ -50,6 +50,13 @@ public class HomeController  extends BaseController{
 		
 	}
 
+	/**
+	 * Pantalla que muestra la barra para dar a conocer que la transaccoin se esta realizando
+	 * 
+	 * @param nextAction
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("/esperando")
 	public String esperando(@RequestParam(required = true) String nextAction,
 			ModelMap model) {
@@ -96,6 +103,12 @@ public class HomeController  extends BaseController{
 		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 	
+	/**
+	 * Metodo que redireccoina al menu de inicio
+	 * @param request
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(value = "/home.htm", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, ModelMap modelMap) {
 		LOG.info("<<home()");

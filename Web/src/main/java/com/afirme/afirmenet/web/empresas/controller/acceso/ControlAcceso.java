@@ -70,6 +70,12 @@ public class ControlAcceso{
 	protected TokenService tokenService;
 	
 	
+	/**
+	 * Metodo utilizado para la validacion del contrato
+	 * @param login
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(value = "/valida_contrato.htm", method = RequestMethod.POST)
 	public String validaContrato(Login login,ModelMap modelMap) {
 		
@@ -80,6 +86,12 @@ public class ControlAcceso{
 		return AfirmeNetWebConstants.MV_LOGIN_AVISO_SEGURIDAD;
 	}
 
+	/**
+	 * Metodo que redirige al jsp para sincronizar manualmente el token
+	 * @param login
+	 * @param modelMap
+	 * @return
+	 */
 	@RequestMapping(value = "/sincroniza.htm", method = RequestMethod.POST)
 	public String sincroniza(@ModelAttribute("login") Login login, ModelMap modelMap) {
 
@@ -89,13 +101,16 @@ public class ControlAcceso{
 		return AfirmeNetWebConstants.MV_SYNC_TOKEN;
 	}
 
+	/**
+	 * metodo que realiza la sincronizacion del token usado
+	 * @param login
+	 * @param modelMap
+	 */
 	@RequestMapping(value = "/sincronizacion_token", method = RequestMethod.POST)
 	public void sincronizacionToken(@ModelAttribute("sincronizacion") Login login, ModelMap modelMap) {
 		
 		LOG.info(">> sincroniza()");
-		LOG.info("<< sincroniza()");
 		mailService.sendAlertaSincrTok(mail, login.getContrato(), login.getSerialToken());
-		LOG.info(">> sincronizacionToken()");
 		LOG.info("<< sincronizacionToken()");
 
 	}

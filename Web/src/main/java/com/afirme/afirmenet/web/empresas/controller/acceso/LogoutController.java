@@ -59,11 +59,9 @@ public class LogoutController extends BaseController {
 	@RequestMapping(value = "/logout.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutSeguro(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-
-		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info(">> logOutSeguro()");
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info("<< logOutSeguro()");
-		
 		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 
@@ -79,11 +77,9 @@ public class LogoutController extends BaseController {
 	@RequestMapping(value = "/logout_enrolamiento.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutSeguroEnrolamiento(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-
-		request.getSession().invalidate();
 		LOG.info(">> logOutSeguroEnrolamiento()");
+		request.getSession().invalidate();
 		LOG.info("<< logOutSeguroEnrolamiento()");
-		
 		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 	
@@ -95,11 +91,10 @@ public class LogoutController extends BaseController {
 	 */
 	@RequestMapping(value = "/cep_spei.htm", method = RequestMethod.POST)
 	public String cepSPEI(HttpServletRequest request, ModelMap modelMap) {				
-		
+		LOG.info(">> cepSPEI()");
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		logInService.updateINOUT(afirmeNetUser.getContrato(), "N");
 		request.getSession().invalidate();
-		LOG.info(">> cepSPEI()");
 		LOG.info("<< cepSPEI()");
 		
 		return AfirmeNetWebConstants.MV_LOGIN;		
@@ -116,11 +111,9 @@ public class LogoutController extends BaseController {
 	@RequestMapping(value = "/logout_version_clasica.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String logOutVersionClasica(ModelMap modelMap, HttpServletRequest request, HttpServletResponse resp) throws IOException {
-
-		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info(">> logOutVersionClasica()");
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info("<< logOutVersionClasica()");
-		
 		return AfirmeNetWebConstants.MV_LOGIN;
 	}
 	

@@ -48,10 +48,10 @@ public class UsuariosController extends BaseController{
 	public String listaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		LOG.info("<<listaUsuarios()");
+		LOG.info(">>listaUsuarios()");
 		Boolean usuarios = false;
 		userService.getdatosUsuario(usuarios);
-		LOG.info(">>listaUsuarios()");
+		LOG.info("<<listaUsuarios()");
 		return AfirmeNetWebConstants.MV_LISTAR_USUARIOS;
 	}
 	/**
@@ -65,10 +65,10 @@ public class UsuariosController extends BaseController{
 	public String tokenDisponibles(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		LOG.info("<<tokenDisponibles()");
+		LOG.info(">>tokenDisponibles()");
 		Boolean soloDisponibles = false;
 		userService.getTokens(soloDisponibles);
-		LOG.info(">>tokenDisponibles()");
+		LOG.info("<<tokenDisponibles()");
 		return AfirmeNetWebConstants.MV_TOKENS_DISPONIBLES;
 	}
 	/**
@@ -81,8 +81,8 @@ public class UsuariosController extends BaseController{
 	@RequestMapping(value="/agregar_usuario.htm", method = RequestMethod.POST)
 	public String agregaUsuarios(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica logueo para extraer datos
-		LOG.info("<<agregaUsuarios()");
 		LOG.info(">>agregaUsuarios()");
+		LOG.info("<<agregaUsuarios()");
 		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_ALTA;
 	}
 	/**
@@ -95,8 +95,8 @@ public class UsuariosController extends BaseController{
 	@RequestMapping(value="/agregar_permisos.htm", method = RequestMethod.POST)
 	public String agregaPermisos(HttpServletRequest request,	ModelMap modelMap){
 		//Se verifica que el usuario esta logueado para extraer datos
-		LOG.info("<<agregaPermisos()");
 		LOG.info(">>agregaPermisos()");
+		LOG.info("<<agregaPermisos()");
 		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_AGREGAR_PERMISOS;
 	}
 	/**
@@ -108,8 +108,8 @@ public class UsuariosController extends BaseController{
 	
 	@RequestMapping(value="/agregar_contrasena.htm", method = RequestMethod.POST)
 	public String agregaContrasenia(HttpServletRequest request,	ModelMap modelMap){
-		LOG.info("<<agregaCotrasenia()");
-		LOG.info(">>agregaContrasenia()");
+		LOG.info(">>agregaCotrasenia()");
+		LOG.info("<<agregaContrasenia()");
 		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_AGREGAR_CONTRASENA;
 	}
 	/**
@@ -124,7 +124,7 @@ public class UsuariosController extends BaseController{
 	public String confirmacion(UsuariosDTO usuariosDTO, ModelMap modelMap, HttpServletRequest httpServletRequest){
 		LOG.info("<<confirmacion()");
 		userService.registrarUsuario(usuariosDTO);
-		LOG.info("<<confirmacion()");
+		LOG.info(">>confirmacion()");
 		return AfirmeNetWebConstants.MV_AGREGAR_USUARIO_CONFIRMACION;
 	}
 	

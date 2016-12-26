@@ -54,8 +54,8 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	@RequestMapping(value = "/seguridad_cambio_correo.htm", method = RequestMethod.POST)
 	public String goCambioCorreoCuentaAfirme(HttpServletRequest request,	ModelMap modelMap) {
 		AfirmeNetUser afirmeNetUser = getSessionUser(request);
-		LOG.info("<<goCambioCorreoCuentaAfirme()");
 		LOG.info(">>goCambioCorreoCuentaAfirme()");
+		LOG.info("<<goCambioCorreoCuentaAfirme()");
 		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO;
 	}
 	
@@ -69,9 +69,9 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 */
 	@RequestMapping(value = "/seguridad_cambio_correo_confirmar.htm", method = RequestMethod.POST)
 	public String confirmarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
-		LOG.info("<<confirmarDatos()");
-		AfirmeNetUser afirmeNetUser = getSessionUser(request);
 		LOG.info(">>confirmarDatos()");
+		AfirmeNetUser afirmeNetUser = getSessionUser(request);
+		LOG.info("<<confirmarDatos()");
 		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO_CONFIRMAR;	
 	}
 	
@@ -90,14 +90,14 @@ public class ConfigSeguridadCambioCorreoController extends BaseController {
 	 */
 	@RequestMapping(value = "/seguridad_cambio_correo_comprobante.htm", method = RequestMethod.POST)
 	public String guardarDatos(@ModelAttribute("correoCuentaAfirme") CorreoElectronicoDTO correoElectronicoDTO, ModelMap modelMap, HttpServletRequest request) {
-		LOG.info("<<confirmarDatos()");
+		LOG.info(">>confirmarDatos()");
 		boolean resultado = false;
 		try {
 			resultado = userService.actualizarCorreoLogin(correoElectronicoDTO);
 		} catch (Exception e) {
 			LOG.error("Error al actualizar el correo.", e);
 		}
-		LOG.info(">>confirmarDatos()");
+		LOG.info("<<confirmarDatos()");
 		return AfirmeNetWebConstants.MV_CONFIGURACIONES_SEGURIDAD_CAMBIOCORREO_COMPROBANTE;
 	}
 	

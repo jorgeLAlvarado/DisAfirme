@@ -51,7 +51,7 @@ public class HistorialMovimientosController extends BaseController{
 	 */
 	@RequestMapping("/historial_comprobante.htm")
 	public String comprobante(ModelMap model, HttpServletRequest request) {
-		LOG.info("<< comprobante()");
+		LOG.info(">> comprobante()");
 		AfirmeNetUser afirmeNetUser=getSessionUser(request);
 		LOG.debug("Atendiendo Peticion = "+request.getServletPath());
  		String idSe=(String)request.getParameter("radio-res");
@@ -74,7 +74,7 @@ public class HistorialMovimientosController extends BaseController{
 		}
 		
 		String modelView=urlComprobante(comprobante, model, afirmeNetUser);
-		LOG.info(">> comprobante()");
+		LOG.info("<< comprobante()");
 		return modelView;
 	}
 	
@@ -88,7 +88,7 @@ public class HistorialMovimientosController extends BaseController{
 	 */
 	private String urlComprobante(TransferenciaBase comprobante, ModelMap modelMap, AfirmeNetUser afirmeNetUser){
 		
-		LOG.info("<< urlComprobante()");
+		LOG.info(">> urlComprobante()");
 		HistorialTipo tipo=HistorialTipo.findByValue(comprobante.getTransactionCode());
 		String modelView = AfirmeNetWebConstants.MV_CONSULTAS_HISTORIAL_RESULTADOS;
 		List<TransferenciaBase> comprobantesExito = new ArrayList<TransferenciaBase>(0);
@@ -105,7 +105,7 @@ public class HistorialMovimientosController extends BaseController{
 			LOG.info("Atendiendo Peticion: TRANSFERENCIA_SPEI");
 			modelView = AfirmeNetWebConstants.MV_TRANSFERENCIAS_NACIONALES_COMPROBANTE;
 			}
-		LOG.info(">> urlComprobante()");
+		LOG.info("<< urlComprobante()");
 		return modelView;	
 	}
 	
@@ -124,8 +124,8 @@ public class HistorialMovimientosController extends BaseController{
 	public ResponseEntity<byte[]> getReimprimirPDF(ModelMap modelMap,
 			SessionStatus sessionStatus, HttpServletRequest request) {
 
-		LOG.info("<<ResponseEntity<byte[]> getReimprimirPDF");
-		LOG.info(">>ResponseEntity<byte[]> getReimprimirPDF");
+		LOG.info(">> ResponseEntity<byte[]> getReimprimirPDF");
+		LOG.info("<< ResponseEntity<byte[]> getReimprimirPDF");
 		return null;
 
 	}
