@@ -136,6 +136,8 @@ public class UsuariosController extends BaseController{
 	 */
 	
 	private void validarDatosRecibidos(UsuariosDTO usuariosDTO) throws AfirmeNetException,Exception{
+		LOG.info(">> validarDatosRecibidos()");
+		LOG.info("<< validarDatosRecibidos()");
 		
 	}
 	
@@ -147,7 +149,8 @@ public class UsuariosController extends BaseController{
 	 */
 	
 	private void enviarComprobante(UsuariosDTO usuariosDTO){
-		
+		LOG.info(">> enviarComprobante()");
+		LOG.info("<< enviarComprobante()");
 	}
 	
 

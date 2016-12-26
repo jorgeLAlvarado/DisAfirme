@@ -137,12 +137,8 @@ public class LoginController extends BaseController {
 	@RequestMapping(value = "/terminos.htm", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	public String mostrarTerminos() {
-
-
-		
 		LOG.info(">> mostrarTerminos()");
 		LOG.info("<< mostrarTerminos()");
-
 		return AfirmeNetWebConstants.MV_HOME_TERMINOS;
 	}
 	
@@ -172,10 +168,10 @@ public class LoginController extends BaseController {
 	
 	@RequestMapping(value = "/avatar.htm", method = RequestMethod.GET)
 	public String mostraravatar(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
-		LOG.info("<<mostraravatar()");
+		LOG.info("<< mostraravatar()");
 		Boolean avatar = false;
 		userService.getobtenerAvatar(avatar);
-		LOG.info(">>mostraravatar()");
+		LOG.info(">> mostraravatar()");
 		
 		return AfirmeNetWebConstants.MV_MOSTRAR_AVATAR;
 	}
@@ -191,10 +187,10 @@ public class LoginController extends BaseController {
 	 */
 	@RequestMapping(value = "/alias.htm", method = RequestMethod.GET)
 	public String mostraralias(HttpServletRequest request, HttpServletResponse resp, ModelMap model) throws IOException{
-		LOG.info("<<mostraralias()");
+		LOG.info("<< mostraralias()");
 		Boolean alias = false;
 		userService.getobtenerAlias(alias);
-		LOG.info(">>mostraralias()");
+		LOG.info(">> mostraralias()");
 		
 		return AfirmeNetWebConstants.MV_MOSTRAR_ALIAS;
 	}
