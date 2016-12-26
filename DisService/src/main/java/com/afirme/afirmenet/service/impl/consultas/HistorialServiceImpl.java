@@ -14,6 +14,12 @@ import com.afirme.afirmenet.ibs.beans.consultas.TipoTransaccion;
 import com.afirme.afirmenet.model.transferencia.TransferenciaBase;
 import com.afirme.afirmenet.service.consultas.HistorialService;
 
+/**
+ * @author Jorge Alvarado
+ * 
+ * 
+ *
+ */
 @Service
 public class HistorialServiceImpl implements HistorialService {
 
@@ -32,17 +38,12 @@ public class HistorialServiceImpl implements HistorialService {
 	public List<String> categorias(boolean esBasicoSinToken) {
 		return historialDao.categorias(esBasicoSinToken);
 	}
-
-	/**
-	 * Devuelve una lista de TransferenciaBase que es el tipo de objeto para mostrar la lista de resultados.
-	 */
 	@SuppressWarnings("unchecked")
 	public List<TransferenciaBase> buscaTransferencias(String contrato, List<Cuenta> cuentas, HistorialTipo tipo, Date fechaDesde, Date fechaHasta) {
 		String fD="";
 		String fH="";
 		List<TransferenciaBase> lista=null;
 		
-		HistorialTipo tipoParaComparar;
 		
 		switch (tipo) {
 		case TRANSFERENCIAS_INTERNACIONALES_DOLARES:
