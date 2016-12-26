@@ -153,9 +153,6 @@ public class HistorialMovimientosController extends BaseController{
 		String modelView = AfirmeNetWebConstants.MV_CONSULTAS_HISTORIAL_RESULTADOS;
 		List<TransferenciaBase> comprobantesExito = new ArrayList<TransferenciaBase>(0);
 		comprobante.setEsReimpresion(true);
-		
-		cuentasHistorialService.setInfoCuentaOrigen(comprobante, afirmeNetUser.getContrato(), tipo.getValor());
-		cuentasHistorialService.setInfoCuentaDestino(comprobante, afirmeNetUser.getContrato(), tipo);
 
 		comprobantesExito.add(comprobante);
 		
