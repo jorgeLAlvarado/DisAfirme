@@ -14,8 +14,17 @@ import com.afirme.afirmenet.beas.login.Notificaciones;
  */
 public interface ActividadesPendientesDao {
 	
+	/**consulta para obtener notificaciones pendientes
+	 * @param notificaciones
+	 * @return
+	 */
 	public List<Notificaciones> getNotificacionesPendientes (Boolean notificaciones);
 	
+	/**
+	 * consulta para obtener autoriazaciones pendientes
+	 * @param autorizaciones
+	 * @return
+	 */
 	public List<Notificaciones> getAutorizacionesPendientes (Boolean autorizaciones);
 
 }

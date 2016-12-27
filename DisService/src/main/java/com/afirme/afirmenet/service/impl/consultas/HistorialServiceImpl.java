@@ -15,10 +15,9 @@ import com.afirme.afirmenet.model.transferencia.TransferenciaBase;
 import com.afirme.afirmenet.service.consultas.HistorialService;
 
 /**
- * @author Jorge Alvarado
- * 
- * 
- *
+ * @author Jorge Luis Alvarado
+ * @version 1.0.0
+ * Created on Created on Dic 10, 2016 3:50:05 PM by Jorge
  */
 @Service
 public class HistorialServiceImpl implements HistorialService {
@@ -33,11 +32,24 @@ public class HistorialServiceImpl implements HistorialService {
 	public List<TipoTransaccion> listaTransacciones(boolean esBasicoSinToken) {
 		return historialDao.listaTransacciones(esBasicoSinToken);
 	}
-	
+	/**
+	 * Listar categorias
+	 * @param esBasicoSinToken
+	 * @return
+	 */	
 	@Override
 	public List<String> categorias(boolean esBasicoSinToken) {
 		return historialDao.categorias(esBasicoSinToken);
 	}
+	/**
+	 * Listar Transferencias
+	 * @param contrato
+	 * @param cuentas
+	 * @param tipo
+	 * @param fechaDesde
+	 * @param fechaHasta
+	 * @return
+	 */	
 	@SuppressWarnings("unchecked")
 	public List<TransferenciaBase> buscaTransferencias(String contrato, List<Cuenta> cuentas, HistorialTipo tipo, Date fechaDesde, Date fechaHasta) {
 		String fD="";
@@ -59,7 +71,11 @@ public class HistorialServiceImpl implements HistorialService {
 		}
 		return lista;
 	}
-
+	/**
+	 * Listar informacion extra
+	 * @param comprobante
+	 * @return
+	 */	
 	@Override
 	public void obtenerInformacionExtra(TransferenciaBase comprobante) {
 		HistorialTipo tipo= HistorialTipo.findByValue(comprobante.getTransactionCode());
@@ -72,6 +88,13 @@ public class HistorialServiceImpl implements HistorialService {
 		
 		comprobante.setSts(getEstatusInotr(comprobante.getReferenceNumber(), comprobante.getContractId()));
 	}
+	
+	/**
+	 * obtenr estatus
+	 * @param referencia
+	 * @param contrato
+	 * @return
+	 */	
 	public String getEstatusInotr(String referencia, String contrato){
 		String STS=comprobanteTransferenciaDao.buscarAtributoINOTR(referencia, contrato, "INOSTS");
 

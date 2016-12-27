@@ -89,14 +89,14 @@ public interface UserDao {
 
 	/**
 	 * Consulta para obtener el avatar asociado a una cuenta
-	 * @param contrato
+	 * @param avatar
 	 * @return
 	 */
 	public String getobtenerAvatar(Boolean avatar);
 
 	/**
 	 * Consulta para obtener el alias asociado a una cuenta
-	 * @param contrato
+	 * @param alias
 	 * @return
 	 */
 	public String getobtenerAlias(Boolean alias);
@@ -117,13 +117,13 @@ public interface UserDao {
 	public boolean registrarUsuario(UsuariosDTO usuarioDTO);
 	
 	/**Consulta para listar usuarios en administrador
-	 * @param datos
+	 * @param usuarios
 	 * @return
 	 */
 	public List<UsuariosDTO> getdatosUsuario(Boolean usuarios);	
 	
 	/**Consulta para los Tokens disponibles en administrador
-	 * @param datos
+	 * @param soloDisponibles
 	 * @return
 	 */	
 	
