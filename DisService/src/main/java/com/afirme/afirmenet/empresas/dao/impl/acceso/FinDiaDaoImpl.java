@@ -18,10 +18,7 @@ public class FinDiaDaoImpl implements FinDiaDao {
 	static final AfirmeNetLog LOG = new AfirmeNetLog(FinDiaDaoImpl.class);
 
 	
-	/**
-	 * metodo para validar manda la nueva contraseña
-	 * @return TRUE si el proceso no presento problemas.
-	 */
+
 	public String getFinDia() {
 		
 
@@ -29,12 +26,7 @@ public class FinDiaDaoImpl implements FinDiaDao {
 	}
 
 	
-	/**
-	 * metodo para validar manda la nueva contraseña
-	 * @param nuevoPassword
-	 * @param password
-	 * @return TRUE si el proceso no presento problemas.
-	 */
+
 	public void valActivSocket() {
 		
 		
