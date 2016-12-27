@@ -2,11 +2,13 @@ package com.afirme.afirmenet.dao.transferencia;
 
 import java.util.List;
 
-import com.afirme.afirmenet.model.transferencia.Comprobante;
-
+/**
+ * @author Usuario
+ *
+ */
 public interface ComprobanteTransferenciaDao {
 
-	public void insertaConfirmacionOperacion(Comprobante comprobante);
+
 
 	/**
 	 * @param contrato
@@ -18,8 +20,9 @@ public interface ComprobanteTransferenciaDao {
 	 */
 	public List<?> buscarComprobantesGenericos(String contrato, String tipo, String fechaDesde, String fechaHasta, String numeroServicio);
 
-	//04 y 51  Reimpresion de Transferencias Internacionales (USD y Multimoneda) --------
+
 	/**
+	 * Reimpresion de Transferencias Internacionales (USD y Multimoneda)
 	 * @param contrato
 	 * @param tipo
 	 * @param fechaDesde
