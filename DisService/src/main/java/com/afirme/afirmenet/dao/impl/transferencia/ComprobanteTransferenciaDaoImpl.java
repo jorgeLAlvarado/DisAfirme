@@ -9,8 +9,11 @@ import com.afirme.afirmenet.model.transferencia.Divisa;
 import com.afirme.afirmenet.model.transferencia.TransferenciaBase;
 
 /**
- * @author Usuario
+ * clase para validar la pregunta secreta
+ * 
+ * @author Mayra Selene Mena Quiñones
  *
+ * @version 1.0.0
  */
 @Repository
 public class ComprobanteTransferenciaDaoImpl implements ComprobanteTransferenciaDao {
