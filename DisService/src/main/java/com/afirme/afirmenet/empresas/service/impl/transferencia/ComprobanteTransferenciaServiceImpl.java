@@ -9,6 +9,10 @@ import com.afirme.afirmenet.dao.transferencia.ComprobanteTransferenciaDao;
 import com.afirme.afirmenet.empresas.service.transferencia.ComprobanteTransferenciaService;
 import com.afirme.afirmenet.model.transferencia.Comprobante;
 
+/**
+ * @author Usuario
+ *
+ */
 @Service
 public class ComprobanteTransferenciaServiceImpl implements ComprobanteTransferenciaService{
 	
