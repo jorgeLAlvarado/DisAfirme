@@ -15,6 +15,13 @@ import org.springframework.stereotype.Repository;
 import com.afirme.afirmenet.empresas.dao.acceso.PreguntaSecretaDao;
 import com.afirme.afirmenet.beas.login.PreguntaSecreta;
 
+/**
+ * clase para validar la pregunta secreta
+ * 
+ * @author Mayra Selene Mena Quiñones
+ *
+ * @version 1.0.0
+ */
 @Repository
 public class PreguntaSecretaDaoImpl implements PreguntaSecretaDao {
 
