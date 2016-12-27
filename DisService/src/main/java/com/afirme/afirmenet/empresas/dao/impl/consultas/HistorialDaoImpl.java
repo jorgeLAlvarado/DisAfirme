@@ -1,11 +1,11 @@
-package com.afirme.afirmenet.dao.impl.consultas;
+package com.afirme.afirmenet.empresas.dao.impl.consultas;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.afirme.afirmenet.dao.consultas.HistorialDao;
+import com.afirme.afirmenet.empresas.dao.consultas.HistorialDao;
 import com.afirme.afirmenet.ibs.beans.consultas.TipoTransaccion;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 /**

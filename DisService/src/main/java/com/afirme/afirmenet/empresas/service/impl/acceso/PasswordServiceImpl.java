@@ -9,7 +9,7 @@ import com.afirme.afirmenet.dao.acceso.ContratoDao;
 import com.afirme.afirmenet.dao.acceso.PasswordDao;
 import com.afirme.afirmenet.dao.acceso.UserDao;
 import com.afirme.afirmenet.empresas.service.acceso.PasswordService;
-import com.afirme.afirmenet.service.impl.acceso.MailService;
+import com.afirme.afirmenet.empresas.service.impl.acceso.MailService;
 
 /**
  * clase para implementar la contraseña

@@ -8,7 +8,7 @@ import com.afirme.afirmenet.empresas.dao.acceso.OTPDao;
 import com.afirme.afirmenet.empresas.dao.acceso.UserDao;
 import com.afirme.afirmenet.empresas.dao.impl.acceso.OTPDaoImpl;
 import com.afirme.afirmenet.empresas.service.acceso.OTPService;
-import com.afirme.afirmenet.service.impl.acceso.MailService;
+import com.afirme.afirmenet.empresas.service.impl.acceso.MailService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 
 /**

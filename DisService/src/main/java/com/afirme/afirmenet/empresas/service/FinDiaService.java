@@ -1,15 +1,14 @@
-package com.afirme.afirmenet.empresas.dao.acceso;
+package com.afirme.afirmenet.empresas.service;
 
 /**
  * clase para dar la validacion de fin de dia
  * 
  * @author Bayron Gamboa Martinez
+ *	@since 13/12/2016
  *
- * @version 1.0.0
- * 
- * Created on Created on Dic 26, 2016 3:50:05 PM by Bayron
+ * @version 1.0.2
  */
-public interface FinDiaDao {
+public interface FinDiaService {
 	/**
 	 * Toma valor de fin de día
 	 * @return
@@ -17,7 +16,6 @@ public interface FinDiaDao {
 	public String getFinDia();
 	/**
 	 * Valida conexion activa
-	 * 
 	 */
 	public void valActivSocket();
 }

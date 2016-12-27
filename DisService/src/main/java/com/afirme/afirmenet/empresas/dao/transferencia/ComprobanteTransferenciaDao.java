@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.dao.transferencia;
+package com.afirme.afirmenet.empresas.dao.transferencia;
 
 import java.util.List;
 

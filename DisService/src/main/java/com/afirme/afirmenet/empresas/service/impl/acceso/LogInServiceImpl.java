@@ -11,13 +11,13 @@ import com.afirme.afirmenet.dao.log.LogDao;
 import com.afirme.afirmenet.empresas.service.acceso.ContrasenaDTO;
 import com.afirme.afirmenet.empresas.service.acceso.DC_CONFMSG;
 import com.afirme.afirmenet.empresas.service.acceso.LogInService;
+import com.afirme.afirmenet.empresas.service.acceso.ParametricasLoginService;
 import com.afirme.afirmenet.exception.AfirmeNetException;
 import com.afirme.afirmenet.ibs.beans.JBAvatar;
 import com.afirme.afirmenet.ibs.beans.JBBMuser;
 import com.afirme.afirmenet.ibs.beans.JBLogin;
 import com.afirme.afirmenet.ibs.beans.JBProCode;
 import com.afirme.afirmenet.ibs.beans.consultas.Cuenta;
-import com.afirme.afirmenet.service.acceso.ParametricasLoginService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 
 @Service

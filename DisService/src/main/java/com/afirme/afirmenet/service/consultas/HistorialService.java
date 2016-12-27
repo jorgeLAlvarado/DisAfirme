@@ -10,6 +10,11 @@ import com.afirme.afirmenet.model.transferencia.TransferenciaBase;
  * 
  * @author Jorge Alvarado
  *
+ * @version 1.0.0
+ * 
+ * Created on 26/12/2016
+ * 
+ * 
  */
 public interface HistorialService {
 	/**
