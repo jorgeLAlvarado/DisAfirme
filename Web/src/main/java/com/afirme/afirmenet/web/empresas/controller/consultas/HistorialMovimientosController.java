@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
+import com.afirme.afirmenet.empresas.service.consultas.HistorialService;
 import com.afirme.afirmenet.ibs.beans.consultas.HistorialTipo;
 import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.transferencia.TransferenciaBase;
-import com.afirme.afirmenet.service.consultas.HistorialService;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
 import com.afirme.afirmenet.web.empresas.controller.base.BaseController;
 import com.afirme.afirmenet.web.utils.AfirmeNetWebConstants;

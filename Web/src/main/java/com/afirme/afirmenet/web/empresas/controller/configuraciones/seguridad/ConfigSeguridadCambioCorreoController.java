@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.afirme.afirmenet.empresas.service.acceso.UserService;
+import com.afirme.afirmenet.empresas.service.contrato.ContratoService;
 import com.afirme.afirmenet.exception.AfirmeNetException;
 import com.afirme.afirmenet.ibs.generics.Util;
 import com.afirme.afirmenet.model.AfirmeNetUser;
 import com.afirme.afirmenet.model.configuraciones.CorreoElectronicoDTO;
-import com.afirme.afirmenet.service.contrato.ContratoService;
 
 
 

@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.service.impl.contrato;
+package com.afirme.afirmenet.empresas.service.impl.contrato;
 
 import java.sql.SQLException;
 
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.empresas.dao.acceso.ContratoDao;
+import com.afirme.afirmenet.empresas.service.contrato.ContratoService;
 import com.afirme.afirmenet.beas.login.Contrato;
 import com.afirme.afirmenet.beas.login.JBLogin;
-import com.afirme.afirmenet.service.contrato.ContratoService;
 
 /**
  * Controller para las pantallas de las url donde se debe mostrar la pantalla de login.

@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.service.impl.transferencia;
+package com.afirme.afirmenet.empresas.service.impl.transferencia;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.dao.transferencia.ComprobanteTransferenciaDao;
+import com.afirme.afirmenet.empresas.service.transferencia.ComprobanteTransferenciaService;
 import com.afirme.afirmenet.model.transferencia.Comprobante;
-import com.afirme.afirmenet.service.transferencia.ComprobanteTransferenciaService;
 
 @Service
 public class ComprobanteTransferenciaServiceImpl implements ComprobanteTransferenciaService{

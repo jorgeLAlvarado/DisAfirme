@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.service.token;
+package com.afirme.afirmenet.empresas.service.token;
 
 import com.afirme.afirmenet.model.base.TokenModel;
 

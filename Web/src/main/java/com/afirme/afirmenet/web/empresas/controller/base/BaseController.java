@@ -21,6 +21,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.afirme.afirmenet.empresas.service.consultas.CuentaService;
 import com.afirme.afirmenet.empresas.service.consultas.InversionService;
+import com.afirme.afirmenet.empresas.service.token.BasicoSinTokenService;
+import com.afirme.afirmenet.empresas.service.token.TokenService;
 import com.afirme.afirmenet.empresas.service.transferencia.ValidacionTransferenciaService;
 import com.afirme.afirmenet.enums.CodigoExcepcion;
 import com.afirme.afirmenet.exception.AfirmeNetSessionExpiredException;
@@ -30,8 +32,6 @@ import com.afirme.afirmenet.ibs.beans.consultas.Resumen;
 import com.afirme.afirmenet.model.base.TokenModel;
 import com.afirme.afirmenet.model.transferencia.TipoTransferencia;
 import com.afirme.afirmenet.model.transferencia.TransferenciaBase;
-import com.afirme.afirmenet.service.token.BasicoSinTokenService;
-import com.afirme.afirmenet.service.token.TokenService;
 import com.afirme.afirmenet.utils.AfirmeNetConstants;
 import com.afirme.afirmenet.utils.time.TimeUtils;
 import com.afirme.afirmenet.web.config.InitConfig;

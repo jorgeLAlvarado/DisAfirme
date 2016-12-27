@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.service.consultas;
+package com.afirme.afirmenet.empresas.service.consultas;
 
 import java.util.List;
 

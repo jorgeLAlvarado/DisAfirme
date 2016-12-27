@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.service.transferencia;
+package com.afirme.afirmenet.empresas.service.transferencia;
 
 import com.afirme.afirmenet.model.transferencia.Comprobante;
 

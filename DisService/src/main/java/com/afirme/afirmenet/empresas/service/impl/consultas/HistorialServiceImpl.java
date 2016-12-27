@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.service.impl.consultas;
+package com.afirme.afirmenet.empresas.service.impl.consultas;
 
 import java.util.Date;
 import java.util.List;
@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 import com.afirme.afirmenet.empresas.dao.consultas.HistorialDao;
 import com.afirme.afirmenet.empresas.dao.transferencia.ComprobanteTransferenciaDao;
+import com.afirme.afirmenet.empresas.service.consultas.HistorialService;
 import com.afirme.afirmenet.ibs.beans.consultas.Cuenta;
 import com.afirme.afirmenet.ibs.beans.consultas.HistorialTipo;
 import com.afirme.afirmenet.ibs.beans.consultas.TipoTransaccion;
 import com.afirme.afirmenet.model.transferencia.TransferenciaBase;
-import com.afirme.afirmenet.service.consultas.HistorialService;
 
 /**
  * clase para el historial de servicios

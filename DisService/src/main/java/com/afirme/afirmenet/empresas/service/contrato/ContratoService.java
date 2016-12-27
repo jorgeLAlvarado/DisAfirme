@@ -1,4 +1,4 @@
-package com.afirme.afirmenet.service.contrato;
+package com.afirme.afirmenet.empresas.service.contrato;
 
 import java.sql.SQLException;
 
