@@ -16,6 +16,7 @@ import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientosTDC;
 public interface ConsultaTDCService {
 	
 	/**
+	 * Consulta de TDC
 	 * @param consultaSaldos
 	 */
 	
@@ -23,6 +24,7 @@ public interface ConsultaTDCService {
 	public List<ConsulatasSaldosMovimientosTDC> consultaTDC (ConsulatasSaldosMovimientosTDC consultaSaldos);
 
 	/**
+	 * Consulta tdc despues del corte
 	 * @param consultaDespuesCorte
 	 */
 	
@@ -30,6 +32,7 @@ public interface ConsultaTDCService {
 	public List<ConsulatasSaldosMovimientosTDC> consultaDespuesCorte (ConsulatasSaldosMovimientosTDC consultaDespuesCorte);
 
 	/**
+	 * Consulta de tdc al corte
 	 * @param consultaMovimientoCorte
 	 */
 	
@@ -37,6 +40,7 @@ public interface ConsultaTDCService {
 	public List<ConsulatasSaldosMovimientosTDC> consultaMovimientoCorte (ConsulatasSaldosMovimientosTDC consultaMovimientoCorte);
 
 	/**
+	 * Consulta de movimiento antes del corte
 	 * @param consultaMovimientoCorteAtras
 	 */
 	
@@ -44,6 +48,7 @@ public interface ConsultaTDCService {
 	public List<ConsulatasSaldosMovimientosTDC> consultaMovimientoCorteAtras (ConsulatasSaldosMovimientosTDC consultaMovimientoCorteAtras);
 
 	/**
+	 * Consulta de promociones a plazos
 	 * @param consultaPromocionesPlazos
 	 */
 	

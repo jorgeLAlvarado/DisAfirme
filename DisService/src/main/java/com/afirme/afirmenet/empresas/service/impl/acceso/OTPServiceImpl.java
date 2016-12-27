@@ -32,84 +32,32 @@ public class OTPServiceImpl implements OTPService {
 	@Autowired
 	MailService mailService;
 	
-	/**
-	 * metodo para validar el token de cesion activa
-	 * @param usuario
-	 * @param serialToken
-	 * @param codigoActivacion
-	 * @return TRUE si el proceso no presento problemas.
-	 * 
-	 */
 	public boolean validaTokenXActivar(String contrato, String usuario, int serialToken, String codigoActivacion) {
 	
 		return false;
 	}
 	
-
-	/**
-	 * metodo para validar el token de cesion activa
-	 * @param usuario
-	 * @param serialToken
-	 * @param codigoActivacion
-	 * @return TRUE si el proceso no presento problemas.
-	 * 
-	 */
 	public String obtenToken(String contrato) {
 		return null;
 	}
 
-	/**
-	 * metodo que regresa la existencia del contacto
-	 * @param contrato
-	 * @return TRUE si el proceso no presento problemas.
-	 * 
-	 */
 	public boolean usaTokens(String contrato) {
 		return false;
 	}
 
-	/**
-	 * metodo para validar el codigo de seguridad
-	 * @param contrato
-	 * @param usuario
-	 * @param codigoSegEnc
-	 * @return TRUE si el proceso no presento problemas.
-	 * 
-	 */
 	public boolean setCodigoSeguridad(String contrato, String usuario, String codigoSegEnc) {
 		return false;
 	}
 
-	/**
-	 * metodo para enviar correo de seguridad
-	 * @param contrato
-	 * @return TRUE si el proceso no presento problemas.
-	 * 
-	 */
 	public boolean enviaMailCodigoSeguridad(String contrato) {
 		
 		return false;
 	}
 
-	/**
-	 * metodo para validar el vencimiento del token
-	 * @param serialToken
-	 * @param fechaVencimiento
-	 * @return TRUE si el proceso no presento problemas.
-	 * 
-	 */
 	public boolean setFechaVencimiento(String serialToken, String fechaVencimiento) {
 		return false;
 	}
 	
-	/**
-	 * metodo para enviar el codigo de seguridad
-	 * @param contrato
-	 * @param mail
-	 * @param codigoSeguridad
-	 * @return TRUE si el proceso no presento problemas.
-	 * 
-	 */
 	private boolean enviarCodigoSeguridad(String contrato, String mail, String codigoSeguridad) {
 
 		return false;

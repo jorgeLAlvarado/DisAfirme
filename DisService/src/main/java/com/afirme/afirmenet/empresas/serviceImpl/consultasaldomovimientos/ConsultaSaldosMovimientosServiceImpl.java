@@ -15,6 +15,7 @@ import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimi
 
 
 /**
+ * Consultas de saldos y movimientos
  * Created on Dic 14, 2016 3:39:05 PM by Noe
  * @author Noe Galarza
  * @version 1.0.0
@@ -81,6 +82,68 @@ public class ConsultaSaldosMovimientosServiceImpl implements ConsultaSaldoMovimi
 	public String informacionPrestamo(List<ConsultaSaldosMovimientosLC> prestamo) {
 		return null;
 		
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientosInversiones> consultaInversion(
+			ConsultaSaldosMovimientosInversiones consultaInversion) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientosInversiones> detalleProducto(
+			ConsultaSaldosMovimientosInversiones detalleProducto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientos> cuentas(ConsultaSaldosMovimientos cuentas) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientos> consultaSaldos(ConsultaSaldosMovimientos consultaSaldos) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientos> ultimosMovimientos(ConsultaSaldosMovimientos ultimosMovimientos) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientos> movimientosMes(ConsultaSaldosMovimientos moviminetoMes) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientos> retenidos(ConsultaSaldosMovimientos retenidos) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientos> buscarHistorico(ConsultaSaldosMovimientos buscarHistorico) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientosLC> cuentasLC(ConsultaSaldosMovimientosLC cuentasLC) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ConsultaSaldosMovimientosLC> informacionPrestamo(ConsultaSaldosMovimientosLC prestamo) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

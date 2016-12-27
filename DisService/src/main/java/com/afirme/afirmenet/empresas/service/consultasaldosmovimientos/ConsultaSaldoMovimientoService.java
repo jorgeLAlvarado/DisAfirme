@@ -16,6 +16,7 @@ import com.afirme.afirmenet.model.consultaSaldosMovimientos.ConsultaSaldosMovimi
 public interface ConsultaSaldoMovimientoService {
 	
 	/**
+	 * Consulta para obtener las inversiones
 	 * @param consultaInversion
 	 */
 	
@@ -23,22 +24,26 @@ public interface ConsultaSaldoMovimientoService {
 	
 	public List<ConsultaSaldosMovimientosInversiones> consultaInversion(ConsultaSaldosMovimientosInversiones consultaInversion);
 	/**
+	 * Consulta para ver los detalles de los productos
 	 * @param detalleProducto
 	 */
 	
 	public List<ConsultaSaldosMovimientosInversiones> detalleProducto (ConsultaSaldosMovimientosInversiones detalleProducto);
 	/**
+	 * Consulta las cuentas
 	 * @param cuentas
 	 */
 	
 	public List<ConsultaSaldosMovimientos> cuentas (ConsultaSaldosMovimientos cuentas);
 	/**
+	 * Consulta el saldo disponible
 	 * @param consultaSaldos
 	 */
 	
 	public List<ConsultaSaldosMovimientos> consultaSaldos(ConsultaSaldosMovimientos consultaSaldos);
 	
 	/**
+	 * Consulta los ultimos movimientos del mes
 	 * @param ultimosMovimientos
 	 */
 	
@@ -46,17 +51,20 @@ public interface ConsultaSaldoMovimientoService {
 	
 	
 	/**
+	 * consulta los ultimos movimientos del mes
 	 * @param movimientoMes
 	 */
 	
 	public List<ConsultaSaldosMovimientos> movimientosMes (ConsultaSaldosMovimientos moviminetoMes);
 	
 	/**
+	 * Consulta los movimientos retenidos
 	 * @param retenidos
 	 */
 	public List<ConsultaSaldosMovimientos> retenidos (ConsultaSaldosMovimientos retenidos);
 	
 	/**
+	 * Consulta los datos historicos
 	 * @param buscarHistorico
 	 */
 	
@@ -64,12 +72,14 @@ public interface ConsultaSaldoMovimientoService {
 	
 	
 	/**
+	 * Consulta los movimientos del LC
 	 * @param cuentasLC
 	 */
 	
 	public List<ConsultaSaldosMovimientosLC> cuentasLC (ConsultaSaldosMovimientosLC cuentasLC);
 	
 	/**
+	 * Consulta la informacion de prestamos
 	 * @param prestamo
 	 */
 

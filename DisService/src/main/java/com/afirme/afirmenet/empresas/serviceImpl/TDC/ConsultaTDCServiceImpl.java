@@ -10,6 +10,7 @@ import com.afirme.afirmenet.empresas.service.TDC.ConsultaTDCService;
 import com.afirme.afirmenet.model.tdc.ConsulatasSaldosMovimientosTDC;
 
 /**
+ * Clase para realizar las consultas de tarjetas de credito
  * Created on Dic 14, 2016 3:39:05 PM by Noe
  * @author Noe Galarza
  * @version 1.0.0
