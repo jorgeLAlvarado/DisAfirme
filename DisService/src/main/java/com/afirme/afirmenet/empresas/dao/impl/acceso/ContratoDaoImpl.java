@@ -37,22 +37,13 @@ public class ContratoDaoImpl implements ContratoDao {
 	private MessageSource dibsSource;
 	
 	
-	/**
-	 * Da la cuenta del Contacto
-	 * @param contacto
-	 * @return
-	 */
+
 	@Override
 	public String getCuentaContrato(String contrato) {
 		LOG.info("Cuenta Contrato DAO Exitoso");
 		return null;
 	}
-	
-	/**
-	 * Da la datos del Contacto
-	 * @param contacto
-	 * @return
-	 */
+
 	@Override
 	public Contrato getDatosContrato(String idContrato) {
 		LOG.info("Datos Contrato DAO Exitoso");
@@ -62,11 +53,7 @@ public class ContratoDaoImpl implements ContratoDao {
 	
 	}
 
-	/**
-	 * Da la cuenta del Contacto
-	 * @param contacto
-	 * @return
-	 */
+
 	@Override
 	public boolean updateContrato(Contrato contrato, String idContrato) {
 		LOG.info("Actualizacion Contrato");
@@ -76,13 +63,7 @@ public class ContratoDaoImpl implements ContratoDao {
 		return false;
 	}
 
-	/**
-	 * Da la contraseña del Contacto
-	 * @param idContrato
-	 * @param password
-	 * @param status
-	 * @return
-	 */
+
 	@Override
 	public boolean setPassword(String idContrato, String password, String status) {
 		LOG.info("Contaseña DAO Exitoso");
@@ -90,12 +71,7 @@ public class ContratoDaoImpl implements ContratoDao {
 		return false;
 	}
 	
-	/**
-	 * Da la el status del Contacto
-	 * @param idContrato
-	 * @param status
-	 * @return
-	 */
+
 	public boolean setStatus(String idContrato, String status) {
 		LOG.info("Estatus DAO Exitoso");
 		
@@ -105,11 +81,7 @@ public class ContratoDaoImpl implements ContratoDao {
 	}
 	
 	
-	/**
-	 * Da la los datos del login
-	 * @param idContrato
-	 * @return
-	 */
+
 	@Override
 	public JBLogin getDatosLogIn(String idContrato) throws SQLException {
 		LOG.info("Datos Login DAO Exitoso");

@@ -19,7 +19,13 @@ import com.afirme.afirmenet.ibs.beans.JBLogin;
 import com.afirme.afirmenet.ibs.beans.JBProCode;
 import com.afirme.afirmenet.ibs.beans.consultas.Cuenta;
 import com.afirme.afirmenet.utils.AfirmeNetLog;
-
+/**
+ * clase para validar la contraseña
+ *  * 
+ * @author Bayron Gamboa Martinez
+ *
+ * @version 1.0.0
+ */
 @Service
 public class LogInServiceImpl implements LogInService {
 	static final AfirmeNetLog LOG = new AfirmeNetLog(LogInServiceImpl.class);

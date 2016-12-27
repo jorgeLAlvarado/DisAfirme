@@ -31,61 +31,37 @@ public class ContratoServiceImpl implements ContratoService {
 	@Autowired
 	private ContratoDao contratoDao;
 	
-	/**
-	 * Da la cuenta del Contacto
-	 * @param idContrato
-	 * @return
-	 */
+
 	@Override
 	public Contrato getDatosContrato(String idContrato) {
 		return contratoDao.getDatosContrato(idContrato);
 	}
 
-	/**
-	 * Da la cuenta del Contacto
-	 * @param idContrato
-	 * @return
-	 */
+
 	@Override
 	public JBLogin getDatosLogIn(String idContrato) throws SQLException{
 		return contratoDao.getDatosLogIn(idContrato);
 	}
 
-	/**
-	 * Da la cuenta del Contacto
-	 * @param idContrato
-	 * @return
-	 */
+	
 	@Override
 	public boolean setStatus(String idContrato, String status) {
 		return contratoDao.setStatus(idContrato, status);
 	}
 
-	/**
-	 * Da la cuenta del Contacto
-	 * @param idContrato
-	 * @return
-	 */
+
 	@Override
 	public boolean updateContrato(Contrato contrato, String idContrato) {
 		return contratoDao.updateContrato(contrato, idContrato);
 	}
 
-	/**
-	 * Da la cuenta del Contacto
-	 * @param idContrato
-	 * @return
-	 */
+
 	@Override
 	public boolean setPassword(String idContrato, String password, String status) {
 		return contratoDao.setPassword(idContrato, password, status);
 	}
 
-	/**
-	 * Da la cuenta del Contacto
-	 * @param idContrato
-	 * @return
-	 */
+
 	@Override
 	public String getCuentaContrato(String contrato) {
 		return contratoDao.getCuentaContrato(contrato);
