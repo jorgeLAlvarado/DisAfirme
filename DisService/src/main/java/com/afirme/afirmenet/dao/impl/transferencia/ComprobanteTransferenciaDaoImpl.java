@@ -52,6 +52,7 @@ public class ComprobanteTransferenciaDaoImpl implements ComprobanteTransferencia
 	
 	@Override
 	public List<TransferenciaBase> buscarComprobantesGenericos(String contrato, String tipo, String fechaDesde, String fechaHasta, String numeroServicio) {
+		return null;
 
 	
 
@@ -67,6 +68,7 @@ public class ComprobanteTransferenciaDaoImpl implements ComprobanteTransferencia
 
 	@Override
 	public String buscarAtributoINOTR(String ref, String contrato, String atrib){
+		return null;
 
 	}
 	
