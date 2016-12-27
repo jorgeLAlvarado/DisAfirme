@@ -4,7 +4,14 @@ import java.util.List;
 
 import com.afirme.afirmenet.model.base.TokenModel;
 
-
+/**
+ * clase para validar el ingreso con un token previamente asignado
+ * 
+ * @author Bayron Gamboa Martinez
+ *	@since 13/12/2016
+ *
+ * @version 1.0.2
+ */
 
 public interface TokenService {
 	
@@ -21,24 +28,17 @@ public interface TokenService {
 	public TokenModel validaClave(String passCode, String contrato, 
 			String usuario, boolean basicoSinToken, List<?> tokenRSA, int intentos);
 	
-//	public void ejecutaSincronizacionToken(String Path, HttpServletRequest req, HttpServletResponse resp, HttpSession session);
-//    
-//	public void ejecutaActivaciónToken(String Path, HttpServletRequest req, HttpServletResponse resp, HttpSession session);
-//	
-//	public ArrayList verificaPasscode(String userID, String passcode);
-//	
-   public TokenModel validaPasscodeLogin(String passCode, String contrato, 
-			String usuario, boolean basicoSinToken, List<?> tokenRSA, int intentos);
-//
-//	public void validaPasscodeLoginInit(String Path, HttpServletRequest req, 
-//										HttpServletResponse resp, HttpSession session);
-//	
-//	public void validaPasscodeLoginAlias(String Path, HttpServletRequest req, HttpServletResponse resp, 
-//										 HttpSession session);
-//    	
-//	public void validaPasscodeTransaccion(String Path, HttpServletRequest req, HttpServletResponse resp, HttpSession session);
-//    
-//	public void validaPasscodeLoginAliasPost(String Path, HttpServletRequest req, HttpServletResponse resp, HttpSession session, String LNG);
-//    
+	/**
+	 * validacion token del usuario
+	 * @param passCode
+	 * @param contrato
+	 * @param usuario
+	 * @param basicoSinToken
+	 * @param tokenRSA
+	 * @param intentos
+	 * @return
+	 */
+	public TokenModel validaPasscodeLogin(String passCode, String contrato, String usuario, boolean basicoSinToken,
+			List<?> tokenRSA, int intentos);
 
 }
